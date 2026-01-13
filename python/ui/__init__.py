@@ -1,1 +1,1 @@
-print("fucking slaves")
+print("hello_world")
