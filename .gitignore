@@ -1,0 +1,60 @@
+######################
+# Python
+######################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+######################
+# C / C++
+######################
+*.o
+*.obj
+*.out
+*.exe
+*.dll
+*.so
+*.a
+*.lib
+
+# Build directories
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+compile_commands.json
+install_manifest.txt
+
+######################
+# IDEs / Editors
+######################
+.vscode/
+.idea/
+*.swp
+
+######################
+# OS
+######################
+.DS_Store
+Thumbs.db
+
+######################
+# Logs & misc
+######################
+*.log
