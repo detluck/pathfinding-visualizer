@@ -1,5 +1,5 @@
 import pygame
-
+from settings import WHITE
 class Node:
     def __init__(self, row, col, width, height):
         self.row = row
@@ -9,7 +9,7 @@ class Node:
         self.x = col*width
         self.y = row*height
         self.isWall = False
-        self.color = (255, 255, 255)
+        self.color = WHITE
     
     def set_wall(self):
         self.isWall = True

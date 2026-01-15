@@ -1,5 +1,6 @@
 import pygame
 from model import Node
+from settings import BLACK
 
 class Ui:
     def __init__(self, rows, cols):
@@ -23,7 +24,7 @@ class Ui:
         return grid
     
     def draw_all(self, grid):
-        self.display.fill((255, 0 ,4))
+        self.display.fill(BLACK)
         for row in grid:
             for node in row:
                 node.draw_node(self.display)
