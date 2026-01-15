@@ -1,14 +1,15 @@
 import pygame
 
 class Node:
-    def __init__(self, row, col, width):
+    def __init__(self, row, col, width, height):
         self.row = row
         self.col = col
+        self.height = height
         self.width = width
-        self.x = row*width
-        self.y = row*width
+        self.x = col*width
+        self.y = row*height
         self.isWall = False
-        self.color = None
+        self.color = (255, 255, 255)
     
     def set_wall(self):
         self.isWall = True
@@ -17,7 +18,4 @@ class Node:
         self.color = color
     
     def draw_node(self, window):
-        pygame.draw.rect(window, self.color, (self.x, self.y, self.width, self.width), 1)
-    
-    def draw_grid(self, rows):
-        
+        pygame.draw.rect(window, self.color, (self.x, self.y, self.width, self.height), 1)
