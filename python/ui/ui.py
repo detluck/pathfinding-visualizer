@@ -1,6 +1,6 @@
 import pygame
 from model import Node
-from settings import BLACK
+from ui.settings import BLACK
 
 class Ui:
     def __init__(self, rows, cols):
@@ -8,7 +8,7 @@ class Ui:
         self.running = True
         self.rows = rows
         self.cols = cols
-        self.size = self.weight, self.height = 640, 400
+        self.size = self.weight, self.height = 1280, 720
         self.display = pygame.display.set_mode(self.size)
         self.clock = pygame.time.Clock()
 

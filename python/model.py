@@ -1,5 +1,5 @@
 import pygame
-from settings import WHITE
+from ui.settings import WHITE
 class Node:
     def __init__(self, row, col, width, height):
         self.row = row

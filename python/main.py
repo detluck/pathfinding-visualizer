@@ -1,7 +1,7 @@
 import pygame
 from ui.ui import Ui
 
-ui_test = Ui(100,100)
+ui_test = Ui(30,30)
 
 while( ui_test.running ):
             for event in pygame.event.get():
