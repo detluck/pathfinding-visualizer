@@ -23,9 +23,8 @@ class Ui:
                 grid[i].append(node)
         return grid
     
-    def draw_all(self, grid):
-        self.display.fill(BLACK)
+    def draw_all(self, grid, surface):
         for row in grid:
             for node in row:
-                node.draw_node(self.display)
+                node.draw_node(surface)
         pygame.display.update()
