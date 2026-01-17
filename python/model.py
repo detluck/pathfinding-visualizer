@@ -1,13 +1,12 @@
 import pygame
 from ui.settings import WHITE
 class Node:
-    def __init__(self, row, col, width, height):
+    def __init__(self, row, col, width):
         self.row = row
         self.col = col
-        self.height = height
         self.width = width
         self.x = col*width
-        self.y = row*height
+        self.y = row*width
         self.isWall = False
         self.color = WHITE
     
@@ -18,4 +17,4 @@ class Node:
         self.color = color
     
     def draw_node(self, window):
-        pygame.draw.rect(window, self.color, (self.x, self.y, self.width, self.height), 1)
+        pygame.draw.rect(window, self.color, (self.x, self.y, self.width, self.width))
