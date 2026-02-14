@@ -47,14 +47,17 @@ qt_add_qml_module(appPathfindingVisualizer
     ui/components/StyledButton.qml
     ui/components/StyledSlider.qml
     ui/components/AlgoSelector.qml
+    ui/components/StyledText.qml
     ui/theme/Theme.qml
     RESOURCES
         ui/theme/qmldir
-        ui/assets/svgs/play-solid-full.svg
-        ui/assets/svgs/return.svg
         ui/assets/svgs/startNode.svg
         ui/assets/svgs/endNode.svg
-        QML_FILES ui/components/StyledText.qml
+        ui/assets/svgs/clean.svg
+        ui/assets/svgs/pause.svg
+        ui/assets/svgs/start.svg
+        ui/assets/svgs/terminate.svg
+        ui/assets/svgs/deleate.svg
 )
 
 target_link_libraries(appPathfindingVisualizer PRIVATE Qt6::Quick Qt6::Qml)
