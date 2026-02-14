@@ -40,10 +40,21 @@ qt_add_qml_module(appPathfindingVisualizer
     URI Pathfinding.App
     VERSION 1.0
     QML_FILES 
-        ui/main.qml
-        ui/ControlPanel.qml
-        ui/PathGrid.qml
-        ui/GridTile.qml
+    ui/Main.qml
+    ui/components/ControlPanel.qml
+    ui/components/PathGrid.qml
+    ui/components/GridTile.qml
+    ui/components/StyledButton.qml
+    ui/components/StyledSlider.qml
+    ui/components/AlgoSelector.qml
+    ui/theme/Theme.qml
+    RESOURCES
+        ui/theme/qmldir
+        ui/assets/svgs/play-solid-full.svg
+        ui/assets/svgs/return.svg
+        ui/assets/svgs/startNode.svg
+        ui/assets/svgs/endNode.svg
+        QML_FILES ui/components/StyledText.qml
 )
 
 target_link_libraries(appPathfindingVisualizer PRIVATE Qt6::Quick Qt6::Qml)
