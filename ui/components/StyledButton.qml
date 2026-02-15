@@ -9,10 +9,11 @@ Button{
     property  color hoverColor: Theme.colors.hoverBtn
     property color textColor: Theme.colors.textPrimary
     property color backgroundColor: "transparent"
-    property int iconSize: Theme.font.size.icon.normal
     property alias radius: background.radius
     property alias fontSize: label.font.pixelSize
     property url svgPath: ""
+    property color squareColor: "transparent"
+    property bool useSquare: squareColor !== "transparent"
 
     width: 200
     height: 200
@@ -28,16 +29,22 @@ Button{
     contentItem: Row{
         anchors.centerIn: parent
         spacing: 8
+            Rectangle{
+                visible: root.useSquare
+                height: root.height -2
+                width: height
+                color: root.squareColor
+            }
             Image {
-            id: svgIcon
-            source: root.svgPath
-            height: root.iconSize
-            width: root.iconSize
-            sourceSize.height: height
-            sourceSize.width: width
-            anchors.verticalCenter: parent.verticalCenter
-            visible: root.svgPath !== ""
-        }
+                id: svgIcon
+                source: root.svgPath
+                height: root.height -2
+                width: height
+                sourceSize.height: height
+                sourceSize.width: width
+                anchors.verticalCenter: parent.verticalCenter
+                visible: root.svgPath !==  "" && !root.useSquare
+            }
            StyledText{
             id: label
             text: root.text

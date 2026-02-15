@@ -9,6 +9,8 @@ Text{
     textFormat: Text.PlainText
     font.family: Theme.font.family.main
     font.pixelSize: Theme.font.size.normal
+    fontSizeMode: Text.Fitt
+    minimumPixelSize: 10
     elide: Text.ElideRight
     verticalAlignment: Text.AlignVCenter
 
