@@ -1,5 +1,5 @@
 pragma Singleton
-import QtQuick 2.15
+import QtQuick
 
 //appearance properties
 QtObject {
@@ -10,6 +10,7 @@ QtObject {
         property color backgroundPanel: "#161a23"
         property color backgroundGrid: "#0b0e14"
         property color hoverBtn: Qt.rgba(0, 0, 0, 0.2)
+        property color pressedBtn: Qt.rgba(0, 0, 0, 0.4)
 
         property color textPrimary: "#e6e6eb"
         property color textSecondary: "#9aa0b2"

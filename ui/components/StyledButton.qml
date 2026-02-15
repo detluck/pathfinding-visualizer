@@ -1,4 +1,5 @@
-import QtQuick 2.15
+pragma ComponentBehavior: Bound
+import QtQuick
 import QtQuick.Controls
 import "../theme"
 
@@ -19,8 +20,6 @@ Button{
     background: Rectangle{
         id: background
         anchors.fill:  parent
-        width: root.width
-        height: root.height
         color: root.hovered? root.hoverColor: root.backgroundColor
         border.width: 0
         radius: 12
@@ -37,7 +36,7 @@ Button{
             sourceSize.height: height
             sourceSize.width: width
             anchors.verticalCenter: parent.verticalCenter
-            visible: root.svgIcon !== ""
+            visible: root.svgPath !== ""
         }
            StyledText{
             id: label

@@ -1,6 +1,6 @@
 pragma ComponentBehavior: Bound
 import "../theme"
-import QtQuick 2.15
+import QtQuick
 
 Text{
     id: root
@@ -9,5 +9,7 @@ Text{
     textFormat: Text.PlainText
     font.family: Theme.font.family.main
     font.pixelSize: Theme.font.size.normal
+    elide: Text.ElideRight
+    verticalAlignment: Text.AlignVCenter
 
 }

@@ -71,15 +71,12 @@ Window{
             fontSize: 40
             svgPath: "../assets/svgs/terminate.svg"
         }
-        StyledButton{
+
+        AlgoSelector{
             Layout.fillWidth: true
             Layout.fillHeight: true
-            text: "Pause"
             width: 100
             height: 50
-            iconSize: 40
-            fontSize: 40
-            svgPath: "../assets/svgs/pause.svg"
         }
 
     }
