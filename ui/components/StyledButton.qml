@@ -13,7 +13,7 @@ Button{
     property alias fontSize: label.font.pixelSize
     property url svgPath: ""
     property color squareColor: "transparent"
-    property bool useSquare: squareColor !== "transparent"
+    property bool useSquare: false
 
     width: 200
     height: 200
@@ -34,16 +34,19 @@ Button{
                 height: root.height -2
                 width: height
                 color: root.squareColor
+                anchors.verticalCenter: parent.verticalCenter
             }
             Image {
                 id: svgIcon
                 source: root.svgPath
-                height: root.height -2
+                height: Math.min(root.height - 2, 64)
                 width: height
                 sourceSize.height: height
                 sourceSize.width: width
                 anchors.verticalCenter: parent.verticalCenter
-                visible: root.svgPath !==  "" && !root.useSquare
+                fillMode: Image.PreserveAspectFit
+                visible: root.svgPath !== "" && !root.useSquare
+                asynchronous: true
             }
            StyledText{
             id: label

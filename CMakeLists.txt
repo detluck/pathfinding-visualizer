@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(Pathfinding-visualizer VERSION 0.1 LANGUAGES CXX)
+project(PathfindingVisualizer VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -11,7 +11,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 # find qt packages
-find_package(Qt6 REQUIRED COMPONENTS Quick)
+find_package(Qt6 REQUIRED COMPONENTS Gui Quick Svg)
 
 # standard Qt project settings
 qt_standard_project_setup()
@@ -58,9 +58,10 @@ qt_add_qml_module(appPathfindingVisualizer
         ui/assets/svgs/start.svg
         ui/assets/svgs/terminate.svg
         ui/assets/svgs/deleate.svg
+        QML_FILES ui/components/StyledRect.qml
 )
 
-target_link_libraries(appPathfindingVisualizer PRIVATE Qt6::Quick Qt6::Qml)
+target_link_libraries(appPathfindingVisualizer PRIVATE Qt6::Quick Qt6::Qml Qt6::Svg)
 
 # Optimierung für Deployment (Optional)
 set_target_properties(appPathfindingVisualizer PROPERTIES
