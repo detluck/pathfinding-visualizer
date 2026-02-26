@@ -5,15 +5,15 @@ import "../theme"
 ComboBox{
     id: root
 
-    property  color hoverColor: Theme.colors.hoverBtn
-    property color pressedColor: Theme.colors.pressedBtn
-    property color textColor: Theme.colors.textPrimary
-    property color backgroundColor: Theme.colors.backgroundMain
+    property  color hoverColor: Theme.current.hoverBtn
+    property color pressedColor: Theme.current.pressedBtn
+    property color textColor: Theme.current.textPrimary
+    property color backgroundColor: Theme.current.backgroundMain
     property int radius: Theme.radius.small
     property int bWidth: 100
     property int bHeight: 50
 
-    model: ["Dijkstra", "A*", "Kp"]
+    model: ["Dijkstra", "A*", "BFS"]
 
     delegate: ItemDelegate{
         id: delegate
@@ -23,12 +23,11 @@ ComboBox{
 
         width: root.width
         contentItem: StyledText{
-
             text: model.modelData
             color: root.textColor
-
         }
         highlighted: root.highlightedIndex === index
+
         background: Rectangle{
             color: delegate.highlighted? root.hoverColor: root.backgroundColor
         }

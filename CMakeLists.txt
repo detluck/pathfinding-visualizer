@@ -31,13 +31,13 @@ set(PROJECT_SOURCES
 )
 
 # make executable
-qt_add_executable(appPathfindingVisualizer
+qt_add_executable(app
     ${PROJECT_SOURCES}
 )
 
 # define qml
-qt_add_qml_module(appPathfindingVisualizer
-    URI Pathfinding.App
+qt_add_qml_module(app
+    URI Pathfinding
     VERSION 1.0
     QML_FILES 
     ui/Main.qml
@@ -58,19 +58,23 @@ qt_add_qml_module(appPathfindingVisualizer
         ui/assets/svgs/start.svg
         ui/assets/svgs/terminate.svg
         ui/assets/svgs/deleate.svg
+        ui/assets/svgs/wall.svg
         QML_FILES ui/components/StyledRect.qml
+        SOURCES cpp/cursorhelper.h cpp/cursorhelper.cpp
+        SOURCES cpp/gridmodel.h cpp/gridmodel.cpp
+        SOURCES cpp/algorithmType.h
+        SOURCES cpp/algorithms/IAlgorithm.h
 )
 
-target_link_libraries(appPathfindingVisualizer PRIVATE Qt6::Quick Qt6::Qml Qt6::Svg)
+target_link_libraries(app PRIVATE Qt6::Quick Qt6::Qml Qt6::Svg)
 
-# Optimierung für Deployment (Optional)
-set_target_properties(appPathfindingVisualizer PROPERTIES
+set_target_properties(app PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.pathfinding.project
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
 )
 
-install(TARGETS appPathfindingVisualizer
+install(TARGETS app
     BUNDLE  DESTINATION .
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}

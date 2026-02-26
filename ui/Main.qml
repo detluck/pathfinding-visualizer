@@ -11,10 +11,15 @@ Window{
     height: 800
     ColumnLayout{
         anchors.fill: parent
-        spacing: 0
         ControlPanel{
-            Layout.fillWidth: true
-            height: root.height / 3
+            id: controlPanel
+            width: root.width
+            height: root.height /4
+        }
+        PathGrid{
+            width: root.width
+            height: root.height - controlPanel.height
+            tileNumber: 100
         }
 
     }

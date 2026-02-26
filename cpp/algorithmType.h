@@ -1,0 +1,4 @@
+#ifndef ALGORITHMTYPE_H
+#define ALGORITHMTYPE_H
+
+#endif // ALGORITHMTYPE_H

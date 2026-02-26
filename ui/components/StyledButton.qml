@@ -1,22 +1,29 @@
 pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
 import "../theme"
 
 Button{
     id: root
 
-    property  color hoverColor: Theme.colors.hoverBtn
-    property color textColor: Theme.colors.textPrimary
+    property  color hoverColor: Theme.current.hoverBtn
+    property color textColor: Theme.current.textPrimary
     property color backgroundColor: "transparent"
     property alias radius: background.radius
     property alias fontSize: label.font.pixelSize
-    property url svgPath: ""
+    property string svgPath: ""
     property color squareColor: "transparent"
     property bool useSquare: false
+    property string tipText: ""
+    property color borderColor: "transparent"
 
-    width: 200
-    height: 200
+    width: 70
+    height: 20
+    hoverEnabled: true
+    ToolTip.visible: hovered && tipText !== ""
+    ToolTip.text: tipText
+    ToolTip.delay: 500
 
     background: Rectangle{
         id: background
@@ -26,20 +33,21 @@ Button{
         radius: 12
     }
 
-    contentItem: Row{
+    contentItem: RowLayout{
         anchors.centerIn: parent
         spacing: 8
             Rectangle{
                 visible: root.useSquare
-                height: root.height -2
+                height: root.height - 4
                 width: height
                 color: root.squareColor
                 anchors.verticalCenter: parent.verticalCenter
+                border.color: root.borderColor
             }
             Image {
                 id: svgIcon
                 source: root.svgPath
-                height: Math.min(root.height - 2, 64)
+                height: root.height - 4
                 width: height
                 sourceSize.height: height
                 sourceSize.width: width

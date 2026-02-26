@@ -13,5 +13,6 @@ Text{
     minimumPixelSize: 10
     elide: Text.ElideRight
     verticalAlignment: Text.AlignVCenter
+    leftPadding: 10
 
 }
