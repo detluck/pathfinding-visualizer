@@ -89,4 +89,8 @@ ComboBox{
         radius: root.radius
         color: root.backgroundColor
     }
+
+    onCurrentIndexChanged: {
+        controller.setAlgorithm(currentIndex);
+    }
 }
