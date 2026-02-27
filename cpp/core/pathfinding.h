@@ -1,6 +1,6 @@
 #ifndef PATHFINDING_H
 #define PATHFINDING_H
-#include "algorithms/IAlgorithm.h"
+#include "cpp/algorithms/ialgorithm.h"
 #include <QObject>
 
 class Pathfinding: public QObject

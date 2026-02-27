@@ -41,7 +41,7 @@ Button{
                 height: root.height - 4
                 width: height
                 color: root.squareColor
-                anchors.verticalCenter: parent.verticalCenter
+                Layout.alignment: verticalCenter
                 border.color: root.borderColor
             }
             Image {
@@ -51,7 +51,7 @@ Button{
                 width: height
                 sourceSize.height: height
                 sourceSize.width: width
-                anchors.verticalCenter: parent.verticalCenter
+                Layout.alignment: verticalAlignment
                 fillMode: Image.PreserveAspectFit
                 visible: root.svgPath !== "" && !root.useSquare
                 asynchronous: true
@@ -59,7 +59,7 @@ Button{
            StyledText{
             id: label
             text: root.text
-            anchors.verticalCenter: parent.verticalCenter
+            Layout.alignment: verticalAlignment
         }
     }
 }

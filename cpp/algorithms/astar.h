@@ -1,6 +1,6 @@
 #ifndef ASTAR_H
 #define ASTAR_H
-#include "IAlgorithm.h"
+#include "ialgorithm.h"
 #include <atomic>
 
 class AStar: public IAlgorithm

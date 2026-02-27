@@ -1,8 +1,9 @@
 #include "pathfinding.h"
-#include "algorithmType.h"
-#include "algorithms/dijkstra.h"
-#include "algorithms/astar.h"
+#include "cpp/algorithms/algorithmType.h"
+#include "cpp/algorithms/dijkstra.h"
+#include "cpp/algorithms/astar.h"
 #include <iostream>
+#include <QDebug>
 
 Pathfinding::Pathfinding(QObject *parent)
     :QObject(parent)
@@ -18,11 +19,11 @@ void Pathfinding::setAlgorithm(int index){
     {
     case AlgorithmType::Dijkstra:
         m_algorithm = std::make_unique<Dijkstra>();
-        std::cout << "Dijkstra aktiv";
+        qDebug() << "Dijkstra aktiv";
         break;
     case AlgorithmType::Astar:
         m_algorithm = std::make_unique<AStar>();
-        std::cout << "AStar aktiv";
+        qDebug() << "AStar aktiv";
         break;
     default:
         break;

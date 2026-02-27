@@ -19,7 +19,6 @@ Window{
         PathGrid{
             width: root.width
             height: root.height - controlPanel.height
-            tileNumber: 100
         }
 
     }

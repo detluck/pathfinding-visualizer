@@ -19,20 +19,19 @@ qt_standard_project_setup()
 # define cpp files
 set(PROJECT_SOURCES
     main.cpp
-    cpp/pathfinding.h
-    cpp/pathfinding.cpp
-    cpp/gridmodel.h
-    cpp/gridmodel.cpp
+    cpp/core/pathfinding.h cpp/core/pathfinding.cpp
     cpp/algorithms/ialgorithm.h
-    cpp/algorithms/astar.h
-    cpp/algorithms/astar.cpp
-    cpp/algorithms/dijkstra.cpp
-    cpp/algorithms/dijkstra.h
+    cpp/algorithms/astar.h cpp/algorithms/astar.cpp
+    cpp/algorithms/dijkstra.h cpp/algorithms/dijkstra.cpp
+    cpp/core/cursorhelper.h cpp/core/cursorhelper.cpp
+    cpp/model/gridmodel.h cpp/model/gridmodel.cpp
+    cpp/algorithms/algorithmType.h
+    cpp/algorithms/IAlgorithm.h
 )
 
 # make executable
 qt_add_executable(app
-    ${PROJECT_SOURCES}
+    main.cpp
 )
 
 # define qml
@@ -40,15 +39,25 @@ qt_add_qml_module(app
     URI Pathfinding
     VERSION 1.0
     QML_FILES 
-    ui/Main.qml
-    ui/components/ControlPanel.qml
-    ui/components/PathGrid.qml
-    ui/components/GridTile.qml
-    ui/components/StyledButton.qml
-    ui/components/StyledSlider.qml
-    ui/components/AlgoSelector.qml
-    ui/components/StyledText.qml
-    ui/theme/Theme.qml
+        ui/Main.qml
+        ui/components/ControlPanel.qml
+        ui/components/PathGrid.qml
+        ui/components/GridTile.qml
+        ui/components/StyledButton.qml
+        ui/components/StyledSlider.qml
+        ui/components/AlgoSelector.qml
+        ui/components/StyledText.qml
+        ui/theme/Theme.qml
+        ui/components/StyledRect.qml
+    SOURCES
+        cpp/core/pathfinding.h cpp/core/pathfinding.cpp
+        cpp/model/gridmodel.h cpp/model/gridmodel.cpp
+        cpp/core/cursorhelper.h cpp/core/cursorhelper.cpp
+        cpp/algorithms/algorithmType.h
+        cpp/algorithms/ialgorithm.h
+        cpp/algorithms/astar.h cpp/algorithms/astar.cpp
+        cpp/algorithms/dijkstra.h cpp/algorithms/dijkstra.cpp
+        cpp/model/node.h
     RESOURCES
         ui/theme/qmldir
         ui/assets/svgs/startNode.svg
@@ -59,11 +68,6 @@ qt_add_qml_module(app
         ui/assets/svgs/terminate.svg
         ui/assets/svgs/deleate.svg
         ui/assets/svgs/wall.svg
-        QML_FILES ui/components/StyledRect.qml
-        SOURCES cpp/cursorhelper.h cpp/cursorhelper.cpp
-        SOURCES cpp/gridmodel.h cpp/gridmodel.cpp
-        SOURCES cpp/algorithmType.h
-        SOURCES cpp/algorithms/IAlgorithm.h
 )
 
 target_link_libraries(app PRIVATE Qt6::Quick Qt6::Qml Qt6::Svg)

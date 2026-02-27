@@ -1,6 +1,6 @@
 #ifndef DIJKSTRA_H
 #define DIJKSTRA_H
-#include "IAlgorithm.h"
+#include "ialgorithm.h"
 #include <atomic>
 
 class Dijkstra: public IAlgorithm
