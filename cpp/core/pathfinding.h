@@ -37,7 +37,7 @@ public:
     void startAlgorithm();
 
 private slots:
-    void handleClick();
+    void handleClick(int index = -1);
 
 signals:
     void clickTypeChanged();

@@ -34,7 +34,7 @@ void Pathfinding::setAlgorithm(int index)
     }
 }
 
-void Pathfinding::handleClick()
+void Pathfinding::handleClick(int index)
 {
     //Not finished
     switch(m_type)
@@ -54,6 +54,18 @@ void Pathfinding::handleClick()
     case ClickType::Clear:
         m_model->clearModel();
         break;
+    case ClickType::StartNode:
+        setStartIndex(index);
+        break;
+    case ClickType::TargetNode:
+        setEndIndex(index);
+        break;
+    case ClickType::Deleate:
+        break;
+    case ClickType::Wall:
+        break;
+    default:
+        break;
     }
 }
 
@@ -65,7 +77,7 @@ void Pathfinding::setClickType(ClickType type)
 
 void Pathfinding::setStartIndex(int index)
 {
-    if(index< 0 || index <= m_model->rowCount())
+    if(index >= 0 || index <= m_model->rowCount())
     {
         m_start = index;
     }
@@ -73,7 +85,7 @@ void Pathfinding::setStartIndex(int index)
 
 void Pathfinding::setEndIndex(int index)
 {
-    if(index< 0 || index <= m_model->rowCount())
+    if(index >= 0 || index <= m_model->rowCount())
     {
         m_end = index;
     }
@@ -86,7 +98,8 @@ void Pathfinding::setWallIndex(int index)
 
 void Pathfinding::startAlgorithm()
 {
-
+    GridData data = collectData();
+    m_algorithm->run(data);
 }
 
 GridData Pathfinding::collectData()
