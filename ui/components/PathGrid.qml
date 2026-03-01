@@ -4,8 +4,6 @@ import QtQuick.Layouts
 Rectangle{
     id: root
 
-    border.color: "black"
-
     GridView{
         model: gridModel
         anchors.fill: parent

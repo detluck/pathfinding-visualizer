@@ -7,7 +7,7 @@ class AStar: public IAlgorithm
 {
 public:
     ~AStar() override = default;
-    void run() override;
+    void run(const GridData& data) override;
     void pause() override;
     void resume() override;
     void stop() override;

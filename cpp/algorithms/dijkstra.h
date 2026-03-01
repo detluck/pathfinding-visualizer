@@ -7,7 +7,7 @@ class Dijkstra: public IAlgorithm
 {
 public:
     ~Dijkstra() override = default;
-    void run() override;
+    void run(const GridData& data) override;
     void pause() override;
     void resume() override;
     void stop() override;

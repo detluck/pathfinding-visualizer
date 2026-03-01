@@ -9,7 +9,7 @@ int main(int argc, char *argv[]){
     QGuiApplication app(argc, argv);
     CursorHelper cursorHelper;
     Pathfinding pathfinding;
-    GridModel gridModel(100, 100);
+    GridModel gridModel(50, 30);
     QQmlApplicationEngine engine;
 
     engine.rootContext()->setContextProperty("cursorHelper", &cursorHelper);

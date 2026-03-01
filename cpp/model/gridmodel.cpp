@@ -34,5 +34,30 @@ QVariant GridModel::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
+void GridModel::resizeModel(int width, int height)
+{
+    m_model.resize(width*height);
+}
+
+std::vector<NodeType> GridModel::nodeTypes() const
+{
+    std::vector<NodeType> types;
+    types.reserve(m_model.size());
+
+    for(const Node& node: m_model)
+    {
+        types.push_back(node.type);
+    }
+    return types;
+}
+
+void GridModel::clearModel()
+{
+    for(Node& node: m_model)
+    {
+        node.type = NodeType::Empty;
+    }
+}
+
 
 

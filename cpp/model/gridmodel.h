@@ -14,17 +14,18 @@ class GridModel : public QAbstractListModel
 public:
 
     enum Roles{
-        TypeRole = Qt::UserRole + 1,
-        DistanceRole,
-        VisitedRole,
-        IsWallRole,
-        IsPathRole
+        TypeRole = Qt::UserRole + 1
     };
 
     GridModel(int width, int height);
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QHash<int, QByteArray> roleNames() const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    void resizeModel(int width, int height);
+    int width();
+    int height();
+    std::vector<NodeType> nodeTypes() const;
+    void clearModel();
 
 private:
     QVector<Node> m_model;

@@ -7,10 +7,22 @@
 class CursorHelper : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(QString cursor READ cursor WRITE setCursor NOTIFY cursorChanged FINAL);
 public:
     explicit CursorHelper(QObject *parent = nullptr);
-    Q_INVOKABLE void setCursor(QString path);
-    Q_INVOKABLE void resetCursor();
+
+    QString cursor();
+
+public slots:
+
+    void setCursor(QString path);
+    void resetCursor();
+
+signals:
+    void cursorChanged();
+
+private:
+    QString m_cursor = "";
 };
 
 #endif // CURSORHELPER_H
