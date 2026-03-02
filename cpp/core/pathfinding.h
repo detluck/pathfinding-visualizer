@@ -16,13 +16,11 @@ class Pathfinding: public QObject
         Clear,
         StartNode,
         TargetNode,
-        Wall,
         Deleate,
+        Wall,
         Count
     };
     Q_ENUM(ClickType)
-
-    Q_PROPERTY(ClickType clickType READ clickType WRITE setClickType NOTIFY clickTypeChanged FINAL)
 
 public:
     explicit Pathfinding(QObject *parent = nullptr);
@@ -30,22 +28,25 @@ public:
     Q_INVOKABLE void setAlgorithm(int index);
 
     ClickType clickType();
-    void setClickType(ClickType type);
-    void setStartIndex(int index);
-    void setEndIndex(int index);
-    void setWallIndex(int index);
+    Q_INVOKABLE void setClickType(ClickType type);
+    Q_INVOKABLE void setStartIndex(const int index);
+    Q_INVOKABLE void setEndIndex(const int index);
+    Q_INVOKABLE void setWallIndex(const int index);
     void startAlgorithm();
+    void pauseAlgorithm();
+    void resumeAlgorithm();
+    void stopAlgorithm();
+    void clearGrid();
+    void deleateitem(const int index);
+    bool isValid(const int index);
+    Q_INVOKABLE void handleClick(const int index = -1);
+    GridModel* gridModel();
 
-private slots:
-    void handleClick(int index = -1);
-
-signals:
-    void clickTypeChanged();
 
 private:
     GridData collectData();
     std::unique_ptr<IAlgorithm> m_algorithm;
-    ClickType m_type = ClickType::Wall;
+    ClickType m_type;
     GridModel* m_model;
     int m_start;
     int m_end;

@@ -2,6 +2,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import App.Controller 1.0
 
 Rectangle{
     id: root
@@ -44,6 +45,7 @@ Rectangle{
             onClicked:{
                 if(svgPath !== ""){
                 cursorHelper.setCursor("Pathfinding/ui" + svgPath.substring(2))
+                controller.setClickType(Controller.StartNode)
                 }
             }
         }
@@ -60,6 +62,10 @@ Rectangle{
             Layout.preferredWidth: 150
             text: "Terminate"
             svgPath: "../assets/svgs/terminate.svg"
+
+            onClicked: {
+                controller.setClickType(Controller.Stop)
+            }
         }
         StyledButton{
             Layout.fillHeight: true
@@ -69,6 +75,7 @@ Rectangle{
             svgPath: "../assets/svgs/endNode.svg"
 
             onClicked:{
+                controller.setClickType(Controller.TargetNode)
                 if(svgPath !== ""){
                 cursorHelper.setCursor("Pathfinding/ui" + svgPath.substring(2))
                 }
@@ -87,6 +94,10 @@ Rectangle{
             Layout.preferredWidth: 150
             text: "Pause"
             svgPath: "../assets/svgs/pause.svg"
+
+            onClicked:{
+                controller.setClickType(Controller.Pause)
+            }
         }
         StyledButton{
             Layout.fillHeight: true
@@ -96,6 +107,7 @@ Rectangle{
             tipText: "Click and hold mouse button to draw walls"
 
             onClicked:{
+                controller.setClickType(Controller.Wall)
                 if(svgPath !== ""){
                 cursorHelper.setCursor("Pathfinding/ui" + svgPath.substring(2))
                 }
@@ -115,6 +127,10 @@ Rectangle{
             text: "Clear Grid"
             svgPath: "../assets/svgs/clean.svg"
             tipText: "clears the entire grid"
+
+            onClicked: {
+                controller.setClickType(Controller.Clear)
+            }
         }
 
         StyledButton{
@@ -125,6 +141,7 @@ Rectangle{
             tipText: "Click and choose the item to deleate"
 
             onClicked:{
+                controller.setClickType(Controller.Deleate)
                 if(svgPath !== ""){
                 cursorHelper.setCursor("Pathfinding/ui" + svgPath.substring(2))
                 }

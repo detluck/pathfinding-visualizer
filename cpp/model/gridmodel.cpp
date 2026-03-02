@@ -1,7 +1,7 @@
 #include "gridmodel.h"
 #include <QDebug>
 
-GridModel::GridModel(int width, int height) {
+GridModel::GridModel(QObject* parent, int width, int height) : QAbstractListModel(parent) {
     m_width = width;
     m_height = height;
     m_model.resize(width * height);
@@ -22,7 +22,7 @@ QHash<int, QByteArray> GridModel::roleNames() const
 QVariant GridModel::data(const QModelIndex &index, int role) const
 {
     qDebug() << "Called Index" << index.row();
-    qDebug() << "Role" << role;
+    qDebug() << "Role" << role << "Type" << static_cast<int>(m_model[index.row()].type);
     if(!index.isValid()){
         return QVariant();
     }
@@ -39,6 +39,16 @@ void GridModel::resizeModel(int width, int height)
     m_model.resize(width*height);
 }
 
+int GridModel::width()
+{
+    return m_width;
+}
+
+int GridModel::height()
+{
+    return m_height;
+}
+
 std::vector<NodeType> GridModel::nodeTypes() const
 {
     std::vector<NodeType> types;
@@ -53,10 +63,27 @@ std::vector<NodeType> GridModel::nodeTypes() const
 
 void GridModel::clearModel()
 {
-    for(Node& node: m_model)
+    for(int i = 0; i<m_model.size(); i++)
     {
-        node.type = NodeType::Empty;
+        m_model[i].type = NodeType::Empty;
     }
+    QModelIndex start = createIndex(0,0);
+    QModelIndex end = createIndex(m_model.size() - 1, 0);
+    emit dataChanged(start, end, {TypeRole});
+}
+
+void GridModel::setNodeType(const NodeType type, const int index)
+{
+    if(index < 0 || index > m_model.size() || m_model[index].type == type)
+    {
+        return;
+    }
+    m_model[index].type = type;
+    qDebug() << "type now" << static_cast<int>(m_model[index].type) << "index" << index;
+    QModelIndex modelIndex = createIndex(index, 0);
+    emit dataChanged(modelIndex, modelIndex, {TypeRole});
+    qDebug() << "type changed";
+
 }
 
 

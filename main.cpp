@@ -9,12 +9,16 @@ int main(int argc, char *argv[]){
     QGuiApplication app(argc, argv);
     CursorHelper cursorHelper;
     Pathfinding pathfinding;
-    GridModel gridModel(50, 30);
     QQmlApplicationEngine engine;
 
-    engine.rootContext()->setContextProperty("cursorHelper", &cursorHelper);
+    qmlRegisterUncreatableType<Pathfinding>(
+        "App.Controller", 1, 0,
+        "Controller",
+        "Enums only"
+        );
     engine.rootContext()->setContextProperty("controller", &pathfinding);
-    engine.rootContext()->setContextProperty("gridModel", &gridModel);
+    engine.rootContext()->setContextProperty("cursorHelper", &cursorHelper);
+    engine.rootContext()->setContextProperty("gridModel", pathfinding.gridModel());
     engine.loadFromModule("Pathfinding", "Main");
     if(engine.rootObjects().isEmpty())
         return -1;

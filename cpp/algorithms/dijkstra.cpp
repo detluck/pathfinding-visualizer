@@ -1,6 +1,6 @@
 #include "dijkstra.h"
 
-void Dijkstra::run()
+void Dijkstra::run(const GridData& data)
 {
 
 }

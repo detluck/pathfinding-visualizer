@@ -7,9 +7,8 @@
 
 //Will be reworked
 Pathfinding::Pathfinding(QObject *parent)
-    :QObject(parent)
+    :QObject(parent), m_model(new GridModel(this))
 {
-    connect(this, &Pathfinding::clickTypeChanged, this, &Pathfinding::handleClick);
 }
 
 void Pathfinding::setAlgorithm(int index)
@@ -34,72 +33,146 @@ void Pathfinding::setAlgorithm(int index)
     }
 }
 
-void Pathfinding::handleClick(int index)
+void Pathfinding::setClickType(ClickType type)
 {
-    //Not finished
+    if(type == m_type)
+    {
+        return;
+    }
+    m_type = type;
+    qDebug() << "ClickType set" << type;
+}
+
+Pathfinding::ClickType Pathfinding::clickType()
+{
+    return m_type;
+}
+
+void Pathfinding::setStartIndex(const int index)
+{
+    if(m_start != -1)
+    {
+        qDebug() << "changing nodetype to empty";
+        m_model->setNodeType(NodeType::Empty, m_start);
+    }
+    if(isValid(index))
+    {
+        m_start = index;
+        qDebug() << "Setting start index in model";
+        m_model->setNodeType(NodeType::Start, m_start);
+    }
+}
+
+void Pathfinding::setEndIndex(const int index)
+{
+    if(m_end != -1)
+    {
+        m_model->setNodeType(NodeType::Empty, m_end);
+    }
+    if(isValid(index))
+    {
+        m_end = index;
+        m_model->setNodeType(NodeType::End, m_end);
+    }
+}
+
+void Pathfinding::setWallIndex(const int index)
+{
+    if(isValid(index))
+    {
+        m_model->setNodeType(NodeType::Wall, index);
+    }
+}
+
+void Pathfinding::startAlgorithm()
+{
+    if(m_algorithm){
+    GridData data = collectData();
+    m_algorithm->run(data);
+    }
+}
+
+void Pathfinding::pauseAlgorithm()
+{
+    if(m_algorithm)
+    {
+        m_algorithm->pause();
+    }
+}
+
+void Pathfinding::resumeAlgorithm()
+{
+    if(m_algorithm)
+    {
+        m_algorithm->resume();
+    }
+}
+
+void Pathfinding::stopAlgorithm()
+{
+    if(m_algorithm)
+    {
+        m_algorithm->stop();
+    }
+}
+
+void Pathfinding::clearGrid()
+{
+    m_model->clearModel();
+}
+
+void Pathfinding::deleateitem(const int index)
+{
+    if(isValid(index)){
+    m_model->setNodeType(NodeType::Empty, index);
+    }
+}
+
+bool Pathfinding::isValid(const int index)
+{
+    return index >= 0 && index < m_model->rowCount();
+}
+
+void Pathfinding::handleClick(const int index)
+{
     switch(m_type)
     {
     case ClickType::Start:
-        Pathfinding::startAlgorithm();
+        startAlgorithm();
         break;
     case ClickType::Pause:
-        m_algorithm->pause();
+        pauseAlgorithm();
         break;
     case ClickType::Resume:
-        m_algorithm->resume();
+        resumeAlgorithm();
         break;
     case ClickType::Stop:
-        m_algorithm->stop();
+        stopAlgorithm();
         break;
     case ClickType::Clear:
-        m_model->clearModel();
+        clearGrid();
         break;
     case ClickType::StartNode:
+        qDebug() << "Starting startNode";
         setStartIndex(index);
         break;
     case ClickType::TargetNode:
         setEndIndex(index);
         break;
     case ClickType::Deleate:
+        deleateitem(index);
         break;
     case ClickType::Wall:
+        setWallIndex(index);
         break;
     default:
         break;
     }
 }
 
-void Pathfinding::setClickType(ClickType type)
+GridModel *Pathfinding::gridModel()
 {
-    m_type = type;
-    emit clickTypeChanged();
-}
-
-void Pathfinding::setStartIndex(int index)
-{
-    if(index >= 0 || index <= m_model->rowCount())
-    {
-        m_start = index;
-    }
-}
-
-void Pathfinding::setEndIndex(int index)
-{
-    if(index >= 0 || index <= m_model->rowCount())
-    {
-        m_end = index;
-    }
-}
-
-void Pathfinding::setWallIndex(int index)
-{
-
-}
-
-void Pathfinding::startAlgorithm()
-{
-    GridData data = collectData();
-    m_algorithm->run(data);
+    return m_model;
 }
 
 GridData Pathfinding::collectData()
@@ -112,11 +185,4 @@ GridData Pathfinding::collectData()
     data.endIndex = m_end;
     types = m_model->nodeTypes();
     return data;
-}
-
-
-
-Pathfinding::ClickType Pathfinding::clickType()
-{
-    return m_type;
 }

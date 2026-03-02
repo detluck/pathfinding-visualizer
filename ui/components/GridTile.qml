@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Layouts
+import App.Controller 1.0
 
 Rectangle{
     id: root
@@ -18,7 +19,7 @@ Rectangle{
         sourceSize.width: width
         Layout.alignment: verticalAlignment
         fillMode: Image.PreserveAspectFit
-        visible: root.svgPath !== ""
+        visible: root.svgPath !== "" && type !== 0
         asynchronous: true
     }
 
@@ -26,10 +27,23 @@ Rectangle{
         id: mouseArea
         anchors.fill: parent
         hoverEnabled: true
+        preventStealing: true
+        drag.target: null
 
         onClicked: {
+            controller.handleClick(index)
             if(cursorHelper.cursor !== ""){
                 svgPath = "qrc:/" + cursorHelper.cursor;
+            }
+        }
+
+        onEntered: {
+            if(mouseArea.pressedButtons & Qt.LeftButton)
+            {
+                controller.handleClick(index)
+                if(cursorHelper.cursor !== ""){
+                    svgPath = "qrc:/" + cursorHelper.cursor;
+                }
             }
         }
     }

@@ -17,7 +17,7 @@ public:
         TypeRole = Qt::UserRole + 1
     };
 
-    GridModel(int width, int height);
+    explicit GridModel(QObject* parent = nullptr, int width = 50, int height = 50);
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QHash<int, QByteArray> roleNames() const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
@@ -26,6 +26,7 @@ public:
     int height();
     std::vector<NodeType> nodeTypes() const;
     void clearModel();
+    void setNodeType(const NodeType type, const int index);
 
 private:
     QVector<Node> m_model;

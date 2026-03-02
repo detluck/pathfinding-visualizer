@@ -1,6 +1,6 @@
 #include "astar.h"
 
-void AStar::run()
+void AStar::run(const GridData& data)
 {
 
 }
