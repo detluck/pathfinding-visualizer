@@ -136,8 +136,8 @@ Rectangle{
         StyledButton{
             Layout.fillHeight: true
             Layout.preferredWidth: 150
-            text: "Deleate Item"
-            svgPath: "../assets/svgs/deleate.svg"
+            text: "Delete Item"
+            svgPath: "../assets/svgs/delete.svg"
             tipText: "Click and choose the item to deleate"
 
             onClicked:{
