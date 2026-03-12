@@ -34,6 +34,11 @@ Rectangle{
             Layout.preferredWidth: 150
             text: "Start"
             svgPath: "../assets/svgs/start.svg"
+
+            onClicked: {
+                controller.setClickType(Controller.Start)
+                controller.handleClick()
+            }
         }
         StyledButton{
             Layout.fillHeight: true
@@ -43,10 +48,8 @@ Rectangle{
             svgPath: "../assets/svgs/startNode.svg"
 
             onClicked:{
-                if(svgPath !== ""){
-                cursorHelper.setCursor("Pathfinding/ui" + svgPath.substring(2))
                 controller.setClickType(Controller.StartNode)
-                }
+                changeCursor()
             }
         }
         StyledButton{
@@ -65,6 +68,7 @@ Rectangle{
 
             onClicked: {
                 controller.setClickType(Controller.Stop)
+                controller.handleClick()
             }
         }
         StyledButton{
@@ -76,9 +80,7 @@ Rectangle{
 
             onClicked:{
                 controller.setClickType(Controller.TargetNode)
-                if(svgPath !== ""){
-                cursorHelper.setCursor("Pathfinding/ui" + svgPath.substring(2))
-                }
+                changeCursor()
             }
         }
         StyledButton{
@@ -97,6 +99,7 @@ Rectangle{
 
             onClicked:{
                 controller.setClickType(Controller.Pause)
+                controller.handleClick()
             }
         }
         StyledButton{
@@ -108,9 +111,7 @@ Rectangle{
 
             onClicked:{
                 controller.setClickType(Controller.Wall)
-                if(svgPath !== ""){
-                cursorHelper.setCursor("Pathfinding/ui" + svgPath.substring(2))
-                }
+                changeCursor()
             }
         }
         StyledButton{
@@ -130,6 +131,7 @@ Rectangle{
 
             onClicked: {
                 controller.setClickType(Controller.Clear)
+                controller.handleClick()
             }
         }
 
@@ -142,9 +144,7 @@ Rectangle{
 
             onClicked:{
                 controller.setClickType(Controller.Deleate)
-                if(svgPath !== ""){
-                cursorHelper.setCursor("Pathfinding/ui" + svgPath.substring(2))
-                }
+                changeCursor()
             }
         }
     }

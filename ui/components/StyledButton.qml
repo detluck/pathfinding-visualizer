@@ -62,4 +62,10 @@ Button{
             Layout.alignment: verticalAlignment
         }
     }
+
+    function changeCursor(){
+        if(svgPath !== ""){
+        cursorHelper.setCursor("Pathfinding/ui" + svgPath.substring(2))
+        }
+    }
 }

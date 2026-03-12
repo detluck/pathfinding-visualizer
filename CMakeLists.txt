@@ -66,7 +66,7 @@ qt_add_qml_module(app
         ui/assets/svgs/pause.svg
         ui/assets/svgs/start.svg
         ui/assets/svgs/terminate.svg
-        ui/assets/svgs/deleate.svg
+        ui/assets/svgs/delete.svg
         ui/assets/svgs/wall.svg
 )
 
