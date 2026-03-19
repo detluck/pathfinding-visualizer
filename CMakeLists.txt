@@ -68,6 +68,7 @@ qt_add_qml_module(app
         ui/assets/svgs/terminate.svg
         ui/assets/svgs/delete.svg
         ui/assets/svgs/wall.svg
+        SOURCES cpp/algorithms/worker.h cpp/algorithms/worker.cpp
 )
 
 target_link_libraries(app PRIVATE Qt6::Quick Qt6::Qml Qt6::Svg)
