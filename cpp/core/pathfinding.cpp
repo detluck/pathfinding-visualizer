@@ -183,6 +183,6 @@ GridData Pathfinding::collectData()
     data.height = m_model->height();
     data.startIndex = m_start;
     data.endIndex = m_end;
-    types = m_model->nodeTypes();
+    data.nodes = m_model->nodeTypes();
     return data;
 }
