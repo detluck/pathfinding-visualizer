@@ -23,7 +23,10 @@ std::vector<int> get_neighbors(int current, const GridData& data)
      */
     int deltaRow[] = {-1,1,0,0};
     int deltaCol[] = {0,0,-1,1};
-
+    /**
+     * our loop that looks for neighbors
+     * it counts until 4 because we have 4 directions: 0,1,2,3;
+     */
     for(int i = 0; i < 4; i++){
         /**
          * inside we calculate these 4 directions by checking them with i
