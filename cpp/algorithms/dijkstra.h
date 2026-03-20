@@ -10,6 +10,7 @@ public:
     void setState(const AlgoState algoState) override;
     void init(const GridData& data) override;
     int step() override;
+    std::vector<int> getPath() override;
     AlgoState state() override;
 
 private:
@@ -17,10 +18,7 @@ private:
     void processNode(int current) override;
 
 private:
-    std::queue<int> m_queue;
-    std::vector<bool> m_visited;
-    GridData m_data;
-    AlgoState m_state = AlgoState::Stopped;
+    std::vector<int> m_cameFrom;
 };
 
 

@@ -1,46 +1,6 @@
 #include "dijkstra.h"
 #include <queue> 
 
-void Dijkstra::run(const GridData& data)
-{
-    ///firstly we initialize our queue
-    std::queue<int> myQueue;
-
-    ///then put our starting position inside our queue
-    myQueue.push(data.startIndex);
-
-    /**
-     * 
-     * and we initialize our list with visited nodes with the size of total nodes we have.
-     * At the start have not visited any nodes so we just put false.
-     * as we have put our starting position, we say that we have been here
-     */
-    std::vector<bool> visited(data.nodes.size(), false);
-    visited[data.startIndex] = true;
-
-    std::vector<int> cameFrom(data.nodes.size(), -1);
-    std::vector<int> neighbors;
-
-    while(!myQueue.empty()) {
-        int current = myQueue.front();
-        myQueue.pop();
-
-        if(current == data.endIndex) {
-            break;
-        }
-        
-        neighbors = neighbors(current);
-
-        for(int next : neighbors) {
-            if(!visited[next]){
-                visited[next] = true;
-                cameFrom[next] = current;
-                myQueue.push(next);
-            }
-        }
-    }
-}
-
 void Dijkstra::setState(const AlgoState algoState)
 {
     if(m_state != algoState){
@@ -55,11 +15,12 @@ void Dijkstra::init(const GridData &data)
     m_queue.push(m_data.startIndex);
     m_visited = std::vector<bool> (data.nodes.size(), false);
     m_visited[m_data.startIndex] = true;
+    m_cameFrom = std::vector<int>(m_data.nodes.size(), -1);
 }
 
 int Dijkstra::step()
 {
-    //stoped, thread stopps
+    //stopped, thread stops
     if(m_state == AlgoState::Stopped){
         return -1;
     }
@@ -100,12 +61,9 @@ std::vector<int> Dijkstra::neighbors(int current)
     /**
      * there are formulas for calculating rows and columns from grid
      * we are lucky that we have grid so we can count it by these two formula
-     * how it works, example: we have number 12 and our grid is 5x5
-     * we divide 12/5 and get 2. this is index 2 (row)
-     * we get the leftover from 12/5 and get two 12-(5*2)=2. this is our column
      */
-    int row = current / data.width;
-    int col = current % data.width;
+    int row = current / m_data.width;
+    int col = current % m_data.width;
     /**
      * created two arrays with directions
      * (-1,0) - up
@@ -129,21 +87,16 @@ std::vector<int> Dijkstra::neighbors(int current)
         int next_row = row + deltaRow[i];
         int next_col = col + deltaCol[i];
 
-        /// basic check to be sure we are not beyond the borders
-        if (next_row >= 0 && next_row < data.height && next_col >= 0 && next_col < data.width) {
+        if (next_row >= 0 && next_row < m_data.height && next_col >= 0 && next_col < m_data.width) {
 
-            /**
-             * because of the fact that we have 1D array,
-             * we have to use this formula to convert our 2D data to 1D
-             */
-            int index = next_row * data.width + next_col;
+            int index = next_row * m_data.width + next_col;
             /**
              * we converted our 2D coordinates into our 1D array
              * so now we can check whether this position has already been in our queue
              * if it has not, and if the position is not the wall
              * then we put our position in the visited list
              */
-            if(data.nodes[index] != NodeType::Wall) {
+            if(m_data.nodes[index] != NodeType::Wall) {
                 neighbors.push_back(index);
             }
         }
@@ -153,5 +106,16 @@ std::vector<int> Dijkstra::neighbors(int current)
 
 void Dijkstra::processNode(int current)
 {
-    //put your code there
+    std::vector<int> current_neighbors = neighbors(current);
+    for(int next : current_neighbors) {
+
+            if(!m_visited[next]){
+
+                m_visited[next] = true;
+
+                m_cameFrom[next] = current;
+
+                m_queue.push(next);
+            }
+        }
 }
