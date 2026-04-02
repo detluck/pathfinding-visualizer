@@ -18,33 +18,43 @@ void Dijkstra::init(const GridData &data)
     m_cameFrom = std::vector<int>(m_data.nodes.size(), -1);
 }
 
-int Dijkstra::step()
+StepResult Dijkstra::step()
 {
     //stopped, thread stops
     if(m_state == AlgoState::Stopped){
-        return -1;
+        return {StepResultType::Finished, -1};
     }
 
     //paused code not doing anything, thread continue
     if(m_state == AlgoState::Paused){
-        return -2;
+        return {StepResultType::Paused, -1};
     }
 
     if(m_queue.empty()){
-        return -1;
+        return {StepResultType::Finished, -1};
     }
 
     int current = m_queue.front();
     m_queue.pop();
 
     if(current == m_data.endIndex){
-        return -1;
+        return {StepResultType::Finished, current};
     }
 
     processNode(current);
 
     //return current node index for signal emit in worker
-    return current;
+    return {StepResultType::Running, current};
+}
+
+void Dijkstra::blazzingRun()
+{
+
+}
+
+std::vector<int> Dijkstra::getPath()
+{
+    //toDO return vector with parents, save parent to m_parent during single step
 }
 
 AlgoState Dijkstra::state()

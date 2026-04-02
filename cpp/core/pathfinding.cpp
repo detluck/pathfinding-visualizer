@@ -9,6 +9,9 @@
 Pathfinding::Pathfinding(QObject *parent)
     :QObject(parent), m_model(new GridModel(this))
 {
+    timer = new QTimer(this);
+    timer->setInterval(50);
+    connect(timer, &QTimer::timeout, this, &Pathfinding::onStep);
 }
 
 void Pathfinding::setAlgorithm(int index)
@@ -88,41 +91,58 @@ void Pathfinding::startAlgorithm()
 {
     if(m_algorithm){
     GridData data = collectData();
-    m_algorithm->run(data);
+    m_algorithm->init(data);
     }
-}
-
-void Pathfinding::pauseAlgorithm()
-{
-    if(m_algorithm)
-    {
-        m_algorithm->pause();
-    }
-}
-
-void Pathfinding::resumeAlgorithm()
-{
-    if(m_algorithm)
-    {
-        m_algorithm->resume();
+    if(!timer->isActive()){
+        timer->start();
     }
 }
 
 void Pathfinding::stopAlgorithm()
 {
-    if(m_algorithm)
-    {
-        m_algorithm->stop();
+    if(timer->isActive()){
+        timer->stop();
+    }
+}
+
+void Pathfinding::resumeAlgorithm()
+{
+    if(!timer->isActive()){
+        timer->start();
+    }
+}
+
+void Pathfinding::setSpeed(const int speed)
+{
+    if(speed == 0){
+        if(timer->isActive()){
+            timer->stop();
+        }
+        //solveinstant
+    }
+    else{
+        if(!timer->isActive()){
+            timer->start(speed);
+        }
+        else{
+            timer->setInterval(speed);
+        }
     }
 }
 
 void Pathfinding::clearGrid()
 {
+    if(timer->isActive()){
+        timer->stop();
+    }
     m_model->clearModel();
 }
 
 void Pathfinding::deleateitem(const int index)
 {
+    if(timer->isActive()){
+        timer->stop();
+    }
     if(isValid(index)){
     m_model->setNodeType(NodeType::Empty, index);
     }
@@ -141,10 +161,10 @@ void Pathfinding::handleClick(const int index)
         startAlgorithm();
         break;
     case ClickType::Pause:
-        pauseAlgorithm();
+        stopAlgorithm();
         break;
     case ClickType::Resume:
-        resumeAlgorithm();
+        startAlgorithm();
         break;
     case ClickType::Stop:
         stopAlgorithm();
@@ -185,4 +205,23 @@ GridData Pathfinding::collectData()
     data.endIndex = m_end;
     data.nodes = m_model->nodeTypes();
     return data;
+}
+
+void Pathfinding::onStep()
+{
+    auto result = m_algorithm->step();
+
+    switch(result.state) {
+        case StepResultType::Running:
+            m_model->setNodeType(NodeType::Visited, result.index);
+            break;
+        case StepResultType::Paused:
+            //do nothing
+            break;
+        case StepResultType::Finished:
+            timer->stop();
+            m_model->reconstructPath(m_algorithm->getPath());
+            emit finished();
+            break;
+    }
 }

@@ -86,5 +86,12 @@ void GridModel::setNodeType(const NodeType type, const int index)
 
 }
 
+void GridModel::reconstructPath(const std::vector<int>& path)
+{
+    for( int index: path){
+        setNodeType(NodeType::Path, index);
+    }
+}
+
 
 

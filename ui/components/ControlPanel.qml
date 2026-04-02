@@ -19,10 +19,17 @@ Rectangle{
         StyledText{
             Layout.fillWidth: true
             Layout.fillHeight: true
-            Layout.columnSpan: 2
             id: titel
             text: "Pathfinding-Visualizer"
         }
+
+        SpeedSlider {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            onValueChanged: controller.setSpeed(value);
+        }
+
         AlgoSelector{
             id: selector
             Layout.fillHeight: true

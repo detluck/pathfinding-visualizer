@@ -7,6 +7,7 @@
 #include <QModelIndex>
 #include <QVariant>
 #include "node.h"
+#include <vector>
 
 class GridModel : public QAbstractListModel
 {
@@ -27,6 +28,7 @@ public:
     std::vector<NodeType> nodeTypes() const;
     void clearModel();
     void setNodeType(const NodeType type, const int index);
+    void reconstructPath(const std::vector<int>& path);
 
 private:
     QVector<Node> m_model;
