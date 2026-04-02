@@ -1,0 +1,73 @@
+# 📍 Pathfinding Visualizer
+
+A high-performance **C++/Qt** application designed to visualize pathfinding algorithms on an interactive grid. This tool provides a real-time look at how algorithms "think," featuring step-by-step execution, speed control, and automatic path reconstruction.
+
+> [!NOTE]
+> This project is built using the Qt Framework. Ensure you have the proper kit configured in your IDE to compile and run the application.
+
+---
+
+## 🚀 Features
+
+* **Step-by-Step Visualization:** Watch algorithms explore the grid in real-time (Dijkstra, A* for now).
+* **Dynamic Controls:** Adjustable execution speed, plus the ability to pause and resume at any point.
+* **Interactive Grid UI:** Easily place walls, set start/end points, and view visited nodes versus the final path.
+* **Modular Design:** Clean separation between the core algorithm logic and the graphical interface.
+
+---
+## 📦 Installation
+
+### Option 1: Download Pre-built Binaries
+You can skip the compilation process by downloading the latest stable version directly:
+1. Go to the [Latest Release](https://github.com/detluck/pathfinding-visualizer/releases/latest) page.
+2. **Windows:** Download the `.exe` file.
+3. **macOS:** Download the macOS executable/disk image.
+
+### Option 2: Build from Source (CMake)
+
+Dependencies:
+
+-   `qt6-declarative`
+-   `gcc-libs`
+-   `qt6-base`
+
+Build dependencies:
+
+-   [`cmake`](https://cmake.org)
+-   [`ninja`](https://github.com/ninja-build/ninja)
+
+To install the shell manually, install all dependencies, then:
+
+# 1. Clone this repo
+```sh
+git clone https://github.com/detluck/pathfinding-visualizer.git
+cd pathfinding-visualizer
+```
+
+# 2. Create a build directory
+```sh
+mkdir build && cd build
+```
+
+# 3. Configure and build
+```sh
+cmake ..
+cmake --build .
+```
+
+## 🛠️ Usage
+
+* **Start / Resume:** Initiate the search or continue from a paused state.
+* **Pause:** Temporarily halt the algorithm to inspect the current frontier.
+* **Stop:** Terminate the current search and reset the grid to its initial state.
+* **Speed Control:** Use the integrated slider to adjust the interval between steps for faster or more detailed viewing.
+> [!NOTE]
+> Setting the speed to the **maximal value ("Blazing Fast")** effectively removes the delay, solving the entire grid instantly in just a few milliseconds.
+
+---
+
+## 🔮 Future Improvements
+
+* [ ] **Algorithm Expansion:** Add support for Breadth-First Search (BFS), and Depth-First Search (DFS).
+* [ ] **Visual Polish:** Implement smooth path animations and transition effects.
+* [ ] **Complex Grids:** Support for weighted edges (terrain costs) and advanced heuristic visualizations.
