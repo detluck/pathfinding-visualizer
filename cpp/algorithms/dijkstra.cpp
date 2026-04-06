@@ -66,6 +66,7 @@ std::vector<int> Dijkstra::getPath()
 {
     std::vector<int> path;
     int current = m_data.endIndex;
+    //bug: when I push slider to maximum, window terminates and shows this line of code
     if(m_cameFrom[current] == -1) {
         return path;
     }
