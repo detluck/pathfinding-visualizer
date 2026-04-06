@@ -1,5 +1,6 @@
 #include "dijkstra.h"
 #include <queue> 
+#include <algorithm>
 
 void Dijkstra::setState(const AlgoState algoState)
 {
@@ -47,14 +48,29 @@ StepResult Dijkstra::step()
     return {StepResultType::Running, current};
 }
 
-void Dijkstra::blazzingRun()
-{
+void Dijkstra::blazzingRun(){
+    while(step().state == StepResultType::Running) {
 
+    }
 }
 
 std::vector<int> Dijkstra::getPath()
 {
-    //toDO return vector with parents, save parent to m_parent during single step
+    std::vector<int> path;
+    int current = m_data.endIndex;
+    if(m_cameFrom[current] == -1) {
+        return path;
+    }
+    while (current != m_data.startIndex) {
+        path.push_back(current);
+        current = m_cameFrom[current];
+    }
+    // we got a path but it is reversed.
+    // so we add the start node at the very end
+    path.push_back(m_data.startIndex);
+    // and reveerse our path 
+    std::reverse(path.begin(), path.end());
+    return path;
 }
 
 AlgoState Dijkstra::state()
