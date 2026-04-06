@@ -26,6 +26,14 @@ Rectangle{
                     default: return "white";
                 }
             }
+            svgPath: getRightSVG(type)
+            function getRightSVG(type){
+                switch(type){
+                        case 4: return "../assets/svgs/startNode.svg"
+                        case 5: return "../assets/svgs/endNode.svg"
+                        default: return ""
+                }
+            }
         }
 
         MouseArea {
@@ -47,12 +55,12 @@ Rectangle{
                     controller.handleClick(idx)
 
 
-                    if (cursorHelper.cursor !== "") {
-                        var item = grid.itemAtIndex(idx)
-                        if (item) {
-                            item.svgPath = "qrc:/" + cursorHelper.cursor
-                        }
-                    }
+                    // if (cursorHelper.cursor !== "") {
+                    //     var item = grid.itemAtIndex(idx)
+                    //     if (item) {
+                    //         item.svgPath = "qrc:/" + cursorHelper.cursor
+                    //     }
+                    // }
                 }
 
                 onPressed: {

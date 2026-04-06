@@ -78,7 +78,36 @@ void GridModel::setNodeType(const NodeType type, const int index)
     {
         return;
     }
-    m_model[index].type = type;
+    Node& node = m_model[index];
+
+    if(node.type == type)
+        return;
+
+    switch(type) {
+    case NodeType::Visited:
+        // dont override start/end
+        if(node.type == NodeType::Start || node.type == NodeType::End)
+            return;
+        node.type = NodeType::Visited;
+        break;
+
+    case NodeType::Wall:
+        // only empty cells could be walls
+        if(node.type == NodeType::Empty)
+            node.type = NodeType::Wall;
+        break;
+
+    case NodeType::Path:
+        // dont override start/end
+        if(node.type == NodeType::Start || node.type == NodeType::End)
+            return;
+        node.type = NodeType::Path;
+        break;
+
+    default:
+        node.type = type;
+        break;
+    }
     qDebug() << "type now" << static_cast<int>(m_model[index].type) << "index" << index;
     QModelIndex modelIndex = createIndex(index, 0);
     emit dataChanged(modelIndex, modelIndex, {TypeRole});
