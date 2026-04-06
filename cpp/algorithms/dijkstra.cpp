@@ -19,6 +19,10 @@ void Dijkstra::init(const GridData &data)
     m_cameFrom = std::vector<int>(m_data.nodes.size(), -1);
 }
 
+void Dijkstra::run(const GridData& data)
+{
+}
+
 StepResult Dijkstra::step()
 {
     //stopped, thread stops
