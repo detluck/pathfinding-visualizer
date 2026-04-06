@@ -54,6 +54,7 @@ private:
     GridModel* m_model;
     int m_start;
     int m_end;
+    bool paused = false;
     QTimer* timer;
 
 signals:

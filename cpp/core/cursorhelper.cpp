@@ -31,5 +31,7 @@ void CursorHelper::setCursor(QString path){
 
 void CursorHelper::resetCursor(){
     m_cursor = "";
-    QGuiApplication::restoreOverrideCursor();
+    while(QGuiApplication::overrideCursor()){
+        QGuiApplication::restoreOverrideCursor();
+    }
 }

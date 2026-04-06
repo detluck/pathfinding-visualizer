@@ -45,6 +45,7 @@ Rectangle{
             onClicked: {
                 controller.setClickType(Controller.Start)
                 controller.handleClick()
+                cursorHelper.resetCursor()
             }
         }
         StyledButton{
@@ -76,6 +77,7 @@ Rectangle{
             onClicked: {
                 controller.setClickType(Controller.Stop)
                 controller.handleClick()
+                cursorHelper.resetCursor()
             }
         }
         StyledButton{
@@ -107,6 +109,7 @@ Rectangle{
             onClicked:{
                 controller.setClickType(Controller.Pause)
                 controller.handleClick()
+                cursorHelper.resetCursor()
             }
         }
         StyledButton{
@@ -139,6 +142,7 @@ Rectangle{
             onClicked: {
                 controller.setClickType(Controller.Clear)
                 controller.handleClick()
+                cursorHelper.resetCursor()
             }
         }
 

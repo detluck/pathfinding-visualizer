@@ -5,7 +5,6 @@
 #include "cpp/model/gridmodel.h"
 #include <QDebug>
 
-//Will be reworked
 Pathfinding::Pathfinding(QObject *parent)
     :QObject(parent), m_model(new GridModel(this))
 {
@@ -100,8 +99,13 @@ void Pathfinding::startAlgorithm()
 
 void Pathfinding::stopAlgorithm()
 {
-    if(timer->isActive()){
+    if(timer->isActive() && !paused){
         timer->stop();
+        paused = true;
+    }
+    else if(!timer->isActive() && paused && m_type == ClickType::Pause){
+        timer->start();
+        paused = false;
     }
 }
 
@@ -115,18 +119,31 @@ void Pathfinding::resumeAlgorithm()
 void Pathfinding::setSpeed(const int speed)
 {
     if(speed == 0){
-        if(timer->isActive()){
-            timer->stop();
+        timer->stop();
+
+        while(true){
+            auto result = m_algorithm->step();
+
+            if(result.state == StepResultType::Finished){
+                m_model->reconstructPath(m_algorithm->getPath());
+                emit finished();
+                break;
+            }
+
+            if(result.state == StepResultType::Running){
+                m_model->setNodeType(NodeType::Visited, result.index);
+            }
         }
-        //solveinstant
+        return;
     }
-    else{
-        if(!timer->isActive()){
-            timer->start(speed);
-        }
-        else{
-            timer->setInterval(speed);
-        }
+
+    bool wasRunning = timer->isActive();
+
+    timer->stop();
+    timer->setInterval(speed);
+
+    if(wasRunning){
+        timer->start();
     }
 }
 
