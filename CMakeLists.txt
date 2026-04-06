@@ -74,6 +74,21 @@ qt_add_qml_module(app
 
 target_link_libraries(app PRIVATE Qt6::Quick Qt6::Qml Qt6::Svg)
 
+include(GNUInstallDirs)
+
+install(TARGETS app
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+    BUNDLE  DESTINATION .
+)
+
+# Generate and install a deploy script that installs the QML module + plugins properly
+qt_generate_deploy_qml_app_script(
+    TARGET app
+    OUTPUT_SCRIPT deploy_qml_script
+)
+
+install(SCRIPT ${deploy_qml_script})
+
 set_target_properties(app PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.pathfinding.project
     MACOSX_BUNDLE TRUE
