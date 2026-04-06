@@ -2,6 +2,7 @@
 #include <queue> 
 #include <algorithm>
 
+
 void Dijkstra::setState(const AlgoState algoState)
 {
     if(m_state != algoState){
@@ -12,15 +13,18 @@ void Dijkstra::setState(const AlgoState algoState)
 void Dijkstra::init(const GridData &data)
 {
     m_data = data;
+
     m_queue = std::queue<int>();
     m_queue.push(m_data.startIndex);
     m_visited = std::vector<bool> (data.nodes.size(), false);
     m_visited[m_data.startIndex] = true;
     m_cameFrom = std::vector<int>(m_data.nodes.size(), -1);
+    m_state = AlgoState::Running;
 }
 
 void Dijkstra::run(const GridData& data)
 {
+    init(data);
 }
 
 StepResult Dijkstra::step()
