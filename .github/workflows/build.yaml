@@ -37,11 +37,26 @@ jobs:
           arch: "clang_64"
           cache: true
 
-      # ----- Build with Ninja -----
-      - name: Configure (Ninja)
+      # ----- Windows: MSVC toolchain (matches win64_msvc2019_64) -----
+      - name: Set up MSVC dev environment
+        if: runner.os == 'Windows'
+        uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Configure (Windows - MSVC)
+        if: runner.os == 'Windows'
+        run: cmake -S . -B build -G "Visual Studio 17 2022" -A x64
+
+      - name: Build (Windows - MSVC)
+        if: runner.os == 'Windows'
+        run: cmake --build build --config Release
+
+      # ----- macOS: Ninja -----
+      - name: Configure (macOS - Ninja)
+        if: runner.os == 'macOS'
         run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
 
-      - name: Build (Ninja)
+      - name: Build (macOS - Ninja)
+        if: runner.os == 'macOS'
         run: cmake --build build
 
       # ----- Deploy Qt runtimes -----
@@ -49,7 +64,7 @@ jobs:
         if: runner.os == 'Windows'
         shell: pwsh
         run: |
-          $exe = "$PWD\build\app.exe"
+          $exe = "$PWD\build\Release\app.exe"
           if (!(Test-Path $exe)) { throw "Expected $exe but it doesn't exist." }
 
           # Bundle Qt DLLs + plugins + QML imports
@@ -57,7 +72,7 @@ jobs:
 
           # Stage distributable folder
           New-Item -ItemType Directory -Force dist\PathfindingVisualizer-win | Out-Null
-          Copy-Item "$PWD\build\*" "dist\PathfindingVisualizer-win" -Recurse -Force
+          Copy-Item "$PWD\build\Release\*" "dist\PathfindingVisualizer-win" -Recurse -Force
 
           # Zip it
           Compress-Archive -Path dist\PathfindingVisualizer-win\* -DestinationPath dist\PathfindingVisualizer-windows.zip
@@ -71,9 +86,7 @@ jobs:
             ls -la build || true
             exit 1
           fi
-
           macdeployqt "$APP_PATH" -qmldir="$GITHUB_WORKSPACE/ui"
-
           mkdir -p dist
           ditto -c -k --sequesterRsrc --keepParent "$APP_PATH" "dist/PathfindingVisualizer-macos.zip"
 
