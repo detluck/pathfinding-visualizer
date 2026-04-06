@@ -66,13 +66,15 @@ std::vector<int> Dijkstra::getPath()
 {
     std::vector<int> path;
     int current = m_data.endIndex;
-    //bug: when I push slider to maximum, window terminates and shows this line of code
-    if(m_cameFrom[current] == -1) {
+    //in case of problems: change to this line instead if(m_cameFrom[current] == -1)
+    if (current < 0 || current >= m_cameFrom.size() || m_cameFrom[current] == -1) {
         return path;
     }
     while (current != m_data.startIndex) {
         path.push_back(current);
         current = m_cameFrom[current];
+        //in case of problems: comment lower line
+        if (current == -1 || path.size() > m_data.nodes.size()) break;
     }
     // we got a path but it is reversed.
     // so we add the start node at the very end
