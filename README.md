@@ -17,7 +17,7 @@ A high-performance **C++/Qt** application designed to visualize pathfinding algo
 ---
 ## 📦 Installation
 
-### Option 1: Download Pre-built Binaries
+### Option 1: Download Pre-built Binaries (in the future, not working yet)
 You can skip the compilation process by downloading the latest stable version directly:
 1. Go to the [Latest Release](https://github.com/detluck/pathfinding-visualizer/releases/latest) page.
 2. **Windows:** Download the `.exe` file.
