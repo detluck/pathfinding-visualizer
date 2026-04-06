@@ -9,6 +9,7 @@ class Pathfinding: public QObject
 {
     Q_OBJECT
 
+public:
     enum class ClickType{
         Start,
         Pause,
