@@ -44,11 +44,15 @@ jobs:
 
       - name: Configure (Windows - MSVC)
         if: runner.os == 'Windows'
-        run: cmake -S . -B build -G "Visual Studio 17 2022" -A x64
+        run: cmake -S . -B build -G "Visual Studio 17 2022" -A x64 -DCMAKE_INSTALL_PREFIX="${{ github.workspace }}\install"
 
       - name: Build (Windows - MSVC)
         if: runner.os == 'Windows'
         run: cmake --build build --config Release
+      
+      - name: Install (Windows)
+        if: runner.os == 'Windows'
+        run: cmake --install build --config Release
 
       # ----- macOS: Ninja -----
       - name: Configure (macOS - Ninja)
@@ -64,18 +68,15 @@ jobs:
         if: runner.os == 'Windows'
         shell: pwsh
         run: |
-          $exe = "$PWD\build\Release\app.exe"
+          $exe = "$PWD\install\bin\app.exe"
           if (!(Test-Path $exe)) { throw "Expected $exe but it doesn't exist." }
 
-          # Bundle Qt DLLs + plugins + QML imports
+          # Deploy Qt DLLs + plugins + QML imports
           windeployqt --release --qmldir "$PWD\ui" $exe
 
-          # Stage distributable folder
-          New-Item -ItemType Directory -Force dist\PathfindingVisualizer-win | Out-Null
-          Copy-Item "$PWD\build\Release\*" "dist\PathfindingVisualizer-win" -Recurse -Force
-
-          # Zip it
-          Compress-Archive -Path dist\PathfindingVisualizer-win\* -DestinationPath dist\PathfindingVisualizer-windows.zip
+          # Stage and zip the install tree
+          New-Item -ItemType Directory -Force dist | Out-Null
+          Compress-Archive -Path "$PWD\install\*" -DestinationPath dist\PathfindingVisualizer-windows.zip
 
       - name: Deploy Qt runtime (macOS)
         if: runner.os == 'macOS'
