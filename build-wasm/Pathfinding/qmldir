@@ -1,0 +1,16 @@
+module Pathfinding
+typeinfo app.qmltypes
+prefer :/Pathfinding/
+Main 1.0 ui/Main.qml
+ControlPanel 1.0 ui/components/ControlPanel.qml
+PathGrid 1.0 ui/components/PathGrid.qml
+GridTile 1.0 ui/components/GridTile.qml
+StyledButton 1.0 ui/components/StyledButton.qml
+StyledSlider 1.0 ui/components/StyledSlider.qml
+AlgoSelector 1.0 ui/components/AlgoSelector.qml
+StyledText 1.0 ui/components/StyledText.qml
+StyledRect 1.0 ui/components/StyledRect.qml
+SpeedSlider 1.0 ui/components/SpeedSlider.qml
+Theme 1.0 ui/theme/Theme.qml
+depends QtQuick
+

@@ -1,0 +1,17 @@
+--resource
+C:/Projects/pathfinding-visualizer/build-wasm/.qt/rcc/qmake_Pathfinding.qrc
+--resource
+C:/Projects/pathfinding-visualizer/build-wasm/.qt/rcc/app_raw_qml_0.qrc
+--resource
+C:/Projects/pathfinding-visualizer/build-wasm/.qt/rcc/app_raw_res_0.qrc
+/Pathfinding/ui/Main.qml
+/Pathfinding/ui/components/ControlPanel.qml
+/Pathfinding/ui/components/PathGrid.qml
+/Pathfinding/ui/components/GridTile.qml
+/Pathfinding/ui/components/StyledButton.qml
+/Pathfinding/ui/components/StyledSlider.qml
+/Pathfinding/ui/components/AlgoSelector.qml
+/Pathfinding/ui/components/StyledText.qml
+/Pathfinding/ui/components/StyledRect.qml
+/Pathfinding/ui/components/SpeedSlider.qml
+/Pathfinding/ui/theme/Theme.qml

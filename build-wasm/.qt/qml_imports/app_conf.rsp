@@ -1,0 +1,15 @@
+-rootPath
+C:/Projects/pathfinding-visualizer
+-cmake-output
+-output-file
+C:/Projects/pathfinding-visualizer/build-wasm/.qt/qml_imports/app_conf.cmake
+-importPath
+C:/Projects/pathfinding-visualizer/build-wasm
+-importPath
+C:/Projects/pathfinding-visualizer/build-wasm/Pathfinding
+-importPath
+C:/Qt/6.10.2/wasm_singlethread/qml
+-qrcFiles
+C:/Projects/pathfinding-visualizer/build-wasm/.qt/rcc/qmake_Pathfinding.qrc
+C:/Projects/pathfinding-visualizer/build-wasm/.qt/rcc/app_raw_qml_0.qrc
+C:/Projects/pathfinding-visualizer/build-wasm/.qt/rcc/app_raw_res_0.qrc
