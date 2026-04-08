@@ -1,7 +1,7 @@
 module Pathfinding
 typeinfo app.qmltypes
 prefer :/Pathfinding/
-Main 1.0 ui/Main.qml
+Main 1.0 Main.qml
 ControlPanel 1.0 ui/components/ControlPanel.qml
 PathGrid 1.0 ui/components/PathGrid.qml
 GridTile 1.0 ui/components/GridTile.qml

@@ -8,15 +8,15 @@
                         {
                             "codegenResult": 2,
                             "column": 25,
-                            "durationMicroseconds": 157,
+                            "durationMicroseconds": 205,
                             "functionName": "onValueChanged",
                             "line": 41,
-                            "message": "Type (component in C:/Projects/pathfinding-visualizer/ui/components/SpeedSlider.qml)::parent with type QQuickItem does not have a property valueChanged for calling"
+                            "message": "Type (component in C:/Projects/Main/pathfinding-visualizer/ui/components/SpeedSlider.qml)::parent with type QQuickItem does not have a property valueChanged for calling"
                         },
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 147,
+                            "durationMicroseconds": 209,
                             "functionName": "x",
                             "line": 14,
                             "message": ""
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 198,
+                            "durationMicroseconds": 240,
                             "functionName": "y",
                             "line": 15,
                             "message": ""
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 47,
+                            "durationMicroseconds": 79,
                             "functionName": "width",
                             "line": 18,
                             "message": ""
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 0,
                             "column": 21,
-                            "durationMicroseconds": 27,
+                            "durationMicroseconds": 40,
                             "functionName": "height",
                             "line": 19,
                             "message": ""
@@ -48,7 +48,7 @@
                         {
                             "codegenResult": 0,
                             "column": 24,
-                            "durationMicroseconds": 116,
+                            "durationMicroseconds": 143,
                             "functionName": "width",
                             "line": 24,
                             "message": ""
@@ -56,7 +56,7 @@
                         {
                             "codegenResult": 0,
                             "column": 25,
-                            "durationMicroseconds": 41,
+                            "durationMicroseconds": 58,
                             "functionName": "height",
                             "line": 25,
                             "message": ""
@@ -64,7 +64,7 @@
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 157,
+                            "durationMicroseconds": 215,
                             "functionName": "x",
                             "line": 32,
                             "message": ""
@@ -72,7 +72,7 @@
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 150,
+                            "durationMicroseconds": 242,
                             "functionName": "y",
                             "line": 33,
                             "message": ""
@@ -80,13 +80,13 @@
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 138,
+                            "durationMicroseconds": 207,
                             "functionName": "color",
                             "line": 37,
                             "message": ""
                         }
                     ],
-                    "filePath": "C:/Projects/pathfinding-visualizer/ui/components/SpeedSlider.qml"
+                    "filePath": "C:/Projects/Main/pathfinding-visualizer/ui/components/SpeedSlider.qml"
                 }
             ],
             "moduleId": "Pathfinding(app)"

@@ -35,12 +35,12 @@ set(__QT_DEPLOY_SYSTEM_NAME "Emscripten")
 set(__QT_DEPLOY_SHARED_LIBRARY_SUFFIX ".so")
 set(__QT_DEPLOY_IS_SHARED_LIBS_BUILD "OFF")
 set(__QT_DEPLOY_TOOL "")
-set(__QT_DEPLOY_IMPL_DIR "C:/Projects/pathfinding-visualizer/build-wasm/.qt")
+set(__QT_DEPLOY_IMPL_DIR "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qt")
 set(__QT_DEPLOY_VERBOSE "")
 set(__QT_CMAKE_EXPORT_NAMESPACE "Qt6")
 set(__QT_LIBINFIX "")
 set(__QT_DEPLOY_GENERATOR_IS_MULTI_CONFIG "0")
-set(__QT_DEPLOY_ACTIVE_CONFIG "")
+set(__QT_DEPLOY_ACTIVE_CONFIG "Debug")
 set(__QT_NO_CREATE_VERSIONLESS_FUNCTIONS "")
 set(__QT_DEFAULT_MAJOR_VERSION "6")
 set(__QT_DEPLOY_QT_ADDITIONAL_PACKAGES_PREFIX_PATH "")
@@ -60,7 +60,7 @@ set(__QT_DEPLOY_QT_DEBUG_POSTFIX "")
 
 # Define the CMake commands to be made available during deployment.
 set(__qt_deploy_support_files
-    "C:/Projects/pathfinding-visualizer/build-wasm/.qt/QtDeployTargets.cmake"
+    "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qt/QtDeployTargets.cmake"
     "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreDeploySupport.cmake"
     "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Qml/Qt6QmlDeploySupport.cmake"
 )

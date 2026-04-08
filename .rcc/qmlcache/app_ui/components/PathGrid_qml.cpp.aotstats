@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 2,
                             "column": 16,
-                            "durationMicroseconds": 482,
+                            "durationMicroseconds": 630,
                             "functionName": "model",
                             "line": 10,
                             "message": "Cannot access value for name gridModel"
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 23,
-                            "durationMicroseconds": 211,
+                            "durationMicroseconds": 223,
                             "functionName": "fill",
                             "line": 11,
                             "message": ""
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 2,
                             "column": 24,
-                            "durationMicroseconds": 84,
+                            "durationMicroseconds": 109,
                             "functionName": "isHovered",
                             "line": 19,
                             "message": "Cannot access value for name index"
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 2,
                             "column": 19,
-                            "durationMicroseconds": 171,
+                            "durationMicroseconds": 260,
                             "functionName": "color",
                             "line": 20,
                             "message": "Cannot access value for name type"
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 2,
                             "column": 22,
-                            "durationMicroseconds": 114,
+                            "durationMicroseconds": 156,
                             "functionName": "svgPath",
                             "line": 29,
                             "message": "Cannot access value for name type"
@@ -72,7 +72,7 @@
                         {
                             "codegenResult": 2,
                             "column": 28,
-                            "durationMicroseconds": 150,
+                            "durationMicroseconds": 213,
                             "functionName": "onPressed",
                             "line": 66,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
@@ -80,7 +80,7 @@
                         {
                             "codegenResult": 2,
                             "column": 36,
-                            "durationMicroseconds": 448,
+                            "durationMicroseconds": 643,
                             "functionName": "onPositionChanged",
                             "line": 70,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
@@ -88,7 +88,7 @@
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 93,
+                            "durationMicroseconds": 127,
                             "functionName": "onExited",
                             "line": 77,
                             "message": ""
@@ -96,13 +96,13 @@
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 48,
+                            "durationMicroseconds": 66,
                             "functionName": "fill",
                             "line": 40,
                             "message": ""
                         }
                     ],
-                    "filePath": "C:/Projects/pathfinding-visualizer/ui/components/PathGrid.qml"
+                    "filePath": "C:/Projects/Main/pathfinding-visualizer/ui/components/PathGrid.qml"
                 }
             ],
             "moduleId": "Pathfinding(app)"

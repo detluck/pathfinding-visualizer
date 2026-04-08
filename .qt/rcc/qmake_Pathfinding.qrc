@@ -1,6 +1,6 @@
 <RCC>
   <qresource prefix="/Pathfinding">
-    <file alias="qmldir">C:/Projects/pathfinding-visualizer/build-wasm/Pathfinding/qmldir</file>
+    <file alias="qmldir">C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/Pathfinding/qmldir</file>
   </qresource>
 </RCC>
 

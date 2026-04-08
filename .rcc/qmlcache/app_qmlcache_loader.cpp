@@ -5,7 +5,7 @@
 #include <QtCore/qstring.h>
 
 namespace QmlCacheGeneratedCode {
-namespace _0x5f_Pathfinding_ui_Main_qml { 
+namespace _0x5f_Pathfinding_Main_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
@@ -96,7 +96,7 @@ Q_GLOBAL_STATIC(Registry, unitRegistry)
 
 
 Registry::Registry() {
-    resourcePathToCachedUnit.insert(QStringLiteral("/Pathfinding/ui/Main.qml"), &QmlCacheGeneratedCode::_0x5f_Pathfinding_ui_Main_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/Pathfinding/Main.qml"), &QmlCacheGeneratedCode::_0x5f_Pathfinding_Main_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/Pathfinding/ui/components/ControlPanel.qml"), &QmlCacheGeneratedCode::_0x5f_Pathfinding_ui_components_ControlPanel_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/Pathfinding/ui/components/PathGrid.qml"), &QmlCacheGeneratedCode::_0x5f_Pathfinding_ui_components_PathGrid_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/Pathfinding/ui/components/GridTile.qml"), &QmlCacheGeneratedCode::_0x5f_Pathfinding_ui_components_GridTile_qml::unit);

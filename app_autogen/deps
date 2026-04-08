@@ -1,23 +1,24 @@
 app_autogen/timestamp: \
-	C:/Projects/pathfinding-visualizer/CMakeLists.txt \
-	C:/Projects/pathfinding-visualizer/build-wasm/.qt/qml_imports/app_conf.cmake \
-	C:/Projects/pathfinding-visualizer/build-wasm/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
-	C:/Projects/pathfinding-visualizer/build-wasm/CMakeFiles/3.30.5/CMakeSystem.cmake \
-	C:/Projects/pathfinding-visualizer/build-wasm/app_autogen/moc_predefs.h \
-	C:/Projects/pathfinding-visualizer/cpp/algorithms/algorithmType.h \
-	C:/Projects/pathfinding-visualizer/cpp/algorithms/astar.cpp \
-	C:/Projects/pathfinding-visualizer/cpp/algorithms/astar.h \
-	C:/Projects/pathfinding-visualizer/cpp/algorithms/dijkstra.cpp \
-	C:/Projects/pathfinding-visualizer/cpp/algorithms/dijkstra.h \
-	C:/Projects/pathfinding-visualizer/cpp/algorithms/ialgorithm.h \
-	C:/Projects/pathfinding-visualizer/cpp/core/cursorhelper.cpp \
-	C:/Projects/pathfinding-visualizer/cpp/core/cursorhelper.h \
-	C:/Projects/pathfinding-visualizer/cpp/core/pathfinding.cpp \
-	C:/Projects/pathfinding-visualizer/cpp/core/pathfinding.h \
-	C:/Projects/pathfinding-visualizer/cpp/model/gridmodel.cpp \
-	C:/Projects/pathfinding-visualizer/cpp/model/gridmodel.h \
-	C:/Projects/pathfinding-visualizer/cpp/model/node.h \
-	C:/Projects/pathfinding-visualizer/main.cpp \
+	C:/Projects/Main/pathfinding-visualizer/CMakeLists.txt \
+	C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qt/qml_imports/app_conf.cmake \
+	C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtc/package-manager/auto-setup.cmake \
+	C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtc/package-manager/maintenance_tool_provider.cmake \
+	C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
+	C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
+	C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/app_autogen/moc_predefs.h \
+	C:/Projects/Main/pathfinding-visualizer/cpp/algorithms/astar.cpp \
+	C:/Projects/Main/pathfinding-visualizer/cpp/algorithms/astar.h \
+	C:/Projects/Main/pathfinding-visualizer/cpp/algorithms/dijkstra.cpp \
+	C:/Projects/Main/pathfinding-visualizer/cpp/algorithms/dijkstra.h \
+	C:/Projects/Main/pathfinding-visualizer/cpp/algorithms/ialgorithm.h \
+	C:/Projects/Main/pathfinding-visualizer/cpp/core/cursorhelper.cpp \
+	C:/Projects/Main/pathfinding-visualizer/cpp/core/cursorhelper.h \
+	C:/Projects/Main/pathfinding-visualizer/cpp/core/pathfinding.cpp \
+	C:/Projects/Main/pathfinding-visualizer/cpp/core/pathfinding.h \
+	C:/Projects/Main/pathfinding-visualizer/cpp/model/gridmodel.cpp \
+	C:/Projects/Main/pathfinding-visualizer/cpp/model/gridmodel.h \
+	C:/Projects/Main/pathfinding-visualizer/cpp/model/node.h \
+	C:/Projects/Main/pathfinding-visualizer/main.cpp \
 	C:/Projects/tools/emsdk/upstream/emscripten/cache/sysroot/include/assert.h \
 	C:/Projects/tools/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
 	C:/Projects/tools/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__algorithm/adjacent_find.h \

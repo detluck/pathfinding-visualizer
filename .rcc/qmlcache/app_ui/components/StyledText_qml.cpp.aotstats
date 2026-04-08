@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 0,
                             "column": 17,
-                            "durationMicroseconds": 161,
+                            "durationMicroseconds": 334,
                             "functionName": "renderType",
                             "line": 8,
                             "message": ""
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 17,
-                            "durationMicroseconds": 45,
+                            "durationMicroseconds": 120,
                             "functionName": "textFormat",
                             "line": 9,
                             "message": ""
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 0,
                             "column": 19,
-                            "durationMicroseconds": 42,
+                            "durationMicroseconds": 98,
                             "functionName": "fontSizeMode",
                             "line": 12,
                             "message": ""
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 0,
                             "column": 12,
-                            "durationMicroseconds": 64,
+                            "durationMicroseconds": 111,
                             "functionName": "elide",
                             "line": 14,
                             "message": ""
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 0,
                             "column": 24,
-                            "durationMicroseconds": 56,
+                            "durationMicroseconds": 141,
                             "functionName": "verticalAlignment",
                             "line": 15,
                             "message": ""
@@ -48,7 +48,7 @@
                         {
                             "codegenResult": 2,
                             "column": 18,
-                            "durationMicroseconds": 1322,
+                            "durationMicroseconds": 2956,
                             "functionName": "family",
                             "line": 10,
                             "message": "Cannot load property family from Theme::font with type QObject."
@@ -56,13 +56,13 @@
                         {
                             "codegenResult": 2,
                             "column": 21,
-                            "durationMicroseconds": 25,
+                            "durationMicroseconds": 55,
                             "functionName": "pixelSize",
                             "line": 11,
                             "message": "Cannot load property size from Theme::font with type QObject."
                         }
                     ],
-                    "filePath": "C:/Projects/pathfinding-visualizer/ui/components/StyledText.qml"
+                    "filePath": "C:/Projects/Main/pathfinding-visualizer/ui/components/StyledText.qml"
                 }
             ],
             "moduleId": "Pathfinding(app)"

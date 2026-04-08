@@ -1,3 +1,3 @@
-C:/Projects/pathfinding-visualizer/build-wasm/app_autogen/include/../T7P5CWKXPE/moc_cursorhelper.cpp.json
-C:/Projects/pathfinding-visualizer/build-wasm/app_autogen/include/../T7P5CWKXPE/moc_pathfinding.cpp.json
-C:/Projects/pathfinding-visualizer/build-wasm/app_autogen/include/../ULN6AZYKRN/moc_gridmodel.cpp.json
+C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/app_autogen/include/../T7P5CWKXPE/moc_cursorhelper.cpp.json
+C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/app_autogen/include/../T7P5CWKXPE/moc_pathfinding.cpp.json
+C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/app_autogen/include/../ULN6AZYKRN/moc_gridmodel.cpp.json

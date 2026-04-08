@@ -1,16 +1,16 @@
 <RCC>
   <qresource prefix="/Pathfinding/">
-    <file alias="ui/Main.qml">C:/Projects/pathfinding-visualizer/ui/Main.qml</file>
-    <file alias="ui/components/ControlPanel.qml">C:/Projects/pathfinding-visualizer/ui/components/ControlPanel.qml</file>
-    <file alias="ui/components/PathGrid.qml">C:/Projects/pathfinding-visualizer/ui/components/PathGrid.qml</file>
-    <file alias="ui/components/GridTile.qml">C:/Projects/pathfinding-visualizer/ui/components/GridTile.qml</file>
-    <file alias="ui/components/StyledButton.qml">C:/Projects/pathfinding-visualizer/ui/components/StyledButton.qml</file>
-    <file alias="ui/components/StyledSlider.qml">C:/Projects/pathfinding-visualizer/ui/components/StyledSlider.qml</file>
-    <file alias="ui/components/AlgoSelector.qml">C:/Projects/pathfinding-visualizer/ui/components/AlgoSelector.qml</file>
-    <file alias="ui/components/StyledText.qml">C:/Projects/pathfinding-visualizer/ui/components/StyledText.qml</file>
-    <file alias="ui/components/StyledRect.qml">C:/Projects/pathfinding-visualizer/ui/components/StyledRect.qml</file>
-    <file alias="ui/components/SpeedSlider.qml">C:/Projects/pathfinding-visualizer/ui/components/SpeedSlider.qml</file>
-    <file alias="ui/theme/Theme.qml">C:/Projects/pathfinding-visualizer/ui/theme/Theme.qml</file>
+    <file alias="Main.qml">C:/Projects/Main/pathfinding-visualizer/Main.qml</file>
+    <file alias="ui/components/ControlPanel.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/ControlPanel.qml</file>
+    <file alias="ui/components/PathGrid.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/PathGrid.qml</file>
+    <file alias="ui/components/GridTile.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/GridTile.qml</file>
+    <file alias="ui/components/StyledButton.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/StyledButton.qml</file>
+    <file alias="ui/components/StyledSlider.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/StyledSlider.qml</file>
+    <file alias="ui/components/AlgoSelector.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/AlgoSelector.qml</file>
+    <file alias="ui/components/StyledText.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/StyledText.qml</file>
+    <file alias="ui/components/StyledRect.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/StyledRect.qml</file>
+    <file alias="ui/components/SpeedSlider.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/SpeedSlider.qml</file>
+    <file alias="ui/theme/Theme.qml">C:/Projects/Main/pathfinding-visualizer/ui/theme/Theme.qml</file>
   </qresource>
 </RCC>
 

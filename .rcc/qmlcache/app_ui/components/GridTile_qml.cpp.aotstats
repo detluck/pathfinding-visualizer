@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 0,
                             "column": 12,
-                            "durationMicroseconds": 329,
+                            "durationMicroseconds": 477,
                             "functionName": "scale",
                             "line": 10,
                             "message": ""
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 8,
-                            "durationMicroseconds": 121,
+                            "durationMicroseconds": 146,
                             "functionName": "z",
                             "line": 11,
                             "message": ""
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 0,
                             "column": 17,
-                            "durationMicroseconds": 130,
+                            "durationMicroseconds": 198,
                             "functionName": "source",
                             "line": 15,
                             "message": ""
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 0,
                             "column": 17,
-                            "durationMicroseconds": 94,
+                            "durationMicroseconds": 129,
                             "functionName": "height",
                             "line": 16,
                             "message": ""
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 61,
+                            "durationMicroseconds": 77,
                             "functionName": "width",
                             "line": 17,
                             "message": ""
@@ -48,7 +48,7 @@
                         {
                             "codegenResult": 0,
                             "column": 19,
-                            "durationMicroseconds": 97,
+                            "durationMicroseconds": 131,
                             "functionName": "fillMode",
                             "line": 21,
                             "message": ""
@@ -56,7 +56,7 @@
                         {
                             "codegenResult": 2,
                             "column": 18,
-                            "durationMicroseconds": 291,
+                            "durationMicroseconds": 377,
                             "functionName": "visible",
                             "line": 22,
                             "message": "Cannot access value for name type"
@@ -64,7 +64,7 @@
                         {
                             "codegenResult": 0,
                             "column": 28,
-                            "durationMicroseconds": 88,
+                            "durationMicroseconds": 80,
                             "functionName": "height",
                             "line": 18,
                             "message": ""
@@ -72,7 +72,7 @@
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 111,
+                            "durationMicroseconds": 71,
                             "functionName": "width",
                             "line": 19,
                             "message": ""
@@ -80,13 +80,13 @@
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 73,
+                            "durationMicroseconds": 82,
                             "functionName": "alignment",
                             "line": 20,
                             "message": ""
                         }
                     ],
-                    "filePath": "C:/Projects/pathfinding-visualizer/ui/components/GridTile.qml"
+                    "filePath": "C:/Projects/Main/pathfinding-visualizer/ui/components/GridTile.qml"
                 }
             ],
             "moduleId": "Pathfinding(app)"

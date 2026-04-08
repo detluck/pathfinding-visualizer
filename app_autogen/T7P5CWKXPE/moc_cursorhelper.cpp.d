@@ -1,5 +1,5 @@
-C:/Projects/pathfinding-visualizer/build-wasm/app_autogen/T7P5CWKXPE/moc_cursorhelper.cpp: C:/Projects/pathfinding-visualizer/cpp/core/cursorhelper.h \
-  C:/Projects/pathfinding-visualizer/build-wasm/app_autogen/moc_predefs.h \
+C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/app_autogen/T7P5CWKXPE/moc_cursorhelper.cpp: C:/Projects/Main/pathfinding-visualizer/cpp/core/cursorhelper.h \
+  C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/app_autogen/moc_predefs.h \
   C:/Projects/tools/emsdk/upstream/emscripten/cache/sysroot/include/assert.h \
   C:/Projects/tools/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
   C:/Projects/tools/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__algorithm/adjacent_find.h \

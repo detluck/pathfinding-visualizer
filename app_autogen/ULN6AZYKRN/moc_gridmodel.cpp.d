@@ -1,6 +1,6 @@
-C:/Projects/pathfinding-visualizer/build-wasm/app_autogen/ULN6AZYKRN/moc_gridmodel.cpp: C:/Projects/pathfinding-visualizer/cpp/model/gridmodel.h \
-  C:/Projects/pathfinding-visualizer/build-wasm/app_autogen/moc_predefs.h \
-  C:/Projects/pathfinding-visualizer/cpp/model/node.h \
+C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/app_autogen/ULN6AZYKRN/moc_gridmodel.cpp: C:/Projects/Main/pathfinding-visualizer/cpp/model/gridmodel.h \
+  C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/app_autogen/moc_predefs.h \
+  C:/Projects/Main/pathfinding-visualizer/cpp/model/node.h \
   C:/Projects/tools/emsdk/upstream/emscripten/cache/sysroot/include/assert.h \
   C:/Projects/tools/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
   C:/Projects/tools/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__algorithm/adjacent_find.h \

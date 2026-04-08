@@ -7,14 +7,14 @@
 
 # =============================================================================
 # Project: PathfindingVisualizer
-# Configurations: 
+# Configurations: Debug
 # =============================================================================
 # =============================================================================
 
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__app_unscanned_
+rule CXX_COMPILER__app_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\Projects\tools\emsdk\upstream\emscripten\em++.bat $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule CXX_COMPILER__app_unscanned_
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__app_
+rule CXX_EXECUTABLE_LINKER__app_Debug
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\Projects\tools\emsdk\upstream\emscripten\em++.bat $FLAGS $LINK_FLAGS @$RSP_FILE -o $TARGET_FILE && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   rspfile = $RSP_FILE
@@ -44,7 +44,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Qt\Tools\CMake_64\bin\cmake.exe --regenerate-during-build -SC:\Projects\pathfinding-visualizer -BC:\Projects\pathfinding-visualizer\build-wasm
+  command = C:\Qt\Tools\CMake_64\bin\cmake.exe --regenerate-during-build -SC:\Projects\Main\pathfinding-visualizer -BC:\Projects\Main\pathfinding-visualizer\build\WebAssembly_Qt_6_10_2_single_threaded-Debug
   description = Re-running CMake...
   generator = 1
 

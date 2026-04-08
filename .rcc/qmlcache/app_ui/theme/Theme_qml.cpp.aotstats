@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 0,
                             "column": 41,
-                            "durationMicroseconds": 223,
+                            "durationMicroseconds": 334,
                             "functionName": "current",
                             "line": 9,
                             "message": ""
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 2,
                             "column": 38,
-                            "durationMicroseconds": 209,
+                            "durationMicroseconds": 291,
                             "functionName": "hoverBtn",
                             "line": 15,
                             "message": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: call to method rgba, returning QVariant -> QColor stored as QVariant"
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 2,
                             "column": 40,
-                            "durationMicroseconds": 132,
+                            "durationMicroseconds": 183,
                             "functionName": "pressedBtn",
                             "line": 16,
                             "message": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: call to method rgba, returning QVariant -> QColor stored as QVariant"
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 2,
                             "column": 38,
-                            "durationMicroseconds": 136,
+                            "durationMicroseconds": 175,
                             "functionName": "hoverBtn",
                             "line": 34,
                             "message": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: call to method rgba, returning QVariant -> QColor stored as QVariant"
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 2,
                             "column": 40,
-                            "durationMicroseconds": 115,
+                            "durationMicroseconds": 172,
                             "functionName": "pressedBtn",
                             "line": 35,
                             "message": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: call to method rgba, returning QVariant -> QColor stored as QVariant"
@@ -48,13 +48,13 @@
                         {
                             "codegenResult": 0,
                             "column": 33,
-                            "durationMicroseconds": 34,
+                            "durationMicroseconds": 49,
                             "functionName": "title",
                             "line": 80,
                             "message": ""
                         }
                     ],
-                    "filePath": "C:/Projects/pathfinding-visualizer/ui/theme/Theme.qml"
+                    "filePath": "C:/Projects/Main/pathfinding-visualizer/ui/theme/Theme.qml"
                 }
             ],
             "moduleId": "Pathfinding(app)"
