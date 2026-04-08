@@ -4,6 +4,8 @@
 #include "cpp/core/cursorhelper.h"
 #include "cpp/core/pathfinding.h"
 #include "cpp/model/gridmodel.h"
+#include <QDirIterator>
+#include <QDebug>
 
 int main(int argc, char *argv[]){
     QGuiApplication app(argc, argv);
@@ -19,7 +21,8 @@ int main(int argc, char *argv[]){
     engine.rootContext()->setContextProperty("controller", &pathfinding);
     engine.rootContext()->setContextProperty("cursorHelper", &cursorHelper);
     engine.rootContext()->setContextProperty("gridModel", pathfinding.gridModel());
-    engine.loadFromModule("Pathfinding", "Main");
+    const QUrl url(QStringLiteral("qrc:/Pathfinding/Main.qml"));
+    engine.load(url);
     if(engine.rootObjects().isEmpty())
         return -1;
 
