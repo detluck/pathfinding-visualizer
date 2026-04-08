@@ -15,6 +15,37 @@ A high-performance **C++/Qt** application designed to visualize pathfinding algo
 * **Modular Design:** Clean separation between the core algorithm logic and the graphical interface.
 
 ---
+## 🌐 Web Version
+
+A web version of the **Pathfinding Visualizer** is available and built using **WebAssembly** with Qt.
+
+This allows the application to run directly in the browser without requiring any installation.
+
+### 🔧 Technology
+
+* Qt 6 (Qt Quick / QML)
+* WebAssembly (via Emscripten)
+* CMake + Ninja
+
+### 🚀 How it works
+
+The project is compiled to WebAssembly using Qt's WebAssembly toolchain.
+The output consists of:
+
+* `app.html`
+* `app.js`
+* `app.wasm`
+
+These files are deployed via GitHub Pages and can be accessed directly in the browser.
+
+> [!NOTE]
+> The WebAssembly build must be served over HTTP (not opened via `file://`), otherwise the application will not load due to browser security restrictions (CORS).
+
+---
+
+You can try the web version here:
+👉 **[https://detluck.github.io/pathfinding-visualizer/]**
+
 ## 📦 Installation
 
 ### Option 1: Download Pre-built Binaries (in the future, not working yet)
