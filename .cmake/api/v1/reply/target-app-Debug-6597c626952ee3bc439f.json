@@ -38,8 +38,8 @@
 			"qt_find_package_system_or_bundled",
 			"_qt_internal_find_third_party_dependencies",
 			"add_dependencies",
-			"_qt_internal_qml_copy_files_to_build_dir",
 			"_qt_internal_write_deferred_qmlls_build_ini_file",
+			"_qt_internal_qml_copy_files_to_build_dir",
 			"target_include_directories",
 			"_qt_internal_qml_type_registration",
 			"target_sources",
@@ -2731,18 +2731,6 @@
 			},
 			{
 				"command" : 28,
-				"file" : 135,
-				"line" : 970,
-				"parent" : 407
-			},
-			{
-				"command" : 27,
-				"file" : 135,
-				"line" : 3083,
-				"parent" : 468
-			},
-			{
-				"command" : 29,
 				"file" : 148,
 				"line" : 1,
 				"parent" : 5
@@ -2751,12 +2739,24 @@
 				"command" : 27,
 				"file" : 135,
 				"line" : 1387,
+				"parent" : 468
+			},
+			{
+				"command" : 29,
+				"file" : 135,
+				"line" : 976,
+				"parent" : 407
+			},
+			{
+				"command" : 27,
+				"file" : 135,
+				"line" : 3083,
 				"parent" : 470
 			},
 			{
-				"command" : 28,
+				"command" : 29,
 				"file" : 135,
-				"line" : 976,
+				"line" : 970,
 				"parent" : 407
 			},
 			{
@@ -3184,15 +3184,15 @@
 	[
 		{
 			"backtrace" : 469,
-			"id" : "app_copy_qml::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 471,
 			"id" : "generate_qmlls_build_ini_file::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 473,
+			"backtrace" : 471,
 			"id" : "app_copy_res::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 473,
+			"id" : "app_copy_qml::@6890427a1f51a3e7e1df"
 		},
 		{
 			"id" : "app_autogen_timestamp_deps::@6890427a1f51a3e7e1df"

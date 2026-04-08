@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 0,
                             "column": 12,
-                            "durationMicroseconds": 477,
+                            "durationMicroseconds": 497,
                             "functionName": "scale",
                             "line": 10,
                             "message": ""
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 8,
-                            "durationMicroseconds": 146,
+                            "durationMicroseconds": 198,
                             "functionName": "z",
                             "line": 11,
                             "message": ""
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 0,
                             "column": 17,
-                            "durationMicroseconds": 198,
+                            "durationMicroseconds": 199,
                             "functionName": "source",
                             "line": 15,
                             "message": ""
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 0,
                             "column": 17,
-                            "durationMicroseconds": 129,
+                            "durationMicroseconds": 119,
                             "functionName": "height",
                             "line": 16,
                             "message": ""
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 77,
+                            "durationMicroseconds": 81,
                             "functionName": "width",
                             "line": 17,
                             "message": ""
@@ -48,7 +48,7 @@
                         {
                             "codegenResult": 0,
                             "column": 19,
-                            "durationMicroseconds": 131,
+                            "durationMicroseconds": 152,
                             "functionName": "fillMode",
                             "line": 21,
                             "message": ""
@@ -56,7 +56,7 @@
                         {
                             "codegenResult": 2,
                             "column": 18,
-                            "durationMicroseconds": 377,
+                            "durationMicroseconds": 388,
                             "functionName": "visible",
                             "line": 22,
                             "message": "Cannot access value for name type"
@@ -64,7 +64,7 @@
                         {
                             "codegenResult": 0,
                             "column": 28,
-                            "durationMicroseconds": 80,
+                            "durationMicroseconds": 88,
                             "functionName": "height",
                             "line": 18,
                             "message": ""
@@ -72,7 +72,7 @@
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 71,
+                            "durationMicroseconds": 76,
                             "functionName": "width",
                             "line": 19,
                             "message": ""
@@ -80,7 +80,7 @@
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 82,
+                            "durationMicroseconds": 76,
                             "functionName": "alignment",
                             "line": 20,
                             "message": ""
