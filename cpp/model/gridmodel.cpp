@@ -4,7 +4,9 @@
 GridModel::GridModel(QObject* parent, int width, int height) : QAbstractListModel(parent) {
     m_width = width;
     m_height = height;
-    m_model.resize(width * height);
+    if(width > 0 && height > 0){
+        m_model.resize(width*height);
+    }
 }
 
 int GridModel::rowCount(const QModelIndex &parent) const
@@ -36,7 +38,20 @@ QVariant GridModel::data(const QModelIndex &index, int role) const
 
 void GridModel::resizeModel(int width, int height)
 {
-    m_model.resize(width*height);
+    if(m_width == width && m_height == height) {
+        return;
+    }
+
+    beginResetModel();
+
+    m_width = width;
+    m_height = height;
+    m_model.clear();
+
+    m_model.resize(width * height);
+
+    endResetModel();
+    emit dimensionsChanged();
 }
 
 int GridModel::width()

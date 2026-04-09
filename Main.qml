@@ -1,8 +1,8 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import "components"
-import "../ui/theme"
+import "ui/components"
+import "ui/theme"
 
 Window{
     id:root

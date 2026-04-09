@@ -8,7 +8,7 @@ CursorHelper::CursorHelper(QObject *parent)
     : QObject{parent}
 {}
 
-QString CursorHelper::cursor()
+QString CursorHelper::cursor() const
 {
     return m_cursor;
 }

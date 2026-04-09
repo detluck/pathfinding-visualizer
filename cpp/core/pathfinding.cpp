@@ -217,9 +217,8 @@ GridData Pathfinding::collectData()
     GridData data;
     std::vector<NodeType> types;
     //my fix
-    data.width = 60; 
-    data.height = m_model->rowCount() / 60;
-    //
+    data.width = m_model->width();
+    data.height = m_model->height();
     data.startIndex = m_start;
     data.endIndex = m_end;
     data.nodes = m_model->nodeTypes();

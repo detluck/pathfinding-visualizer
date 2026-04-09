@@ -12,23 +12,29 @@
 class GridModel : public QAbstractListModel
 {
     Q_OBJECT
+    Q_PROPERTY(int width READ width NOTIFY dimensionsChanged)
+    Q_PROPERTY(int height READ height NOTIFY dimensionsChanged)
 public:
 
     enum Roles{
         TypeRole = Qt::UserRole + 1
     };
 
-    explicit GridModel(QObject* parent = nullptr, int width = 50, int height = 50);
+    explicit GridModel(QObject* parent = nullptr, int width = 0, int height = 0);
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QHash<int, QByteArray> roleNames() const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    void resizeModel(int width, int height);
-    int width();
-    int height();
     std::vector<NodeType> nodeTypes() const;
     void clearModel();
     void setNodeType(const NodeType type, const int index);
     void reconstructPath(const std::vector<int>& path);
+public slots:
+    Q_INVOKABLE void resizeModel(int width, int height);
+    int width();
+    int height();
+
+signals:
+    void dimensionsChanged();
 
 private:
     QVector<Node> m_model;
