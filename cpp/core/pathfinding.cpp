@@ -43,6 +43,7 @@ void Pathfinding::setClickType(ClickType type)
     }
     m_type = type;
     qDebug() << "ClickType set" << type;
+    emit clickTypeChanged();
 }
 
 Pathfinding::ClickType Pathfinding::clickType()
