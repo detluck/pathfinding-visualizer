@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 2,
                             "column": 33,
-                            "durationMicroseconds": 2837,
+                            "durationMicroseconds": 2725,
                             "functionName": "hoverColor",
                             "line": 10,
                             "message": "Cannot load property hoverBtn from Theme::current with type QObject."
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 2,
                             "column": 31,
-                            "durationMicroseconds": 51,
+                            "durationMicroseconds": 52,
                             "functionName": "textColor",
                             "line": 11,
                             "message": "Cannot load property textPrimary from Theme::current with type QObject."
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 2,
                             "column": 5,
-                            "durationMicroseconds": 207,
+                            "durationMicroseconds": 209,
                             "functionName": "changeCursor",
                             "line": 66,
                             "message": "Cannot access value for name cursorHelper"
@@ -48,7 +48,7 @@
                         {
                             "codegenResult": 2,
                             "column": 16,
-                            "durationMicroseconds": 507,
+                            "durationMicroseconds": 455,
                             "functionName": "color",
                             "line": 31,
                             "message": "Cannot access value for name root"
@@ -56,7 +56,7 @@
                         {
                             "codegenResult": 0,
                             "column": 24,
-                            "durationMicroseconds": 204,
+                            "durationMicroseconds": 235,
                             "functionName": "fill",
                             "line": 30,
                             "message": ""
@@ -64,7 +64,7 @@
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 92,
+                            "durationMicroseconds": 84,
                             "functionName": "centerIn",
                             "line": 37,
                             "message": ""
@@ -72,7 +72,7 @@
                         {
                             "codegenResult": 2,
                             "column": 26,
-                            "durationMicroseconds": 232,
+                            "durationMicroseconds": 186,
                             "functionName": "visible",
                             "line": 40,
                             "message": "Cannot access value for name root"
@@ -80,7 +80,7 @@
                         {
                             "codegenResult": 2,
                             "column": 25,
-                            "durationMicroseconds": 178,
+                            "durationMicroseconds": 170,
                             "functionName": "height",
                             "line": 41,
                             "message": "Cannot access value for name root"
@@ -88,7 +88,7 @@
                         {
                             "codegenResult": 0,
                             "column": 24,
-                            "durationMicroseconds": 95,
+                            "durationMicroseconds": 81,
                             "functionName": "width",
                             "line": 42,
                             "message": ""
@@ -104,7 +104,7 @@
                         {
                             "codegenResult": 2,
                             "column": 35,
-                            "durationMicroseconds": 52,
+                            "durationMicroseconds": 45,
                             "functionName": "alignment",
                             "line": 44,
                             "message": "cannot convert from (component in C:/Projects/Main/pathfinding-visualizer/ui/components/StyledButton.qml)::verticalCenter with type QQuickAnchorLine to Qt::Alignment"
@@ -112,7 +112,7 @@
                         {
                             "codegenResult": 2,
                             "column": 31,
-                            "durationMicroseconds": 198,
+                            "durationMicroseconds": 152,
                             "functionName": "color",
                             "line": 45,
                             "message": "Cannot access value for name root"
@@ -120,7 +120,7 @@
                         {
                             "codegenResult": 2,
                             "column": 25,
-                            "durationMicroseconds": 273,
+                            "durationMicroseconds": 265,
                             "functionName": "source",
                             "line": 49,
                             "message": "Cannot access value for name root"
@@ -128,7 +128,7 @@
                         {
                             "codegenResult": 2,
                             "column": 25,
-                            "durationMicroseconds": 210,
+                            "durationMicroseconds": 216,
                             "functionName": "height",
                             "line": 50,
                             "message": "Cannot access value for name root"
@@ -136,7 +136,7 @@
                         {
                             "codegenResult": 0,
                             "column": 24,
-                            "durationMicroseconds": 107,
+                            "durationMicroseconds": 101,
                             "functionName": "width",
                             "line": 51,
                             "message": ""
@@ -144,7 +144,7 @@
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 150,
+                            "durationMicroseconds": 158,
                             "functionName": "fillMode",
                             "line": 55,
                             "message": ""
@@ -152,7 +152,7 @@
                         {
                             "codegenResult": 2,
                             "column": 26,
-                            "durationMicroseconds": 524,
+                            "durationMicroseconds": 483,
                             "functionName": "visible",
                             "line": 56,
                             "message": "Cannot access value for name root"
@@ -160,7 +160,7 @@
                         {
                             "codegenResult": 0,
                             "column": 36,
-                            "durationMicroseconds": 116,
+                            "durationMicroseconds": 120,
                             "functionName": "height",
                             "line": 52,
                             "message": ""
@@ -168,7 +168,7 @@
                         {
                             "codegenResult": 0,
                             "column": 35,
-                            "durationMicroseconds": 97,
+                            "durationMicroseconds": 75,
                             "functionName": "width",
                             "line": 53,
                             "message": ""
@@ -176,7 +176,7 @@
                         {
                             "codegenResult": 0,
                             "column": 35,
-                            "durationMicroseconds": 114,
+                            "durationMicroseconds": 79,
                             "functionName": "alignment",
                             "line": 54,
                             "message": ""
@@ -184,7 +184,7 @@
                         {
                             "codegenResult": 2,
                             "column": 19,
-                            "durationMicroseconds": 405,
+                            "durationMicroseconds": 331,
                             "functionName": "text",
                             "line": 61,
                             "message": "Cannot access value for name root"
@@ -192,7 +192,7 @@
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 102,
+                            "durationMicroseconds": 83,
                             "functionName": "alignment",
                             "line": 62,
                             "message": ""

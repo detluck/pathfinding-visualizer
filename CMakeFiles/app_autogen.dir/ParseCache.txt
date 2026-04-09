@@ -2194,3 +2194,6 @@ C:/Projects/Main/pathfinding-visualizer/cpp/core/cursorhelper.cpp
 C:/Projects/Main/pathfinding-visualizer/cpp/core/pathfinding.cpp
 C:/Projects/Main/pathfinding-visualizer/cpp/model/gridmodel.cpp
 C:/Projects/Main/pathfinding-visualizer/main.cpp
+C:/Projects/Main/pathfinding-visualizer/cpp/algorithms/algorithmType.h
+C:/Projects/Main/pathfinding-visualizer/cpp/algorithms/ialgorithm.h
+C:/Projects/Main/pathfinding-visualizer/cpp/model/node.h

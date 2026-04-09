@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 2,
                             "column": 25,
-                            "durationMicroseconds": 250,
+                            "durationMicroseconds": 245,
                             "functionName": "onValueChanged",
                             "line": 41,
                             "message": "Type (component in C:/Projects/Main/pathfinding-visualizer/ui/components/SpeedSlider.qml)::parent with type QQuickItem does not have a property valueChanged for calling"
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 223,
+                            "durationMicroseconds": 220,
                             "functionName": "x",
                             "line": 14,
                             "message": ""
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 259,
+                            "durationMicroseconds": 307,
                             "functionName": "y",
                             "line": 15,
                             "message": ""
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 72,
+                            "durationMicroseconds": 92,
                             "functionName": "width",
                             "line": 18,
                             "message": ""
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 0,
                             "column": 21,
-                            "durationMicroseconds": 45,
+                            "durationMicroseconds": 47,
                             "functionName": "height",
                             "line": 19,
                             "message": ""
@@ -56,7 +56,7 @@
                         {
                             "codegenResult": 0,
                             "column": 25,
-                            "durationMicroseconds": 77,
+                            "durationMicroseconds": 67,
                             "functionName": "height",
                             "line": 25,
                             "message": ""
@@ -64,7 +64,7 @@
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 280,
+                            "durationMicroseconds": 246,
                             "functionName": "x",
                             "line": 32,
                             "message": ""
@@ -72,7 +72,7 @@
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 261,
+                            "durationMicroseconds": 242,
                             "functionName": "y",
                             "line": 33,
                             "message": ""
@@ -80,7 +80,7 @@
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 249,
+                            "durationMicroseconds": 248,
                             "functionName": "color",
                             "line": 37,
                             "message": ""

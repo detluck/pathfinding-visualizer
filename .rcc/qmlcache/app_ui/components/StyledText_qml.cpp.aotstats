@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 0,
                             "column": 17,
-                            "durationMicroseconds": 294,
+                            "durationMicroseconds": 328,
                             "functionName": "renderType",
                             "line": 8,
                             "message": ""
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 17,
-                            "durationMicroseconds": 77,
+                            "durationMicroseconds": 104,
                             "functionName": "textFormat",
                             "line": 9,
                             "message": ""
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 0,
                             "column": 19,
-                            "durationMicroseconds": 70,
+                            "durationMicroseconds": 133,
                             "functionName": "fontSizeMode",
                             "line": 12,
                             "message": ""
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 0,
                             "column": 12,
-                            "durationMicroseconds": 95,
+                            "durationMicroseconds": 115,
                             "functionName": "elide",
                             "line": 14,
                             "message": ""
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 0,
                             "column": 24,
-                            "durationMicroseconds": 90,
+                            "durationMicroseconds": 110,
                             "functionName": "verticalAlignment",
                             "line": 15,
                             "message": ""
@@ -48,7 +48,7 @@
                         {
                             "codegenResult": 2,
                             "column": 18,
-                            "durationMicroseconds": 2241,
+                            "durationMicroseconds": 3006,
                             "functionName": "family",
                             "line": 10,
                             "message": "Cannot load property family from Theme::font with type QObject."
@@ -56,7 +56,7 @@
                         {
                             "codegenResult": 2,
                             "column": 21,
-                            "durationMicroseconds": 105,
+                            "durationMicroseconds": 70,
                             "functionName": "pixelSize",
                             "line": 11,
                             "message": "Cannot load property size from Theme::font with type QObject."
