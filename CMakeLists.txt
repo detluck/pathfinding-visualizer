@@ -13,14 +13,21 @@ set(CMAKE_AUTOUIC ON)
 # Qt6 Pakete
 find_package(Qt6 REQUIRED COMPONENTS Quick Qml Gui Svg)
 
+set(PROJECT_SOURCES
+    main.cpp
+    cpp/core/pathfinding.h cpp/core/pathfinding.cpp
+    cpp/core/cursorhelper.h cpp/core/cursorhelper.cpp
+    cpp/model/gridmodel.h cpp/model/gridmodel.cpp
+    cpp/model/node.h
+    cpp/algorithms/ialgorithm.h
+    cpp/algorithms/astar.h cpp/algorithms/astar.cpp
+    cpp/algorithms/dijkstra.h cpp/algorithms/dijkstra.cpp
+    cpp/algorithms/algorithmType.h
+)
+
 # Executable
 qt_add_executable(app
-    main.cpp
-    cpp/core/pathfinding.cpp
-    cpp/core/cursorhelper.cpp
-    cpp/model/gridmodel.cpp
-    cpp/algorithms/astar.cpp
-    cpp/algorithms/dijkstra.cpp
+    ${PROJECT_SOURCES}
 )
 
 # QML Modul

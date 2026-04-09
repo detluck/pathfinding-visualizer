@@ -3,7 +3,6 @@
 #include <QQmlContext>
 #include "cpp/core/cursorhelper.h"
 #include "cpp/core/pathfinding.h"
-#include "cpp/model/gridmodel.h"
 #include <QDirIterator>
 #include <QDebug>
 

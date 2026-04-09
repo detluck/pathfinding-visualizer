@@ -11,7 +11,7 @@ class CursorHelper : public QObject
 public:
     explicit CursorHelper(QObject *parent = nullptr);
 
-    QString cursor();
+    QString cursor() const;
 
 public slots:
 
