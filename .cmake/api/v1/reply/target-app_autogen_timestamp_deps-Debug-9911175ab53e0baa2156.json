@@ -22,7 +22,7 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 27,
+				"line" : 34,
 				"parent" : 0
 			},
 			{
@@ -60,16 +60,16 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "generate_qmlls_build_ini_file::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 4,
 			"id" : "app_copy_res::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 6,
 			"id" : "app_copy_qml::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "generate_qmlls_build_ini_file::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "app_autogen_timestamp_deps::@6890427a1f51a3e7e1df",

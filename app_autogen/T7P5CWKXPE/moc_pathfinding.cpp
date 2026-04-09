@@ -39,8 +39,12 @@ template <> constexpr inline auto Pathfinding::qt_create_metaobjectdata<qt_meta_
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "Pathfinding",
-        "finished",
+        "clickTypeChanged",
         "",
+        "finished",
+        "setClickType",
+        "Pathfinding::ClickType",
+        "type",
         "startAlgorithm",
         "stopAlgorithm",
         "resumeAlgorithm",
@@ -49,13 +53,11 @@ template <> constexpr inline auto Pathfinding::qt_create_metaobjectdata<qt_meta_
         "onStep",
         "setAlgorithm",
         "index",
-        "setClickType",
-        "ClickType",
-        "type",
         "setStartIndex",
         "setEndIndex",
         "setWallIndex",
         "handleClick",
+        "ClickType",
         "Start",
         "Pause",
         "Resume",
@@ -69,62 +71,66 @@ template <> constexpr inline auto Pathfinding::qt_create_metaobjectdata<qt_meta_
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Signal 'finished'
+        // Signal 'clickTypeChanged'
         QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'finished'
+        QtMocHelpers::SignalData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
+        // Slot 'setClickType'
+        QtMocHelpers::SlotData<void(Pathfinding::ClickType)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 5, 6 },
+        }}),
         // Slot 'startAlgorithm'
-        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'stopAlgorithm'
-        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'resumeAlgorithm'
-        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'setSpeed'
-        QtMocHelpers::SlotData<void(const int)>(6, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Int, 7 },
+        QtMocHelpers::SlotData<void(const int)>(10, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 11 },
         }}),
         // Slot 'onStep'
-        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(12, 2, QMC::AccessPrivate, QMetaType::Void),
         // Method 'setAlgorithm'
-        QtMocHelpers::MethodData<void(int)>(9, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Int, 10 },
-        }}),
-        // Method 'setClickType'
-        QtMocHelpers::MethodData<void(enum ClickType)>(11, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { 0x80000000 | 12, 13 },
+        QtMocHelpers::MethodData<void(int)>(13, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 14 },
         }}),
         // Method 'setStartIndex'
-        QtMocHelpers::MethodData<void(const int)>(14, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Int, 10 },
+        QtMocHelpers::MethodData<void(const int)>(15, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 14 },
         }}),
         // Method 'setEndIndex'
-        QtMocHelpers::MethodData<void(const int)>(15, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Int, 10 },
+        QtMocHelpers::MethodData<void(const int)>(16, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 14 },
         }}),
         // Method 'setWallIndex'
-        QtMocHelpers::MethodData<void(const int)>(16, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Int, 10 },
-        }}),
-        // Method 'handleClick'
         QtMocHelpers::MethodData<void(const int)>(17, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Int, 10 },
+            { QMetaType::Int, 14 },
         }}),
         // Method 'handleClick'
-        QtMocHelpers::MethodData<void()>(17, 2, QMC::AccessPublic | QMC::MethodCloned, QMetaType::Void),
+        QtMocHelpers::MethodData<void(const int)>(18, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 14 },
+        }}),
+        // Method 'handleClick'
+        QtMocHelpers::MethodData<void()>(18, 2, QMC::AccessPublic | QMC::MethodCloned, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
+        // property 'type'
+        QtMocHelpers::PropertyData<enum ClickType>(6, 0x80000000 | 19, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag, 0),
     };
     QtMocHelpers::UintData qt_enums {
         // enum 'ClickType'
-        QtMocHelpers::EnumData<enum ClickType>(12, 12, QMC::EnumIsScoped).add({
-            {   18, ClickType::Start },
-            {   19, ClickType::Pause },
-            {   20, ClickType::Resume },
-            {   21, ClickType::Stop },
-            {   22, ClickType::Clear },
-            {   23, ClickType::StartNode },
-            {   24, ClickType::TargetNode },
-            {   25, ClickType::Deleate },
-            {   26, ClickType::Wall },
-            {   27, ClickType::Count },
+        QtMocHelpers::EnumData<enum ClickType>(19, 19, QMC::EnumIsScoped).add({
+            {   20, ClickType::Start },
+            {   21, ClickType::Pause },
+            {   22, ClickType::Resume },
+            {   23, ClickType::Stop },
+            {   24, ClickType::Clear },
+            {   25, ClickType::StartNode },
+            {   26, ClickType::TargetNode },
+            {   27, ClickType::Deleate },
+            {   28, ClickType::Wall },
+            {   29, ClickType::Count },
         }),
     };
     return QtMocHelpers::metaObjectData<Pathfinding, qt_meta_tag_ZN11PathfindingE_t>(QMC::MetaObjectFlag{}, qt_stringData,
@@ -145,25 +151,42 @@ void Pathfinding::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
     auto *_t = static_cast<Pathfinding *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->finished(); break;
-        case 1: _t->startAlgorithm(); break;
-        case 2: _t->stopAlgorithm(); break;
-        case 3: _t->resumeAlgorithm(); break;
-        case 4: _t->setSpeed((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
-        case 5: _t->onStep(); break;
-        case 6: _t->setAlgorithm((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
-        case 7: _t->setClickType((*reinterpret_cast<std::add_pointer_t<enum ClickType>>(_a[1]))); break;
-        case 8: _t->setStartIndex((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
-        case 9: _t->setEndIndex((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
-        case 10: _t->setWallIndex((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
-        case 11: _t->handleClick((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
-        case 12: _t->handleClick(); break;
+        case 0: _t->clickTypeChanged(); break;
+        case 1: _t->finished(); break;
+        case 2: _t->setClickType((*reinterpret_cast<std::add_pointer_t<Pathfinding::ClickType>>(_a[1]))); break;
+        case 3: _t->startAlgorithm(); break;
+        case 4: _t->stopAlgorithm(); break;
+        case 5: _t->resumeAlgorithm(); break;
+        case 6: _t->setSpeed((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        case 7: _t->onStep(); break;
+        case 8: _t->setAlgorithm((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        case 9: _t->setStartIndex((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        case 10: _t->setEndIndex((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        case 11: _t->setWallIndex((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        case 12: _t->handleClick((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        case 13: _t->handleClick(); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
-        if (QtMocHelpers::indexOfMethod<void (Pathfinding::*)()>(_a, &Pathfinding::finished, 0))
+        if (QtMocHelpers::indexOfMethod<void (Pathfinding::*)()>(_a, &Pathfinding::clickTypeChanged, 0))
             return;
+        if (QtMocHelpers::indexOfMethod<void (Pathfinding::*)()>(_a, &Pathfinding::finished, 1))
+            return;
+    }
+    if (_c == QMetaObject::ReadProperty) {
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: *reinterpret_cast<enum ClickType*>(_v) = _t->clickType(); break;
+        default: break;
+        }
+    }
+    if (_c == QMetaObject::WriteProperty) {
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: _t->setClickType(*reinterpret_cast<enum ClickType*>(_v)); break;
+        default: break;
+        }
     }
 }
 
@@ -186,21 +209,33 @@ int Pathfinding::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 13)
+        if (_id < 14)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 13;
+        _id -= 14;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 13)
+        if (_id < 14)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 13;
+        _id -= 14;
+    }
+    if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
+            || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
+            || _c == QMetaObject::RegisterPropertyMetaType) {
+        qt_static_metacall(this, _c, _id, _a);
+        _id -= 1;
     }
     return _id;
 }
 
 // SIGNAL 0
-void Pathfinding::finished()
+void Pathfinding::clickTypeChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+}
+
+// SIGNAL 1
+void Pathfinding::finished()
+{
+    QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
 }
 QT_WARNING_POP

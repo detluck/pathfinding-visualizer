@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 2,
                             "column": 33,
-                            "durationMicroseconds": 2642,
+                            "durationMicroseconds": 1607,
                             "functionName": "hoverColor",
                             "line": 6,
                             "message": "Cannot load property colors from Theme."
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 2,
                             "column": 31,
-                            "durationMicroseconds": 77,
+                            "durationMicroseconds": 27,
                             "functionName": "textColor",
                             "line": 7,
                             "message": "Cannot load property colors from Theme."
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 0,
                             "column": 12,
-                            "durationMicroseconds": 233,
+                            "durationMicroseconds": 114,
                             "functionName": "color",
                             "line": 15,
                             "message": ""
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 97,
+                            "durationMicroseconds": 44,
                             "functionName": "centerIn",
                             "line": 18,
                             "message": ""
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 0,
                             "column": 21,
-                            "durationMicroseconds": 227,
+                            "durationMicroseconds": 124,
                             "functionName": "height",
                             "line": 21,
                             "message": ""
@@ -48,7 +48,7 @@
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 82,
+                            "durationMicroseconds": 40,
                             "functionName": "width",
                             "line": 22,
                             "message": ""
@@ -56,7 +56,7 @@
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 123,
+                            "durationMicroseconds": 63,
                             "functionName": "color",
                             "line": 23,
                             "message": ""
@@ -64,7 +64,7 @@
                         {
                             "codegenResult": 0,
                             "column": 37,
-                            "durationMicroseconds": 134,
+                            "durationMicroseconds": 71,
                             "functionName": "verticalCenter",
                             "line": 24,
                             "message": ""
@@ -72,7 +72,7 @@
                         {
                             "codegenResult": 0,
                             "column": 19,
-                            "durationMicroseconds": 113,
+                            "durationMicroseconds": 63,
                             "functionName": "text",
                             "line": 28,
                             "message": ""
@@ -80,7 +80,7 @@
                         {
                             "codegenResult": 0,
                             "column": 37,
-                            "durationMicroseconds": 151,
+                            "durationMicroseconds": 70,
                             "functionName": "verticalCenter",
                             "line": 29,
                             "message": ""

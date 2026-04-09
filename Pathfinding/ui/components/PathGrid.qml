@@ -51,65 +51,18 @@ Rectangle{
                 }
             }
         }
-
-        // MouseArea {
-        //     anchors.fill: parent
-        //     hoverEnabled: true
-        //     preventStealing: true
-
-        //     function tileIndexAt(x, y) {
-        //         var col = Math.floor(x / grid.cellWidth)
-        //         var row = Math.floor((y + grid.contentY) / grid.cellHeight)
-        //         var idx = row * Math.floor(grid.width / grid.cellWidth) + col
-        //         if (idx >= 0 && idx < gridModel.rowCount()) return idx
-        //             return -1
-        //         }
-        //         function paintTile(x, y) {
-        //             var idx = tileIndexAt(x, y)
-        //             if (idx < 0) return
-
-        //             controller.handleClick(idx)
-
-
-        //             // if (cursorHelper.cursor !== "") {
-        //             //     var item = grid.itemAtIndex(idx)
-        //             //     if (item) {
-        //             //         item.svgPath = "qrc:/" + cursorHelper.cursor
-        //             //     }
-        //             // }
-        //         }
-
-        //         onPressed: {
-        //             paintTile(mouseX, mouseY)
-        //         }
-
-        //         onPositionChanged: {
-        //             grid.hoverIndex = tileIndexAt(mouseX, mouseY)
-        //             if (pressedButtons & Qt.LeftButton) {
-        //                 paintTile(mouseX, mouseY)
-        //             }
-        //         }
-
-        //         onExited: {
-        //             grid.hoverIndex = -1
-        //         }
-        // }
     }
     MouseArea {
-                anchors.fill: parent // Füllt jetzt nur noch die tatsächliche Grid-Fläche!
+                anchors.fill: parent
                 hoverEnabled: true
                 preventStealing: true
 
                 function tileIndexAt(x, y) {
-                    // Da die MouseArea nur so groß wie das Grid ist,
-                    // sind x und y jetzt perfekt lokal zum ersten Tile oben links.
                     var col = Math.floor(x / grid.cellWidth)
                     var row = Math.floor(y / grid.cellHeight)
 
-                    // Nutze IMMER die Breite aus dem Model für den Index
                     var colsInModel = gridModel.width
 
-                    // Sicherheit Check
                     if (col < 0 || col >= colsInModel || row < 0 || row >= gridModel.height)
                         return -1
 

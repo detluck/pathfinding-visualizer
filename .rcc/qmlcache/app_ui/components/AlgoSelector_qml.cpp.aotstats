@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 2,
                             "column": 33,
-                            "durationMicroseconds": 2865,
+                            "durationMicroseconds": 1530,
                             "functionName": "hoverColor",
                             "line": 8,
                             "message": "Cannot load property hoverBtn from Theme::current with type QObject."
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 2,
                             "column": 34,
-                            "durationMicroseconds": 47,
+                            "durationMicroseconds": 22,
                             "functionName": "pressedColor",
                             "line": 9,
                             "message": "Cannot load property pressedBtn from Theme::current with type QObject."
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 2,
                             "column": 31,
-                            "durationMicroseconds": 37,
+                            "durationMicroseconds": 15,
                             "functionName": "textColor",
                             "line": 10,
                             "message": "Cannot load property textPrimary from Theme::current with type QObject."
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 2,
                             "column": 37,
-                            "durationMicroseconds": 35,
+                            "durationMicroseconds": 12,
                             "functionName": "backgroundColor",
                             "line": 11,
                             "message": "Cannot load property backgroundMain from Theme::current with type QObject."
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 2,
                             "column": 26,
-                            "durationMicroseconds": 34,
+                            "durationMicroseconds": 12,
                             "functionName": "radius",
                             "line": 12,
                             "message": "Cannot load property small from Theme::radius with type QObject."
@@ -80,7 +80,7 @@
                         {
                             "codegenResult": 2,
                             "column": 19,
-                            "durationMicroseconds": 67,
+                            "durationMicroseconds": 29,
                             "functionName": "text",
                             "line": 26,
                             "message": "Cannot access value for name model"
@@ -88,7 +88,7 @@
                         {
                             "codegenResult": 2,
                             "column": 20,
-                            "durationMicroseconds": 341,
+                            "durationMicroseconds": 194,
                             "functionName": "color",
                             "line": 27,
                             "message": "Cannot access value for name root"
@@ -96,7 +96,7 @@
                         {
                             "codegenResult": 2,
                             "column": 20,
-                            "durationMicroseconds": 471,
+                            "durationMicroseconds": 233,
                             "functionName": "color",
                             "line": 32,
                             "message": "Cannot access value for name delegate"
@@ -104,7 +104,7 @@
                         {
                             "codegenResult": 2,
                             "column": 23,
-                            "durationMicroseconds": 469,
+                            "durationMicroseconds": 217,
                             "functionName": "rightPadding",
                             "line": 39,
                             "message": "Cannot access value for name root"
@@ -112,7 +112,7 @@
                         {
                             "codegenResult": 2,
                             "column": 15,
-                            "durationMicroseconds": 188,
+                            "durationMicroseconds": 101,
                             "functionName": "text",
                             "line": 40,
                             "message": "Cannot access value for name root"
@@ -120,7 +120,7 @@
                         {
                             "codegenResult": 2,
                             "column": 16,
-                            "durationMicroseconds": 580,
+                            "durationMicroseconds": 252,
                             "functionName": "color",
                             "line": 41,
                             "message": "Cannot access value for name root"
@@ -128,7 +128,7 @@
                         {
                             "codegenResult": 2,
                             "column": 16,
-                            "durationMicroseconds": 355,
+                            "durationMicroseconds": 170,
                             "functionName": "x",
                             "line": 46,
                             "message": "Cannot access value for name root"
@@ -136,7 +136,7 @@
                         {
                             "codegenResult": 2,
                             "column": 16,
-                            "durationMicroseconds": 303,
+                            "durationMicroseconds": 132,
                             "functionName": "y",
                             "line": 47,
                             "message": "Cannot access value for name root"
@@ -144,7 +144,7 @@
                         {
                             "codegenResult": 2,
                             "column": 22,
-                            "durationMicroseconds": 595,
+                            "durationMicroseconds": 331,
                             "functionName": "onPaint",
                             "line": 57,
                             "message": "Cannot access value for name root"
@@ -152,7 +152,7 @@
                         {
                             "codegenResult": 2,
                             "column": 25,
-                            "durationMicroseconds": 57,
+                            "durationMicroseconds": 30,
                             "functionName": "target",
                             "line": 53,
                             "message": "Cannot access value for name root"
@@ -160,7 +160,7 @@
                         {
                             "codegenResult": 2,
                             "column": 17,
-                            "durationMicroseconds": 62,
+                            "durationMicroseconds": 33,
                             "functionName": "onPressedChanged",
                             "line": 54,
                             "message": "Cannot access value for name canvas"
@@ -192,7 +192,7 @@
                         {
                             "codegenResult": 0,
                             "column": 29,
-                            "durationMicroseconds": 165,
+                            "durationMicroseconds": 123,
                             "functionName": "implicitHeight",
                             "line": 75,
                             "message": ""
@@ -200,7 +200,7 @@
                         {
                             "codegenResult": 2,
                             "column": 20,
-                            "durationMicroseconds": 954,
+                            "durationMicroseconds": 468,
                             "functionName": "model",
                             "line": 76,
                             "message": "Cannot access value for name root"
@@ -208,7 +208,7 @@
                         {
                             "codegenResult": 2,
                             "column": 27,
-                            "durationMicroseconds": 417,
+                            "durationMicroseconds": 162,
                             "functionName": "currentIndex",
                             "line": 77,
                             "message": "Cannot access value for name root"
@@ -216,7 +216,7 @@
                         {
                             "codegenResult": 2,
                             "column": 21,
-                            "durationMicroseconds": 150,
+                            "durationMicroseconds": 63,
                             "functionName": "radius",
                             "line": 81,
                             "message": "Cannot access value for name root"
@@ -224,7 +224,7 @@
                         {
                             "codegenResult": 2,
                             "column": 20,
-                            "durationMicroseconds": 123,
+                            "durationMicroseconds": 48,
                             "functionName": "color",
                             "line": 82,
                             "message": "Cannot access value for name root"
@@ -232,7 +232,7 @@
                         {
                             "codegenResult": 2,
                             "column": 25,
-                            "durationMicroseconds": 130,
+                            "durationMicroseconds": 49,
                             "functionName": "implicitHeight",
                             "line": 87,
                             "message": "Cannot access value for name root"
@@ -240,7 +240,7 @@
                         {
                             "codegenResult": 2,
                             "column": 24,
-                            "durationMicroseconds": 117,
+                            "durationMicroseconds": 43,
                             "functionName": "implicitWidth",
                             "line": 88,
                             "message": "Cannot access value for name root"
@@ -248,7 +248,7 @@
                         {
                             "codegenResult": 2,
                             "column": 17,
-                            "durationMicroseconds": 105,
+                            "durationMicroseconds": 41,
                             "functionName": "radius",
                             "line": 89,
                             "message": "Cannot access value for name root"
@@ -256,7 +256,7 @@
                         {
                             "codegenResult": 2,
                             "column": 16,
-                            "durationMicroseconds": 103,
+                            "durationMicroseconds": 41,
                             "functionName": "color",
                             "line": 90,
                             "message": "Cannot access value for name root"

@@ -12,13 +12,12 @@ Window{
     ColumnLayout{
         anchors.fill: parent
         ControlPanel{
-            id: controlPanel
-            width: root.width
-            height: root.height /4
+            id: controlPaneL
+            Layout.fillWidth: true
         }
         PathGrid{
-            width: root.width
-            height: root.height - controlPanel.height
+            Layout.fillHeight: true
+            Layout.fillWidth: true
         }
 
     }

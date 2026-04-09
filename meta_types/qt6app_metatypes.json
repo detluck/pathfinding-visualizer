@@ -74,7 +74,7 @@
                     {
                         "isClass": true,
                         "isFlag": false,
-                        "lineNumber": 13,
+                        "lineNumber": 14,
                         "name": "ClickType",
                         "values": [
                             "Start",
@@ -100,22 +100,9 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 6,
-                        "lineNumber": 30,
-                        "name": "setAlgorithm",
-                        "returnType": "void"
-                    },
-                    {
-                        "access": "public",
-                        "arguments": [
-                            {
-                                "name": "type",
-                                "type": "ClickType"
-                            }
-                        ],
-                        "index": 7,
+                        "index": 8,
                         "lineNumber": 31,
-                        "name": "setClickType",
+                        "name": "setAlgorithm",
                         "returnType": "void"
                     },
                     {
@@ -126,7 +113,7 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 8,
+                        "index": 9,
                         "lineNumber": 32,
                         "name": "setStartIndex",
                         "returnType": "void"
@@ -139,7 +126,7 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 9,
+                        "index": 10,
                         "lineNumber": 33,
                         "name": "setEndIndex",
                         "returnType": "void"
@@ -152,7 +139,7 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 10,
+                        "index": 11,
                         "lineNumber": 34,
                         "name": "setWallIndex",
                         "returnType": "void"
@@ -165,14 +152,14 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 11,
+                        "index": 12,
                         "lineNumber": 35,
                         "name": "handleClick",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
-                        "index": 12,
+                        "index": 13,
                         "isCloned": true,
                         "lineNumber": 35,
                         "name": "handleClick",
@@ -180,12 +167,37 @@
                     }
                 ],
                 "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "lineNumber": 11,
+                        "name": "type",
+                        "notify": "clickTypeChanged",
+                        "read": "clickType",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "ClickType",
+                        "user": false,
+                        "write": "setClickType"
+                    }
+                ],
                 "qualifiedClassName": "Pathfinding",
                 "signals": [
                     {
                         "access": "public",
                         "index": 0,
-                        "lineNumber": 62,
+                        "lineNumber": 50,
+                        "name": "clickTypeChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "lineNumber": 66,
                         "name": "finished",
                         "returnType": "void"
                     }
@@ -193,22 +205,35 @@
                 "slots": [
                     {
                         "access": "public",
-                        "index": 1,
-                        "lineNumber": 43,
-                        "name": "startAlgorithm",
-                        "returnType": "void"
-                    },
-                    {
-                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "Pathfinding::ClickType"
+                            }
+                        ],
                         "index": 2,
-                        "lineNumber": 44,
-                        "name": "stopAlgorithm",
+                        "lineNumber": 43,
+                        "name": "setClickType",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 3,
+                        "lineNumber": 44,
+                        "name": "startAlgorithm",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 4,
                         "lineNumber": 45,
+                        "name": "stopAlgorithm",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "lineNumber": 46,
                         "name": "resumeAlgorithm",
                         "returnType": "void"
                     },
@@ -220,15 +245,15 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 4,
-                        "lineNumber": 46,
+                        "index": 6,
+                        "lineNumber": 47,
                         "name": "setSpeed",
                         "returnType": "void"
                     },
                     {
                         "access": "private",
-                        "index": 5,
-                        "lineNumber": 49,
+                        "index": 7,
+                        "lineNumber": 53,
                         "name": "onStep",
                         "returnType": "void"
                     }

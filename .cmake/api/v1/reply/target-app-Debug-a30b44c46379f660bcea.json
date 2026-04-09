@@ -38,8 +38,8 @@
 			"qt_find_package_system_or_bundled",
 			"_qt_internal_find_third_party_dependencies",
 			"add_dependencies",
-			"_qt_internal_write_deferred_qmlls_build_ini_file",
 			"_qt_internal_qml_copy_files_to_build_dir",
+			"_qt_internal_write_deferred_qmlls_build_ini_file",
 			"target_include_directories",
 			"_qt_internal_qml_type_registration",
 			"target_sources",
@@ -211,7 +211,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 17,
+				"line" : 29,
 				"parent" : 0
 			},
 			{
@@ -2382,7 +2382,7 @@
 			{
 				"command" : 20,
 				"file" : 1,
-				"line" : 27,
+				"line" : 34,
 				"parent" : 0
 			},
 			{
@@ -2400,7 +2400,7 @@
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 55,
+				"line" : 62,
 				"parent" : 0
 			},
 			{
@@ -2731,20 +2731,20 @@
 			},
 			{
 				"command" : 28,
-				"file" : 148,
-				"line" : 1,
-				"parent" : 5
+				"file" : 135,
+				"line" : 976,
+				"parent" : 407
 			},
 			{
 				"command" : 27,
 				"file" : 135,
-				"line" : 1387,
+				"line" : 3083,
 				"parent" : 468
 			},
 			{
-				"command" : 29,
+				"command" : 28,
 				"file" : 135,
-				"line" : 976,
+				"line" : 970,
 				"parent" : 407
 			},
 			{
@@ -2755,14 +2755,14 @@
 			},
 			{
 				"command" : 29,
-				"file" : 135,
-				"line" : 970,
-				"parent" : 407
+				"file" : 148,
+				"line" : 1,
+				"parent" : 5
 			},
 			{
 				"command" : 27,
 				"file" : 135,
-				"line" : 3083,
+				"line" : 1387,
 				"parent" : 472
 			},
 			{
@@ -3156,18 +3156,14 @@
 			[
 				0,
 				1,
-				2,
 				3,
-				4,
 				5,
-				6,
-				8,
-				9,
+				7,
 				11,
-				12,
-				14,
+				13,
 				16,
-				18,
+				17,
+				19,
 				20,
 				22,
 				24,
@@ -3175,8 +3171,12 @@
 				28,
 				30,
 				32,
-				33,
-				34
+				34,
+				36,
+				38,
+				40,
+				41,
+				42
 			]
 		}
 	],
@@ -3184,15 +3184,15 @@
 	[
 		{
 			"backtrace" : 469,
-			"id" : "generate_qmlls_build_ini_file::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 471,
 			"id" : "app_copy_res::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 473,
+			"backtrace" : 471,
 			"id" : "app_copy_qml::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 473,
+			"id" : "generate_qmlls_build_ini_file::@6890427a1f51a3e7e1df"
 		},
 		{
 			"id" : "app_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
@@ -4335,36 +4335,46 @@
 			[
 				0,
 				1,
-				2,
 				3,
-				4,
 				5,
-				6,
-				10,
+				7,
+				11,
 				13,
-				15,
-				17,
-				19,
+				18,
 				21,
 				23,
 				25,
 				27,
 				29,
-				31
+				31,
+				33,
+				35,
+				37,
+				39
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				2,
+				4,
+				6,
+				8,
+				9,
+				10,
+				12,
+				14
 			]
 		},
 		{
 			"name" : "Source Files\\Generated",
 			"sourceIndexes" : 
 			[
-				7,
-				8,
-				9,
-				11,
-				12,
-				14,
+				15,
 				16,
-				18,
+				17,
+				19,
 				20,
 				22,
 				24,
@@ -4372,42 +4382,38 @@
 				28,
 				30,
 				32,
-				33,
 				34,
-				35,
-				37,
-				38
+				36,
+				38,
+				40,
+				41,
+				42,
+				43,
+				45,
+				46
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				36,
-				39,
-				40,
-				41,
-				42,
-				43,
 				44,
-				45,
-				46,
-				47
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				48,
-				68,
-				69,
-				70,
-				71,
-				72,
-				73,
-				74,
-				75,
+				56,
 				76,
 				77,
 				78,
@@ -4426,21 +4432,21 @@
 				91,
 				92,
 				93,
-				94
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				49,
-				50,
-				51,
-				52,
-				53,
-				54,
-				55,
-				56,
 				57,
 				58,
 				59,
@@ -4451,25 +4457,33 @@
 				64,
 				65,
 				66,
-				67
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75
 			]
 		},
 		{
 			"name" : "Object Libraries",
 			"sourceIndexes" : 
 			[
-				95,
-				96,
-				97,
-				98,
-				99,
-				100,
-				101,
-				102,
 				103,
 				104,
 				105,
-				106
+				106,
+				107,
+				108,
+				109,
+				110,
+				111,
+				112,
+				113,
+				114
 			]
 		}
 	],
@@ -4490,9 +4504,19 @@
 		},
 		{
 			"backtrace" : 4,
+			"path" : "cpp/core/pathfinding.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
 			"compileGroupIndex" : 0,
 			"path" : "cpp/core/pathfinding.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "cpp/core/cursorhelper.h",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
@@ -4502,9 +4526,29 @@
 		},
 		{
 			"backtrace" : 4,
+			"path" : "cpp/model/gridmodel.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
 			"compileGroupIndex" : 0,
 			"path" : "cpp/model/gridmodel.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "cpp/model/node.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "cpp/algorithms/ialgorithm.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "cpp/algorithms/astar.h",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
@@ -4514,29 +4558,39 @@
 		},
 		{
 			"backtrace" : 4,
+			"path" : "cpp/algorithms/dijkstra.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
 			"compileGroupIndex" : 0,
 			"path" : "cpp/algorithms/dijkstra.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
+			"backtrace" : 4,
+			"path" : "cpp/algorithms/algorithmType.h",
+			"sourceGroupIndex" : 1
+		},
+		{
 			"backtrace" : 478,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/meta_types/qt6app_metatypes.json.gen",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 479,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/app_qmltyperegistrations.cpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 483,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qt/rcc/qrc_qmake_Pathfinding.cpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 485,
@@ -4548,14 +4602,14 @@
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_qmlcache_loader.cpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 488,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_Main_qml.cpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 489,
@@ -4567,7 +4621,7 @@
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/ControlPanel_qml.cpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 491,
@@ -4579,7 +4633,7 @@
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/PathGrid_qml.cpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 493,
@@ -4591,7 +4645,7 @@
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/GridTile_qml.cpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 495,
@@ -4603,7 +4657,7 @@
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/StyledButton_qml.cpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 497,
@@ -4615,7 +4669,7 @@
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/StyledSlider_qml.cpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 499,
@@ -4627,7 +4681,7 @@
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/AlgoSelector_qml.cpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 501,
@@ -4639,7 +4693,7 @@
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/StyledText_qml.cpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 503,
@@ -4651,7 +4705,7 @@
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/StyledRect_qml.cpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 505,
@@ -4663,7 +4717,7 @@
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/SpeedSlider_qml.cpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 507,
@@ -4675,417 +4729,417 @@
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/theme/Theme_qml.cpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 512,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qt/rcc/qrc_app_raw_qml_0.cpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 516,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qt/rcc/qrc_app_raw_res_0.cpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 518,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qt/rcc/qmake_Pathfinding.qrc",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 518,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/Pathfinding/qmldir",
-			"sourceGroupIndex" : 2
+			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 518,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qt/rcc/app_raw_qml_0.qrc",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 518,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qt/rcc/app_raw_res_0.qrc",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 518,
 			"path" : "ui/theme/qmldir",
-			"sourceGroupIndex" : 2
+			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 518,
 			"path" : "ui/assets/svgs/startNode.svg",
-			"sourceGroupIndex" : 2
+			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 518,
 			"path" : "ui/assets/svgs/endNode.svg",
-			"sourceGroupIndex" : 2
+			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 518,
 			"path" : "ui/assets/svgs/clean.svg",
-			"sourceGroupIndex" : 2
+			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 518,
 			"path" : "ui/assets/svgs/pause.svg",
-			"sourceGroupIndex" : 2
+			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 518,
 			"path" : "ui/assets/svgs/start.svg",
-			"sourceGroupIndex" : 2
+			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 518,
 			"path" : "ui/assets/svgs/terminate.svg",
-			"sourceGroupIndex" : 2
+			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 518,
 			"path" : "ui/assets/svgs/delete.svg",
-			"sourceGroupIndex" : 2
+			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 518,
 			"path" : "ui/assets/svgs/wall.svg",
-			"sourceGroupIndex" : 2
+			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/app_autogen/timestamp",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/meta_types/qt6app_metatypes.json.gen.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/app_qmltyperegistrations.cpp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qt/rcc/qrc_qmake_Pathfinding.cpp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_qmlcache_loader.cpp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_Main_qml.cpp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/ControlPanel_qml.cpp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/PathGrid_qml.cpp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/GridTile_qml.cpp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/StyledButton_qml.cpp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/StyledSlider_qml.cpp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/AlgoSelector_qml.cpp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/StyledText_qml.cpp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/StyledRect_qml.cpp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/components/SpeedSlider_qml.cpp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.rcc/qmlcache/app_ui/theme/Theme_qml.cpp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qt/rcc/qrc_app_raw_qml_0.cpp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qt/rcc/qrc_app_raw_res_0.cpp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/app_autogen/timestamp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/meta_types/app_json_file_list.txt.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 17,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6core_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 408,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6qml_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 408,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6network_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 409,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quick_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 409,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6gui_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 409,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6opengl_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 409,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6svg_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6qmlmeta_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6qmlmodels_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quickcontrols2_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quickcontrols2fusion_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quickcontrols2material_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quickcontrols2imagine_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quickcontrols2universal_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quickcontrols2basic_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quicktemplates2_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quickcontrols2impl_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quickcontrols2fusionstyleimpl_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quickcontrols2materialstyleimpl_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quickcontrols2imaginestyleimpl_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quickcontrols2universalstyleimpl_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quickcontrols2fluentwinui3styleimpl_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quickeffects_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quicklayouts_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quickshapesprivate_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6quickcontrols2basicstyleimpl_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 412,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/metatypes/qt6labsqmlmodels_metatypes.json",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 416,
 			"isGenerated" : true,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/plugins/tls/objects-Release/QTlsBackendCertOnlyPlugin_init/QTlsBackendCertOnlyPlugin_init.cpp.o",
-			"sourceGroupIndex" : 5
+			"sourceGroupIndex" : 6
 		},
 		{
 			"backtrace" : 416,
 			"isGenerated" : true,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/plugins/imageformats/objects-Release/QGifPlugin_init/QGifPlugin_init.cpp.o",
-			"sourceGroupIndex" : 5
+			"sourceGroupIndex" : 6
 		},
 		{
 			"backtrace" : 416,
 			"isGenerated" : true,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/plugins/imageformats/objects-Release/QICNSPlugin_init/QICNSPlugin_init.cpp.o",
-			"sourceGroupIndex" : 5
+			"sourceGroupIndex" : 6
 		},
 		{
 			"backtrace" : 416,
 			"isGenerated" : true,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/plugins/imageformats/objects-Release/QICOPlugin_init/QICOPlugin_init.cpp.o",
-			"sourceGroupIndex" : 5
+			"sourceGroupIndex" : 6
 		},
 		{
 			"backtrace" : 416,
 			"isGenerated" : true,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/plugins/imageformats/objects-Release/QJpegPlugin_init/QJpegPlugin_init.cpp.o",
-			"sourceGroupIndex" : 5
+			"sourceGroupIndex" : 6
 		},
 		{
 			"backtrace" : 416,
 			"isGenerated" : true,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/plugins/iconengines/objects-Release/QSvgIconPlugin_init/QSvgIconPlugin_init.cpp.o",
-			"sourceGroupIndex" : 5
+			"sourceGroupIndex" : 6
 		},
 		{
 			"backtrace" : 416,
 			"isGenerated" : true,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/plugins/imageformats/objects-Release/QSvgPlugin_init/QSvgPlugin_init.cpp.o",
-			"sourceGroupIndex" : 5
+			"sourceGroupIndex" : 6
 		},
 		{
 			"backtrace" : 416,
 			"isGenerated" : true,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/plugins/imageformats/objects-Release/QTgaPlugin_init/QTgaPlugin_init.cpp.o",
-			"sourceGroupIndex" : 5
+			"sourceGroupIndex" : 6
 		},
 		{
 			"backtrace" : 416,
 			"isGenerated" : true,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/plugins/imageformats/objects-Release/QTiffPlugin_init/QTiffPlugin_init.cpp.o",
-			"sourceGroupIndex" : 5
+			"sourceGroupIndex" : 6
 		},
 		{
 			"backtrace" : 416,
 			"isGenerated" : true,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/plugins/platforms/objects-Release/QWasmIntegrationPlugin_init/QWasmIntegrationPlugin_init.cpp.o",
-			"sourceGroupIndex" : 5
+			"sourceGroupIndex" : 6
 		},
 		{
 			"backtrace" : 416,
 			"isGenerated" : true,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/plugins/imageformats/objects-Release/QWbmpPlugin_init/QWbmpPlugin_init.cpp.o",
-			"sourceGroupIndex" : 5
+			"sourceGroupIndex" : 6
 		},
 		{
 			"backtrace" : 416,
 			"isGenerated" : true,
 			"path" : "C:/Qt/6.10.2/wasm_singlethread/plugins/imageformats/objects-Release/QWebpPlugin_init/QWebpPlugin_init.cpp.o",
-			"sourceGroupIndex" : 5
+			"sourceGroupIndex" : 6
 		}
 	],
 	"type" : "EXECUTABLE"

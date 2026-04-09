@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 0,
                             "column": 21,
-                            "durationMicroseconds": 350,
+                            "durationMicroseconds": 246,
                             "functionName": "onWidthChanged",
                             "line": 7,
                             "message": ""
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 22,
-                            "durationMicroseconds": 83,
+                            "durationMicroseconds": 57,
                             "functionName": "onHeightChanged",
                             "line": 8,
                             "message": ""
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 2,
                             "column": 5,
-                            "durationMicroseconds": 461,
+                            "durationMicroseconds": 320,
                             "functionName": "updateGridSize",
                             "line": 10,
                             "message": "Cannot access value for name gridModel"
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 0,
                             "column": 28,
-                            "durationMicroseconds": 91,
+                            "durationMicroseconds": 59,
                             "functionName": "onCompleted",
                             "line": 19,
                             "message": ""
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 2,
                             "column": 16,
-                            "durationMicroseconds": 893,
+                            "durationMicroseconds": 399,
                             "functionName": "model",
                             "line": 24,
                             "message": "Cannot access value for name gridModel"
@@ -48,7 +48,7 @@
                         {
                             "codegenResult": 2,
                             "column": 16,
-                            "durationMicroseconds": 551,
+                            "durationMicroseconds": 324,
                             "functionName": "width",
                             "line": 26,
                             "message": "Cannot access value for name gridModel"
@@ -56,7 +56,7 @@
                         {
                             "codegenResult": 2,
                             "column": 17,
-                            "durationMicroseconds": 464,
+                            "durationMicroseconds": 300,
                             "functionName": "height",
                             "line": 27,
                             "message": "Cannot access value for name gridModel"
@@ -64,7 +64,7 @@
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 156,
+                            "durationMicroseconds": 104,
                             "functionName": "centerIn",
                             "line": 25,
                             "message": ""
@@ -72,7 +72,7 @@
                         {
                             "codegenResult": 2,
                             "column": 24,
-                            "durationMicroseconds": 104,
+                            "durationMicroseconds": 70,
                             "functionName": "isHovered",
                             "line": 35,
                             "message": "Cannot access value for name index"
@@ -80,7 +80,7 @@
                         {
                             "codegenResult": 2,
                             "column": 19,
-                            "durationMicroseconds": 264,
+                            "durationMicroseconds": 148,
                             "functionName": "color",
                             "line": 36,
                             "message": "Cannot access value for name type"
@@ -88,7 +88,7 @@
                         {
                             "codegenResult": 2,
                             "column": 22,
-                            "durationMicroseconds": 177,
+                            "durationMicroseconds": 105,
                             "functionName": "svgPath",
                             "line": 45,
                             "message": "Cannot access value for name type"
@@ -106,7 +106,7 @@
                             "column": 17,
                             "durationMicroseconds": 0,
                             "functionName": "tileIndexAt",
-                            "line": 103,
+                            "line": 60,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -114,39 +114,39 @@
                             "column": 17,
                             "durationMicroseconds": 0,
                             "functionName": "paintTile",
-                            "line": 124,
+                            "line": 77,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
                             "codegenResult": 2,
                             "column": 28,
-                            "durationMicroseconds": 254,
+                            "durationMicroseconds": 152,
                             "functionName": "onPressed",
-                            "line": 129,
+                            "line": 82,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
                         {
                             "codegenResult": 2,
                             "column": 36,
-                            "durationMicroseconds": 805,
+                            "durationMicroseconds": 458,
                             "functionName": "onPositionChanged",
-                            "line": 130,
+                            "line": 83,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 183,
+                            "durationMicroseconds": 99,
                             "functionName": "onExited",
-                            "line": 134,
+                            "line": 87,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 119,
+                            "durationMicroseconds": 61,
                             "functionName": "fill",
-                            "line": 99,
+                            "line": 56,
                             "message": ""
                         }
                     ],
