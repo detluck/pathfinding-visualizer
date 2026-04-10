@@ -65,8 +65,7 @@ jobs:
         shell: pwsh
         run: |
           New-Item -ItemType Directory -Force dist
-          # Zippt den GESAMTEN install-Ordner, inklusive der Ordner "platforms", "qml", etc.
-          Compress-Archive -Path "${{ github.workspace }}\install\*" -DestinationPath dist\PathfindingVisualizer-windows.zip
+          Compress-Archive -Path "${{ github.workspace }}\install\bin\*" -DestinationPath dist\PathfindingVisualizer-windows.zip
 
       # ==========================================
       # 3. BUILD & DEPLOY (macOS)

@@ -68,7 +68,7 @@ set_target_properties(app PROPERTIES
 
 install(TARGETS app
     BUNDLE DESTINATION .
-    RUNTIME DESTINATION .
+    RUNTIME DESTINATION bin
 )
 
 if(NOT EMSCRIPTEN)
