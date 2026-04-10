@@ -20,8 +20,8 @@ int main(int argc, char *argv[]){
     engine.rootContext()->setContextProperty("controller", &pathfinding);
     engine.rootContext()->setContextProperty("cursorHelper", &cursorHelper);
     engine.rootContext()->setContextProperty("gridModel", pathfinding.gridModel());
-    const QUrl url(QStringLiteral("qrc:/Pathfinding/Main.qml"));
-    engine.load(url);
+    QObject::connect(&engine, &QQmlApplicationEngine::objectCreationFailed, &app, []() { QCoreApplication::exit(-1); }, Qt::QueuedConnection);
+    engine.loadFromModule("Pathfinding", "Main");
     if(engine.rootObjects().isEmpty())
         return -1;
 
