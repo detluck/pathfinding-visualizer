@@ -62,10 +62,9 @@ jobs:
 
       - name: Zip Release (Windows)
         if: runner.os == 'Windows'
-        shell: pwsh
         run: |
-          New-Item -ItemType Directory -Force dist
-          Compress-Archive -Path "${{ github.workspace }}\install\bin\*" -DestinationPath dist\PathfindingVisualizer-windows.zip
+          mkdir dist
+          tar.exe -a -c -f dist/PathfindingVisualizer-windows.zip -C install .
 
       # ==========================================
       # 3. BUILD & DEPLOY (macOS)
