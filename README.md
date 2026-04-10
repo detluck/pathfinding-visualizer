@@ -1,9 +1,9 @@
 # 📍 Pathfinding Visualizer
 
-A high-performance **C++/Qt** application designed to visualize pathfinding algorithms on an interactive grid. This tool provides a real-time look at how algorithms "think," featuring step-by-step execution, speed control, and automatic path reconstruction.
+A high-performance **C++/Qt** application designed to visualize pathfinding algorithms on an interactive grid. This tool provides a real-time look at how algorithms "think," featuring step-by-step execution, speed control, and automatic path reconstruction. The project is avaliable as desktop and web application (see [web version](#-web-version)).
 
 > [!NOTE]
-> This project is built using the Qt Framework. Ensure you have the proper kit configured in your IDE to compile and run the application.
+> This project is built using the Qt Framework. If you want to build it from source, ensure you have the proper kit configured in your IDE to compile and run the application. See [installation](#-installation).
 
 ---
 
