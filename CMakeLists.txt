@@ -30,7 +30,7 @@ qt_add_executable(app MACOSX_BUNDLE
     ${PROJECT_SOURCES}
 )
 
-# QML Modul
+# QML Module
 qt_add_qml_module(app
     URI Pathfinding
     VERSION 1.0
@@ -61,11 +61,16 @@ qt_add_qml_module(app
 # Link Qt Bibliotheken
 target_link_libraries(app PRIVATE Qt6::Quick Qt6::Qml Qt6::Gui Qt6::Svg)
 
-# Plattform-spezifische Einstellungen (blendet auf Windows die Terminal-Konsole aus)
 set_target_properties(app PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
+install(TARGETS app
+    BUNDLE DESTINATION .
+    RUNTIME DESTINATION bin
+)
+
+# Deployment-Script generieren (führt windeployqt / macdeployqt aus)
 if(NOT EMSCRIPTEN)
     qt_generate_deploy_qml_app_script(
         TARGET app
