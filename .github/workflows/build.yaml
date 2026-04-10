@@ -63,8 +63,8 @@ jobs:
       - name: Zip Release (Windows)
         if: runner.os == 'Windows'
         run: |
-          mkdir dist
-          tar.exe -a -c -f dist/PathfindingVisualizer-windows.zip -C install .
+          mkdir -p dist
+          7z a -tzip dist/PathfindingVisualizer-windows.zip .\install\*
 
       # ==========================================
       # 3. BUILD & DEPLOY (macOS)
