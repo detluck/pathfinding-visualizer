@@ -20,6 +20,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # ==========================================
+      # 1. Qt INSTALL
+      # ==========================================
       - name: Install Qt (Windows)
         if: runner.os == 'Windows'
         uses: jurplel/install-qt-action@v4
@@ -38,6 +41,9 @@ jobs:
           arch: "clang_64"
           cache: true
 
+      # ==========================================
+      # 2. BUILD & DEPLOY (WINDOWS)
+      # ==========================================
       - name: Set up MSVC dev environment (Windows)
         if: runner.os == 'Windows'
         uses: ilammy/msvc-dev-cmd@v1
@@ -52,17 +58,17 @@ jobs:
        
       - name: Install & Automagic Deploy (Windows)
         if: runner.os == 'Windows'
-        run: cmake --install build --config Release --prefix install
+        run: cmake --install build --config Release --prefix "${{ github.workspace }}/install"
 
       - name: Zip Release (Windows)
         if: runner.os == 'Windows'
-        shell: pwsh
         run: |
-          New-Item -ItemType Directory -Force dist
-          # Wir zippen einfach den gesamten Inhalt des bin-Ordners
-          Compress-Archive -Path "install\bin\*" -DestinationPath dist\PathfindingVisualizer-windows.zip
+          mkdir -p dist
+          7z a -tzip dist/PathfindingVisualizer-windows.zip .\install\*
 
-
+      # ==========================================
+      # 3. BUILD & DEPLOY (macOS)
+      # ==========================================
       - name: Configure (macOS)
         if: runner.os == 'macOS'
         run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
@@ -73,16 +79,17 @@ jobs:
 
       - name: Install & Automagic Deploy (macOS)
         if: runner.os == 'macOS'
-        run: cmake --install build --prefix install
+        run: cmake --install build --prefix "${{ github.workspace }}/install"
 
       - name: Zip Release (macOS)
         if: runner.os == 'macOS'
         run: |
           mkdir -p dist
-          # Wir zippen die fertige, deployte macOS App
-          ditto -c -k --sequesterRsrc --keepParent "install/bin/app.app" "dist/PathfindingVisualizer-macos.zip"
+          ditto -c -k --sequesterRsrc --keepParent "${{ github.workspace }}/install/app.app" "dist/PathfindingVisualizer-macos.zip"
 
-
+      # ==========================================
+      # 4. GITHUB RELEASE UPLOAD
+      # ==========================================
       - name: Upload artifacts to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
