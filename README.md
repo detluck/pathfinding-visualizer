@@ -44,15 +44,17 @@ These files are deployed via GitHub Pages and can be accessed directly in the br
 ---
 
 You can try the web version here:
-👉 **[https://detluck.github.io/pathfinding-visualizer/]**
+👉 **https://detluck.github.io/pathfinding-visualizer/**
 
 ## 📦 Installation
 
-### Option 1: Download Pre-built Binaries (in the future, not working yet)
+### Option 1: Download Pre-built Binaries
 You can skip the compilation process by downloading the latest stable version directly:
 1. Go to the [Latest Release](https://github.com/detluck/pathfinding-visualizer/releases/latest) page.
-2. **Windows:** Download the `.exe` file.
-3. **macOS:** Download the macOS executable/disk image.
+2. **Windows:** Download the `PathfindingVisualizer-windows.zip`.
+3. **macOS:** Download the `PathfindingVisualizer-macos.zip`.
+> [!NOTE]
+> The macOS pre-build was not tested, so it could be broken.
 
 ### Option 2: Build from Source (CMake)
 
