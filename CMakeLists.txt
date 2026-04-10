@@ -10,7 +10,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 
-find_package(Qt6 REQUIRED COMPONENTS Quick Qml Gui Svg)
+find_package(Qt6 REQUIRED COMPONENTS Quick Qml Gui Svg QuickControls2)
 
 
 qt_policy(SET QTP0001 NEW)
@@ -59,7 +59,7 @@ qt_add_qml_module(app
         ui/assets/svgs/wall.svg
 )
 
-target_link_libraries(app PRIVATE Qt6::Quick Qt6::Qml Qt6::Gui Qt6::Svg)
+target_link_libraries(app PRIVATE Qt6::Quick Qt6::Qml Qt6::Gui Qt6::Svg Qt6::QuickControls2)
 
 set_target_properties(app PROPERTIES
     WIN32_EXECUTABLE TRUE

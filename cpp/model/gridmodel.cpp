@@ -23,14 +23,11 @@ QHash<int, QByteArray> GridModel::roleNames() const
 
 QVariant GridModel::data(const QModelIndex &index, int role) const
 {
-    qDebug() << "Called Index" << index.row();
-    qDebug() << "Role" << role << "Type" << static_cast<int>(m_model[index.row()].type);
     if(!index.isValid()){
         return QVariant();
     }
     const Node &node = m_model[index.row()];
     if(role == TypeRole){
-        qDebug() << "returning type" << static_cast<int>(node.type);
         return static_cast<int>(node.type);
     }
     return QVariant();
@@ -123,10 +120,9 @@ void GridModel::setNodeType(const NodeType type, const int index)
         node.type = type;
         break;
     }
-    qDebug() << "type now" << static_cast<int>(m_model[index].type) << "index" << index;
+    //qDebug() << "type now" << static_cast<int>(m_model[index].type) << "index" << index;
     QModelIndex modelIndex = createIndex(index, 0);
     emit dataChanged(modelIndex, modelIndex, {TypeRole});
-    qDebug() << "type changed";
 
 }
 

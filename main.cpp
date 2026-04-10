@@ -5,9 +5,11 @@
 #include "cpp/core/pathfinding.h"
 #include <QDirIterator>
 #include <QDebug>
+#include <QQuickStyle>
 
 int main(int argc, char *argv[]){
     QGuiApplication app(argc, argv);
+    QQuickStyle::setStyle("Basic");
     CursorHelper cursorHelper;
     Pathfinding pathfinding;
     QQmlApplicationEngine engine;
