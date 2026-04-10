@@ -10,8 +10,9 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-# Qt6 Pakete
 find_package(Qt6 REQUIRED COMPONENTS Quick Qml Gui Svg)
+
+qt_policy(SET QTP0001 NEW)
 
 set(PROJECT_SOURCES
     main.cpp
@@ -25,8 +26,7 @@ set(PROJECT_SOURCES
     cpp/algorithms/algorithmType.h
 )
 
-# Executable
-qt_add_executable(app
+qt_add_executable(app MACOSX_BUNDLE
     ${PROJECT_SOURCES}
 )
 
@@ -61,12 +61,11 @@ qt_add_qml_module(app
 # Link Qt Bibliotheken
 target_link_libraries(app PRIVATE Qt6::Quick Qt6::Qml Qt6::Gui Qt6::Svg)
 
-# Plattform-spezifische Einstellungen
+# Plattform-spezifische Einstellungen (blendet auf Windows die Terminal-Konsole aus)
 set_target_properties(app PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-# Deployment-Script nur für Desktop (nicht WebAssembly)
 if(NOT EMSCRIPTEN)
     qt_generate_deploy_qml_app_script(
         TARGET app
@@ -75,5 +74,4 @@ if(NOT EMSCRIPTEN)
     install(SCRIPT ${deploy_qml_script})
 endif()
 
-# Abschluss: Qt6 finalisieren
 qt_finalize_executable(app)

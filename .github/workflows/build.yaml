@@ -1,3 +1,5 @@
+name: Release Build
+
 on:
   release:
     types: [published]
@@ -18,7 +20,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # ----- Install Qt -----
       - name: Install Qt (Windows)
         if: runner.os == 'Windows'
         uses: jurplel/install-qt-action@v4
@@ -37,61 +38,47 @@ jobs:
           arch: "clang_64"
           cache: true
 
-      # ----- Windows: MSVC toolchain (matches win64_msvc2019_64) -----
-      - name: Set up MSVC dev environment
+      - name: Set up MSVC dev environment (Windows)
         if: runner.os == 'Windows'
         uses: ilammy/msvc-dev-cmd@v1
 
-      - name: Configure (Windows - MSVC)
+      - name: Configure (Windows)
         if: runner.os == 'Windows'
-        run: cmake -S . -B build -G "Visual Studio 17 2022" -A x64 -DCMAKE_INSTALL_PREFIX="${{ github.workspace }}\install"
+        run: cmake -S . -B build -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=Release
 
-      - name: Build (Windows - MSVC)
+      - name: Build (Windows)
         if: runner.os == 'Windows'
         run: cmake --build build --config Release
-      
-      - name: Install (Windows)
+       
+      - name: Install & Automagic Deploy (Windows)
         if: runner.os == 'Windows'
-        run: cmake --install build --config Release
+        run: cmake --install build --config Release --prefix "${{ github.workspace }}/install"
 
-      # ----- macOS: Ninja -----
-      - name: Configure (macOS - Ninja)
-        if: runner.os == 'macOS'
-        run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
-
-      - name: Build (macOS - Ninja)
-        if: runner.os == 'macOS'
-        run: cmake --build build
-
-      # ----- Deploy Qt runtimes -----
-      - name: Deploy Qt runtime (Windows)
+      - name: Zip Release (Windows)
         if: runner.os == 'Windows'
         shell: pwsh
         run: |
-          $exe = "$PWD\install\bin\app.exe"
-          if (!(Test-Path $exe)) { throw "Expected $exe but it doesn't exist." }
+          New-Item -ItemType Directory -Force dist
+          Compress-Archive -Path "${{ github.workspace }}\install\bin\*" -DestinationPath dist\PathfindingVisualizer-windows.zip
 
-          # Deploy Qt DLLs + plugins + QML imports
-          windeployqt --release --qmldir "$PWD\ui" $exe
+      - name: Configure (macOS)
+        if: runner.os == 'macOS'
+        run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
 
-          # Stage and zip the install tree
-          New-Item -ItemType Directory -Force dist | Out-Null
-          Compress-Archive -Path "$PWD\install\*" -DestinationPath dist\PathfindingVisualizer-windows.zip
+      - name: Build (macOS)
+        if: runner.os == 'macOS'
+        run: cmake --build build
 
-      - name: Deploy Qt runtime (macOS)
+      - name: Install & Automagic Deploy (macOS)
+        if: runner.os == 'macOS'
+        run: cmake --install build --prefix "${{ github.workspace }}/install"
+
+      - name: Zip Release (macOS)
         if: runner.os == 'macOS'
         run: |
-          APP_PATH="$GITHUB_WORKSPACE/build/app.app"
-          if [ ! -d "$APP_PATH" ]; then
-            echo "Expected $APP_PATH but it doesn't exist."
-            ls -la build || true
-            exit 1
-          fi
-          macdeployqt "$APP_PATH" -qmldir="$GITHUB_WORKSPACE/ui"
           mkdir -p dist
-          ditto -c -k --sequesterRsrc --keepParent "$APP_PATH" "dist/PathfindingVisualizer-macos.zip"
+          ditto -c -k --sequesterRsrc --keepParent "${{ github.workspace }}/install/app.app" "dist/PathfindingVisualizer-macos.zip"
 
-      # ----- Upload to the GitHub Release -----
       - name: Upload artifacts to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
