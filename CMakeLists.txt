@@ -5,12 +5,13 @@ project(PathfindingVisualizer VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Automatisches MOC / UIC / RCC
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
+
 find_package(Qt6 REQUIRED COMPONENTS Quick Qml Gui Svg)
+
 
 qt_policy(SET QTP0001 NEW)
 
@@ -58,19 +59,18 @@ qt_add_qml_module(app
         ui/assets/svgs/wall.svg
 )
 
-# Link Qt Bibliotheken
 target_link_libraries(app PRIVATE Qt6::Quick Qt6::Qml Qt6::Gui Qt6::Svg)
 
 set_target_properties(app PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
+
 install(TARGETS app
     BUNDLE DESTINATION .
-    RUNTIME DESTINATION bin
+    RUNTIME DESTINATION .
 )
 
-# Deployment-Script generieren (führt windeployqt / macdeployqt aus)
 if(NOT EMSCRIPTEN)
     qt_generate_deploy_qml_app_script(
         TARGET app

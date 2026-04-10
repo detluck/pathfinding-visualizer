@@ -20,6 +20,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # ==========================================
+      # 1. Qt INSTALL
+      # ==========================================
       - name: Install Qt (Windows)
         if: runner.os == 'Windows'
         uses: jurplel/install-qt-action@v4
@@ -38,6 +41,9 @@ jobs:
           arch: "clang_64"
           cache: true
 
+      # ==========================================
+      # 2. BUILD & DEPLOY (WINDOWS)
+      # ==========================================
       - name: Set up MSVC dev environment (Windows)
         if: runner.os == 'Windows'
         uses: ilammy/msvc-dev-cmd@v1
@@ -59,8 +65,12 @@ jobs:
         shell: pwsh
         run: |
           New-Item -ItemType Directory -Force dist
-          Compress-Archive -Path "${{ github.workspace }}\install\bin\*" -DestinationPath dist\PathfindingVisualizer-windows.zip
+          # Zippt den GESAMTEN install-Ordner, inklusive der Ordner "platforms", "qml", etc.
+          Compress-Archive -Path "${{ github.workspace }}\install\*" -DestinationPath dist\PathfindingVisualizer-windows.zip
 
+      # ==========================================
+      # 3. BUILD & DEPLOY (macOS)
+      # ==========================================
       - name: Configure (macOS)
         if: runner.os == 'macOS'
         run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
@@ -79,6 +89,9 @@ jobs:
           mkdir -p dist
           ditto -c -k --sequesterRsrc --keepParent "${{ github.workspace }}/install/app.app" "dist/PathfindingVisualizer-macos.zip"
 
+      # ==========================================
+      # 4. GITHUB RELEASE UPLOAD
+      # ==========================================
       - name: Upload artifacts to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
