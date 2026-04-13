@@ -5,11 +5,10 @@ import "../theme"
 ComboBox{
     id: root
 
-    property  color hoverColor: Theme.current.hoverBtn
-    property color pressedColor: Theme.current.pressedBtn
-    property color textColor: Theme.current.textPrimary
-    property color backgroundColor: Theme.current.backgroundMain
-    property int radius: Theme.radius.small
+    property  color hoverColor: Theme.surface1
+    property color pressedColor: Theme.surface2
+    property color textColor: Theme.textMain
+    property color backgroundColor: Theme.surface0
     property int bWidth: 100
     property int bHeight: 50
 
@@ -86,7 +85,7 @@ ComboBox{
     background: Rectangle{
         implicitHeight: root.bHeight
         implicitWidth: root.bWidth
-        radius: root.radius
+        radius: 6
         color: root.backgroundColor
     }
 

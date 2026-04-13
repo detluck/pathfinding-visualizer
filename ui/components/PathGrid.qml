@@ -1,11 +1,15 @@
 import QtQuick
 import QtQuick.Layouts
+import Pathfinding
 
 Rectangle{
     id: root
-
     onWidthChanged: updateGridSize()
     onHeightChanged: updateGridSize()
+
+    color: Theme.bgGrid
+
+    Behavior on color { ColorAnimation { duration: 150 } }
 
     function updateGridSize() {
         if (grid.cellWidth === 0 || grid.cellHeight === 0) return;
@@ -35,11 +39,11 @@ Rectangle{
             isHovered: index === grid.hoverIndex
             color:{
                 switch(type){
-                    case 0: return "white";
-                    case 1: return "blue";
-                    case 2: return "black";
-                    case 3: return "yellow";
-                    default: return "white";
+                    case 0: return Theme.bgGrid;
+                    case 1: return Theme.visited;
+                    case 2: return Theme.wall;
+                    case 3: return Theme.path;
+                    default: return Theme.bgGrid;
                 }
             }
             svgPath: getRightSVG(type)

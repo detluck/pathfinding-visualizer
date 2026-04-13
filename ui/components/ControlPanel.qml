@@ -3,10 +3,11 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import App.Controller 1.0
+import Pathfinding
 
 Rectangle {
     id: root
-    color: "white"
+    color: Theme.bgBase
 
     Layout.fillWidth: true
     Layout.preferredHeight: parent ? parent.height * 0.35 : 280
@@ -53,7 +54,7 @@ Rectangle {
 
             RowLayout {
                 Layout.fillWidth: true
-                Layout.fillHeight: true   // 🔥 wichtig!
+                Layout.fillHeight: true
                 spacing: 40
 
                 ColumnLayout {
@@ -178,7 +179,7 @@ Rectangle {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         useSquare: true
-                        borderColor: "skyblue"
+                        borderColor: Theme.empty
                         text: "Unvisited Node"
                         hoverEnabled: false
                     }
@@ -187,7 +188,7 @@ Rectangle {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         useSquare: true
-                        squareColor: "blue"
+                        squareColor: Theme.visited
                         text: "Visited Node"
                         hoverEnabled: false
                     }
@@ -196,9 +197,12 @@ Rectangle {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         useSquare: true
-                        squareColor: "yellow"
+                        squareColor: Theme.path
                         text: "Shortest Path"
                         hoverEnabled: false
+                        onClicked: {
+                            Theme.toggleTheme()
+                        }
                     }
 
                     Item { Layout.fillHeight: true }
