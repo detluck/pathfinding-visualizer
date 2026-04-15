@@ -133,7 +133,7 @@ std::vector<int> Bfs::neighbors(int current)
              * if it has not, and if the position is not the wall
              * then we put our position in the visited list
              */
-            if(m_data.nodes[index] != NodeType::Wall) {
+            if(m_data.nodes[index].type != NodeType::Wall) {
                 neighbors.push_back(index);
             }
         }

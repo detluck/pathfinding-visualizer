@@ -143,8 +143,12 @@ void Pathfinding::startAlgorithm()
     GridData data = collectData();
     m_algorithm->init(data);
     }
+
     if(!timer->isActive()){
         timer->start();
+    }
+    else {
+        qDebug() << "Error: trying to start, but no algorithm selected!";
     }
 }
 
@@ -272,13 +276,17 @@ GridData Pathfinding::collectData()
     data.height = m_model->height();
     data.startIndex = m_start;
     data.endIndex = m_end;
-    data.nodes = m_model->nodeTypes();
+    data.nodes = m_model->getNodes();
 
     return data;
 }
 
 void Pathfinding::onStep()
 {
+    if(!m_algorithm) {
+        timer->stop();
+        return;
+    }
     auto result = m_algorithm->step();
 
     switch(result.state) {

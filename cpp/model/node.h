@@ -7,7 +7,8 @@ enum class NodeType{
     Wall,
     Path,
     Start,
-    End
+    End,
+    WeightNode
 };
 
 struct Node{

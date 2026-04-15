@@ -17,7 +17,8 @@ int GridModel::rowCount(const QModelIndex &parent) const
 QHash<int, QByteArray> GridModel::roleNames() const
 {
     return {
-            {TypeRole, "type"}
+            {TypeRole, "type"},
+            {WeightRole, "weight"}
     };
 }
 
@@ -27,8 +28,12 @@ QVariant GridModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
     const Node &node = m_model[index.row()];
+
     if(role == TypeRole){
         return static_cast<int>(node.type);
+    }
+    if(role == WeightRole){
+        return node.weight;
     }
     return QVariant();
 }
@@ -73,27 +78,38 @@ std::vector<NodeType> GridModel::nodeTypes() const
     return types;
 }
 
+std::vector<Node> GridModel::getNodes() const
+{
+    return std::vector<Node>(m_model.begin(), m_model.end());
+}
+
 void GridModel::clearModel()
 {
     for(int i = 0; i<m_model.size(); i++)
     {
         m_model[i].type = NodeType::Empty;
+        m_model[i].weight = 0;
     }
     QModelIndex start = createIndex(0,0);
     QModelIndex end = createIndex(m_model.size() - 1, 0);
-    emit dataChanged(start, end, {TypeRole});
+    emit dataChanged(start, end, {TypeRole, WeightRole});
 }
 
-void GridModel::setNodeType(const NodeType type, const int index)
+void GridModel::setNodeType(const NodeType type, const int index, const int weight)
 {
-    if(index < 0 || index > m_model.size() || m_model[index].type == type)
+    if(index < 0 || index >= m_model.size())
     {
         return;
     }
     Node& node = m_model[index];
-
-    if(node.type == type)
-        return;
+    //if the cell being changed to empty, we make its weight = 0
+    if (type == NodeType::Empty) {
+        node.weight = 0;
+    }
+    // if we draw a cell with a weight, we save that weight
+    else if (type == NodeType::WeightNode) {
+        node.weight = weight; 
+    }
 
     switch(type) {
     case NodeType::Visited:
@@ -104,8 +120,7 @@ void GridModel::setNodeType(const NodeType type, const int index)
         break;
 
     case NodeType::Wall:
-        // only empty cells could be walls
-        if(node.type == NodeType::Empty)
+        if(node.type == NodeType::Empty || node.type == NodeType::WeightNode)
             node.type = NodeType::Wall;
         break;
 
@@ -122,7 +137,7 @@ void GridModel::setNodeType(const NodeType type, const int index)
     }
     //qDebug() << "type now" << static_cast<int>(m_model[index].type) << "index" << index;
     QModelIndex modelIndex = createIndex(index, 0);
-    emit dataChanged(modelIndex, modelIndex, {TypeRole});
+    emit dataChanged(modelIndex, modelIndex, {TypeRole, WeightRole});
 
 }
 
