@@ -78,11 +78,11 @@ Rectangle {
                     StyledButton {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
-                        text: "Terminate"
-                        svgPath: "../assets/svgs/terminate.svg"
-                        highlighted: controller.type === Controller.Stop
+                        text: "Pause"
+                        svgPath: "../assets/svgs/pause.svg"
+                        highlighted: controller.type === Controller.Pause
                         onClicked: {
-                            controller.setClickType(Controller.Stop)
+                            controller.setClickType(Controller.Pause)
                             controller.handleClick()
                             cursorHelper.resetCursor()
                         }
@@ -91,13 +91,12 @@ Rectangle {
                     StyledButton {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
-                        text: "Pause"
-                        svgPath: "../assets/svgs/pause.svg"
-                        highlighted: controller.type === Controller.Pause
+                        text: "Delete Item"
+                        svgPath: "../assets/svgs/delete.svg"
+                        highlighted: controller.type === Controller.Deleate
                         onClicked: {
-                            controller.setClickType(Controller.Pause)
-                            controller.handleClick()
-                            cursorHelper.resetCursor()
+                            controller.setClickType(Controller.Deleate)
+                            changeCursor()
                         }
                     }
 
@@ -157,16 +156,9 @@ Rectangle {
                         }
                     }
 
-                    StyledButton {
+                    WeightButton{
                         Layout.fillWidth: true
                         Layout.fillHeight: true
-                        text: "Delete Item"
-                        svgPath: "../assets/svgs/delete.svg"
-                        highlighted: controller.type === Controller.Deleate
-                        onClicked: {
-                            controller.setClickType(Controller.Deleate)
-                            changeCursor()
-                        }
                     }
                 }
 

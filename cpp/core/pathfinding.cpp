@@ -1,6 +1,6 @@
 #include "pathfinding.h"
 #include "cpp/algorithms/algorithmType.h"
-#include "cpp/algorithms/dijkstra.h"
+#include "cpp/algorithms/bfs.h"
 #include "cpp/algorithms/astar.h"
 #include "cpp/model/gridmodel.h"
 #include <QDebug>
@@ -11,6 +11,11 @@ Pathfinding::Pathfinding(QObject *parent)
     timer = new QTimer(this);
     timer->setInterval(50);
     connect(timer, &QTimer::timeout, this, &Pathfinding::onStep);
+
+    QSettings settings("GoonSoft", "Pathfinder");
+    QVariant defaultWeights = QVariantList{10, 20, 40, 60, 80, 100};
+
+    m_avilableWeights = settings.value("customWeights", defaultWeights).toList();
 }
 
 void Pathfinding::setAlgorithm(int index)
@@ -23,12 +28,16 @@ void Pathfinding::setAlgorithm(int index)
     switch(type)
     {
     case AlgorithmType::Dijkstra:
-        m_algorithm = std::make_unique<Dijkstra>();
+        //m_algorithm = std::make_unique<Dijkstra>();
         qDebug() << "Dijkstra aktiv";
         break;
     case AlgorithmType::Astar:
         m_algorithm = std::make_unique<AStar>();
         qDebug() << "AStar aktiv";
+        break;
+    case AlgorithmType::Bfs:
+        m_algorithm = std::make_unique<Bfs>();
+        qDebug() << "Bfs aktiv";
         break;
     default:
         break;
@@ -49,6 +58,47 @@ void Pathfinding::setClickType(ClickType type)
 Pathfinding::ClickType Pathfinding::clickType()
 {
     return m_type;
+}
+
+int Pathfinding::currentWeight(){
+    return m_currentWeight;
+}
+
+QVariantList Pathfinding::availableWeights(){
+    return m_avilableWeights;
+}
+
+void Pathfinding::setCurrentWeight(const int weight){
+    if(weight == m_currentWeight){
+        return;
+    }
+    m_currentWeight = weight;
+    emit currentWeightChanged();
+}
+
+void Pathfinding::setAvailableWeights(const QVariantList list){
+    if(list == m_avilableWeights){
+        return;
+    }
+
+    QVariantList validated;
+
+    for(const QVariant &item: list){
+        bool ok;
+        int weight = item.toInt(&ok);
+
+        if(ok && weight > 0 && !validated.contains(weight) && validated.size() < 12){
+            validated.append(weight);
+        }
+    }
+
+    if(m_avilableWeights != validated){
+        m_avilableWeights = validated;
+
+        QSettings settings("GoonSoft", "Pathfinder");
+        settings.value("customWeights", m_avilableWeights);
+        emit availableWeightsChanged();
+    }
 }
 
 void Pathfinding::setStartIndex(const int index)

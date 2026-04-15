@@ -4,12 +4,15 @@
 #include <QObject>
 #include "cpp/model/gridmodel.h"
 #include <QTimer>
+#include<QVariantList>
+#include<QSettings>
 
 class Pathfinding: public QObject
 {
     Q_OBJECT
     Q_PROPERTY(ClickType type READ clickType WRITE setClickType NOTIFY clickTypeChanged)
-
+    Q_PROPERTY(QVariantList availableWeights READ availableWeights WRITE setAvailableWeights NOTIFY availableWeightsChanged)
+    Q_PROPERTY(int currentWeight READ currentWeight WRITE setCurrentWeight NOTIFY currentWeightChanged)
 public:
     enum class ClickType{
         Start,
@@ -38,6 +41,8 @@ public:
     void deleateitem(const int index);
     bool isValid(const int index);
     GridModel* gridModel();
+    QVariantList availableWeights();
+    int currentWeight();
 
 public slots:
     void setClickType(Pathfinding::ClickType type);
@@ -45,9 +50,13 @@ public slots:
     void stopAlgorithm();
     void resumeAlgorithm();
     void setSpeed(const int speed);
+    void setAvailableWeights(const QVariantList list);
+    void setCurrentWeight(const int weight);
 
 signals:
     void clickTypeChanged();
+    void availableWeightsChanged();
+    void currentWeightChanged();
 
 private slots:
     void onStep();
@@ -61,6 +70,8 @@ private:
     int m_end;
     bool paused = false;
     QTimer* timer;
+    QVariantList m_avilableWeights;
+    int m_currentWeight;
 
 signals:
     void finished();

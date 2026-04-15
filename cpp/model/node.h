@@ -1,6 +1,5 @@
 #ifndef NODE_H
 #define NODE_H
-#include <climits>
 
 enum class NodeType{
     Empty,
@@ -12,9 +11,8 @@ enum class NodeType{
 };
 
 struct Node{
-    int distance = INT_MAX;
-    int parent = -1;
-
+    int weight = 0;
+    //int parent = -1;
     NodeType type = NodeType::Empty;
 };
 

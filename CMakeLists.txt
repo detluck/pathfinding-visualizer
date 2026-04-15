@@ -23,7 +23,7 @@ set(PROJECT_SOURCES
     cpp/model/node.h
     cpp/algorithms/ialgorithm.h
     cpp/algorithms/astar.h cpp/algorithms/astar.cpp
-    cpp/algorithms/dijkstra.h cpp/algorithms/dijkstra.cpp
+    cpp/algorithms/bfs.h cpp/algorithms/bfs.cpp
     cpp/algorithms/algorithmType.h
 )
 
@@ -60,6 +60,7 @@ qt_add_qml_module(Pathfinder
         ui/assets/svgs/weight.svg
         ui/assets/fonts/JetBrainsMono-Bold.ttf
         ui/assets/fonts/JetBrainsMono-Regular.ttf
+        QML_FILES ui/components/WeightButton.qml
 )
 
 target_link_libraries(Pathfinder PRIVATE Qt6::Quick Qt6::Qml Qt6::Gui Qt6::Svg Qt6::QuickControls2)

@@ -1,12 +1,12 @@
-#ifndef DIJKSTRA_H
-#define DIJKSTRA_H
+#ifndef BFS_H
+#define BFS_H
 #include "ialgorithm.h"
 #include <queue>
 
-class Dijkstra: public IAlgorithm
+class Bfs: public IAlgorithm
 {
 public:
-    ~Dijkstra() override = default;
+    ~Bfs() override = default;
     void run(const GridData& data) override;
     void setState(const AlgoState algoState) override;
     void init(const GridData& data) override;

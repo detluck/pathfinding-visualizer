@@ -1,16 +1,16 @@
-#include "dijkstra.h"
+#include "bfs.h"
 #include <queue> 
 #include <algorithm>
 
 
-void Dijkstra::setState(const AlgoState algoState)
+void Bfs::setState(const AlgoState algoState)
 {
     if(m_state != algoState){
         m_state = algoState;
     }
 }
 
-void Dijkstra::init(const GridData &data)
+void Bfs::init(const GridData &data)
 {
     m_data = data;
 
@@ -22,12 +22,12 @@ void Dijkstra::init(const GridData &data)
     m_state = AlgoState::Running;
 }
 
-void Dijkstra::run(const GridData& data)
+void Bfs::run(const GridData& data)
 {
     init(data);
 }
 
-StepResult Dijkstra::step()
+StepResult Bfs::step()
 {
     //stopped, thread stops
     if(m_state == AlgoState::Stopped){
@@ -56,13 +56,13 @@ StepResult Dijkstra::step()
     return {StepResultType::Running, current};
 }
 
-void Dijkstra::blazzingRun(){
+void Bfs::blazzingRun(){
     while(step().state == StepResultType::Running) {
 
     }
 }
 
-std::vector<int> Dijkstra::getPath()
+std::vector<int> Bfs::getPath()
 {
     std::vector<int> path;
     int current = m_data.endIndex;
@@ -84,12 +84,12 @@ std::vector<int> Dijkstra::getPath()
     return path;
 }
 
-AlgoState Dijkstra::state()
+AlgoState Bfs::state()
 {
     return m_state;
 }
 
-std::vector<int> Dijkstra::neighbors(int current)
+std::vector<int> Bfs::neighbors(int current)
 {
 
     //ToDO: optimize function to calculate neighbors for @current Node using @m_data
@@ -141,7 +141,7 @@ std::vector<int> Dijkstra::neighbors(int current)
     return neighbors;
 }
 
-void Dijkstra::processNode(int current)
+void Bfs::processNode(int current)
 {
     std::vector<int> current_neighbors = neighbors(current);
     for(int next : current_neighbors) {
