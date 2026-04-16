@@ -9,6 +9,9 @@ import App.Controller 1.0
 Item {
     id: root
 
+    property bool isEditing: false
+    property int delegateWidth: 40
+
     implicitWidth: button.implicitWidth > 0? button.implicitWidth: 120
     implicitHeight: button.implicitHeight > 0? button.implicitHeight: 50
 
@@ -22,8 +25,6 @@ Item {
 
     Popup{
         id: popup
-        width: 400
-        height: 200
         modal: true
 
         background: Rectangle{
@@ -33,17 +34,21 @@ Item {
         }
 
         ColumnLayout{
-            anchors.fill: parent
-            anchors.margins: 15
+            anchors.centerIn: parent
+            spacing: 0
 
             StyledText{
-                text: "Select Node weight or create one"
+                text: "Select Node weight"
                 font.bold: true
+                Layout.alignment: Qt.AlignCenter
             }
 
-            Flow{
+            Grid{
                 Layout.fillWidth: true
-                spacing: 10
+                columnSpacing: 10
+                rowSpacing: 30
+                columns: 4
+                padding: 15
 
                 Repeater{
                     model: controller.availableWeights
@@ -52,8 +57,8 @@ Item {
                         id: delegateItem
                         required property int modelData
 
-                        width: 30
-                        height: 30
+                        width: root.delegateWidth
+                        height: root.delegateWidth
                         border.width: 2
                         border.color: Theme.surface1
                         radius: 10
@@ -118,6 +123,82 @@ Item {
                                 button.changeCursor()
                                 popup.close()
                             }
+                        }
+                    }
+                }
+
+                Rectangle{
+                    id: newButton
+
+                    width: delegateWidth
+                    height: delegateWidth
+                    border.width: 2
+                    border.color: Theme.surface1
+                    radius: 10
+                    color: "transparent"
+
+                    StyledText{
+                        anchors.centerIn: parent
+                        text: "+"
+                        visible: !isEditing
+                    }
+
+                    TextField{
+                        id: newField
+                        visible: isEditing
+                        anchors.fill: parent
+                        z:999
+
+                        color: Theme.textMain
+
+                        cursorDelegate: Rectangle {
+                            width: 2
+                            color: Theme.textMain
+
+                            SequentialAnimation on opacity {
+                                loops: Animation.Infinite
+                                running: newField.activeFocus
+
+                                NumberAnimation { to: 1; duration: 0 }
+                                PauseAnimation { duration: 500 }
+
+                                NumberAnimation { to: 0; duration: 0 }
+                                PauseAnimation { duration: 500 }
+                            }
+                        }
+
+                        background: Rectangle{
+                            color: "transparent"
+                        }
+
+                        inputMethodHints: Qt.ImhFormattedNumbersOnly
+                        validator: IntValidator{
+                            bottom: 0
+                            top: 1000
+                        }
+
+                        onVisibleChanged: {
+                            if (visible) {
+                                forceActiveFocus()
+                            }
+                        }
+
+                        onAccepted: {
+                            let weight = parseInt(text)
+                            if (!isNaN(weight)) {
+
+                                controller.addWeight(weight);
+                                text = ""
+                                root.isEditing = false
+                            }
+                        }
+                    }
+
+                    MouseArea{
+                        anchors.fill: newButton
+
+                        onClicked: {
+                            isEditing = !isEditing
                         }
                     }
                 }

@@ -35,7 +35,7 @@ Button {
         anchors.fill: parent
         color: (root.hovered || root.highlighted) ? root.hoverColor : (root.useSquare ? "transparent" : root.backgroundColor)
         border.width: 0
-        radius: 12
+        radius: 20
     }
 
     contentItem: Row {

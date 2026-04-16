@@ -38,6 +38,7 @@ public:
     void setWeightNode(const int index, const int weight);
     void setWallIndex(const int index);
     Q_INVOKABLE void handleClick(const int index = -1);
+    Q_INVOKABLE void addWeight(const int weight);
     void clearGrid();
     ClickType clickType();
     void deleateitem(const int index);
@@ -59,6 +60,7 @@ signals:
     void clickTypeChanged();
     void availableWeightsChanged();
     void currentWeightChanged();
+    void finished();
 
 private slots:
     void onStep();
@@ -72,11 +74,8 @@ private:
     int m_end;
     bool paused = false;
     QTimer* timer;
-    QVariantList m_avilableWeights;
+    QVariantList m_availableWeights;
     int m_currentWeight;
-
-signals:
-    void finished();
 };
 
 #endif

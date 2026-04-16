@@ -5,6 +5,7 @@
 #include "cpp/algorithms/dijkstra.h"
 #include "cpp/model/gridmodel.h"
 #include <QDebug>
+#include <algorithm>
 
 Pathfinding::Pathfinding(QObject *parent)
     :QObject(parent), m_model(new GridModel(this))
@@ -16,7 +17,7 @@ Pathfinding::Pathfinding(QObject *parent)
     QSettings settings("GoonSoft", "Pathfinder");
     QVariant defaultWeights = QVariantList{10, 20, 40, 60, 80, 100};
 
-    m_avilableWeights = settings.value("customWeights", defaultWeights).toList();
+    m_availableWeights = settings.value("customWeights", defaultWeights).toList();
 }
 
 void Pathfinding::setAlgorithm(int index)
@@ -66,7 +67,7 @@ int Pathfinding::currentWeight(){
 }
 
 QVariantList Pathfinding::availableWeights(){
-    return m_avilableWeights;
+    return m_availableWeights;
 }
 
 void Pathfinding::setCurrentWeight(const int weight){
@@ -78,7 +79,7 @@ void Pathfinding::setCurrentWeight(const int weight){
 }
 
 void Pathfinding::setAvailableWeights(const QVariantList list){
-    if(list == m_avilableWeights){
+    if(list == m_availableWeights){
         return;
     }
 
@@ -93,11 +94,11 @@ void Pathfinding::setAvailableWeights(const QVariantList list){
         }
     }
 
-    if(m_avilableWeights != validated){
-        m_avilableWeights = validated;
+    if(m_availableWeights != validated){
+        m_availableWeights = validated;
 
         QSettings settings("GoonSoft", "Pathfinder");
-        settings.value("customWeights", m_avilableWeights);
+        settings.value("customWeights", m_availableWeights);
         emit availableWeightsChanged();
     }
 }
@@ -278,6 +279,26 @@ void Pathfinding::handleClick(const int index)
     default:
         break;
     }
+}
+
+void Pathfinding::addWeight(const int weight)
+{
+    if (weight <= 1 || weight > 1000) {
+        return;
+    }
+    if (m_availableWeights.contains(weight)) {
+        setCurrentWeight(weight);
+        return;
+    }
+    m_availableWeights.append(weight);
+    std::sort(m_availableWeights.begin(), m_availableWeights.end(), [](const QVariant &a, const QVariant &b) {
+        return a.toInt() < b.toInt();
+    });
+    if(m_availableWeights.contains(weight)){
+        qDebug() << "Weight added";
+    }
+
+    emit availableWeightsChanged();
 }
 
 GridModel *Pathfinding::gridModel()
