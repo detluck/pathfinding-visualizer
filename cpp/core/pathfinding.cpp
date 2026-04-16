@@ -148,16 +148,20 @@ void Pathfinding::setWallIndex(const int index)
 
 void Pathfinding::startAlgorithm()
 {
-    if(m_algorithm && m_start > -1 && m_end > -1){
+    if(m_algorithm && isValid(m_start) && isValid(m_end)){
+        if(m_algorithm->state() == AlgoState::Stopped){
+            m_model->clearVisited();
+        }
         GridData data = collectData();
         m_algorithm->init(data);
+
+        if(!timer->isActive()){
+            timer->start();
+        }
     }
 
-    if(!timer->isActive()){
-        timer->start();
-    }
     else {
-        qDebug() << "Error: trying to start, but no algorithm selected!";
+        qDebug() << "Error: trying to start, but no algorithm selected or start/end index not valid!";
     }
 }
 

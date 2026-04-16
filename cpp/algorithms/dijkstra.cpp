@@ -37,13 +37,19 @@ StepResult Dijkstra::step()
 {
     if(m_state == AlgoState::Stopped) return {StepResultType::Finished, -1};
     if(m_state == AlgoState::Paused)return {StepResultType::Paused, -1};
-    if(m_queue.empty()) return {StepResultType::Finished, -1};
+    if(m_queue.empty()) {
+        m_state = AlgoState::Stopped;
+        return {StepResultType::Finished, -1};
+    }
     
 
     int current = m_queue.top().index;
     m_queue.pop();
 
-    if(current == m_data.endIndex) return {StepResultType::Finished, current};
+    if(current == m_data.endIndex) {
+        m_state = AlgoState::Stopped;
+        return {StepResultType::Finished, current};
+    }
     
     processNode(current);
     return {StepResultType::Running, current};
@@ -83,6 +89,7 @@ std::vector<int> Dijkstra::getPath()
     path.push_back(m_data.startIndex);
     // and reveerse our path 
     std::reverse(path.begin(), path.end());
+    m_state = AlgoState::Stopped;
     return path;
 }
 

@@ -40,6 +40,7 @@ StepResult Bfs::step()
     }
 
     if(m_queue.empty()){
+        m_state = AlgoState::Stopped;
         return {StepResultType::Finished, -1};
     }
 
@@ -47,6 +48,7 @@ StepResult Bfs::step()
     m_queue.pop();
 
     if(current == m_data.endIndex){
+        m_state = AlgoState::Stopped;
         return {StepResultType::Finished, current};
     }
 
@@ -81,6 +83,7 @@ std::vector<int> Bfs::getPath()
     path.push_back(m_data.startIndex);
     // and reveerse our path 
     std::reverse(path.begin(), path.end());
+    m_state = AlgoState::Stopped;
     return path;
 }
 
