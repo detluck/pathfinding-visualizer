@@ -43,9 +43,20 @@ Rectangle{
                     case 1: return Theme.visited;
                     case 2: return Theme.wall;
                     case 3: return Theme.path;
+                    case 6: switch(true){
+                                case weight <= 33:
+                                    return Theme.weightLight
+                                case weight <= 66:
+                                    return Theme.weightMiddle
+                                case weight <= 100:
+                                    return Theme.weightHeavy
+                                default:
+                                    return Theme.bgBaseReverse
+                            }
                     default: return Theme.bgGrid;
                 }
             }
+            opacity: type === 6? Math.max(0.2, weight / 100.0): 100.0
             svgPath: getRightSVG(type)
             function getRightSVG(type){
                 switch(type){

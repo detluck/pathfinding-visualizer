@@ -95,6 +95,20 @@ void GridModel::clearModel()
     emit dataChanged(start, end, {TypeRole, WeightRole});
 }
 
+void GridModel::clearVisited()
+{
+    for(int i = 0; i<m_model.size(); i++)
+    {
+        if(m_model[i].type == NodeType::Visited || m_model[i].type == NodeType::Path){
+            m_model[i].type = NodeType::Empty;
+            m_model[i].weight = 0;
+        }
+    }
+    QModelIndex start = createIndex(0,0);
+    QModelIndex end = createIndex(m_model.size() - 1, 0);
+    emit dataChanged(start, end, {TypeRole, WeightRole});
+}
+
 void GridModel::setNodeType(const NodeType type, const int index, const int weight)
 {
     if(index < 0 || index >= m_model.size())

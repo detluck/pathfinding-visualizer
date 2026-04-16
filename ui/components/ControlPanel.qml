@@ -69,7 +69,7 @@ Rectangle {
                         svgPath: "../assets/svgs/start.svg"
                         highlighted: controller.type === Controller.Start
                         onClicked: {
-                            controller.setClickType(Controller.Start)
+                            controller.type = Controller.Start
                             controller.handleClick()
                             cursorHelper.resetCursor()
                         }
@@ -82,7 +82,7 @@ Rectangle {
                         svgPath: "../assets/svgs/pause.svg"
                         highlighted: controller.type === Controller.Pause
                         onClicked: {
-                            controller.setClickType(Controller.Pause)
+                            controller.type = Controller.Pause
                             controller.handleClick()
                             cursorHelper.resetCursor()
                         }
@@ -95,7 +95,7 @@ Rectangle {
                         svgPath: "../assets/svgs/delete.svg"
                         highlighted: controller.type === Controller.Deleate
                         onClicked: {
-                            controller.setClickType(Controller.Deleate)
+                            controller.type = Controller.Deleate
                             changeCursor()
                         }
                     }
@@ -108,7 +108,7 @@ Rectangle {
                         tipText: "clears the entire grid"
                         highlighted: controller.type === Controller.Clear
                         onClicked: {
-                            controller.setClickType(Controller.Clear)
+                            controller.type = Controller.Clear
                             controller.handleClick()
                             cursorHelper.resetCursor()
                         }
@@ -127,7 +127,7 @@ Rectangle {
                         svgPath: "../assets/svgs/startNode.svg"
                         highlighted: controller.type === Controller.StartNode
                         onClicked: {
-                            controller.setClickType(Controller.StartNode)
+                            controller.type = Controller.StartNode
                             changeCursor()
                         }
                     }
@@ -139,7 +139,7 @@ Rectangle {
                         svgPath: "../assets/svgs/endNode.svg"
                         highlighted: controller.type === Controller.TargetNode
                         onClicked: {
-                            controller.setClickType(Controller.TargetNode)
+                            controller.type = Controller.TargetNode
                             changeCursor()
                         }
                     }
@@ -151,7 +151,7 @@ Rectangle {
                         svgPath: "../assets/svgs/wall.svg"
                         highlighted: controller.type === Controller.Wall
                         onClicked: {
-                            controller.setClickType(Controller.Wall)
+                            controller.type = Controller.Wall
                             changeCursor()
                         }
                     }

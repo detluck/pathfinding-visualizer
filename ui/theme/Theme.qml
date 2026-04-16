@@ -32,6 +32,9 @@ QtObject {
     property color visited: "#74c7ec"
     property color wall: isDark? "#7f849c": "#8c8fa1"
     property color empty: isDark? "#89dceb": "#04a5e5"
+    property color weightLight: isDark? "#a6e3a1": "#40a02b"
+    property color weightMiddle: isDark? "#fab387": "#fe640b"
+    property color weightHeavy: isDark? "#eba0ac": "#e64553"
 
     function toggleTheme() {
         isDark = !isDark

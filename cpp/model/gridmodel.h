@@ -31,6 +31,7 @@ public:
     std::vector<Node> getNodes() const;
 
     void clearModel();
+    void clearVisited();
 
     void setNodeType(const NodeType type, const int index, const int weight = 0);
     

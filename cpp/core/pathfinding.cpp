@@ -2,6 +2,7 @@
 #include "cpp/algorithms/algorithmType.h"
 #include "cpp/algorithms/bfs.h"
 #include "cpp/algorithms/astar.h"
+#include "cpp/algorithms/dijkstra.h"
 #include "cpp/model/gridmodel.h"
 #include <QDebug>
 
@@ -28,7 +29,7 @@ void Pathfinding::setAlgorithm(int index)
     switch(type)
     {
     case AlgorithmType::Dijkstra:
-        //m_algorithm = std::make_unique<Dijkstra>();
+        m_algorithm = std::make_unique<Dijkstra>();
         qDebug() << "Dijkstra aktiv";
         break;
     case AlgorithmType::Astar:
@@ -129,6 +130,14 @@ void Pathfinding::setEndIndex(const int index)
     }
 }
 
+void Pathfinding::setWeightNode(const int index, const int weight)
+{
+    if(weight >= 0 && isValid(index)){
+        m_model->setNodeType(NodeType::WeightNode, index, weight);
+        qDebug() << "Weight set " << weight;
+    }
+}
+
 void Pathfinding::setWallIndex(const int index)
 {
     if(isValid(index))
@@ -139,9 +148,9 @@ void Pathfinding::setWallIndex(const int index)
 
 void Pathfinding::startAlgorithm()
 {
-    if(m_algorithm){
-    GridData data = collectData();
-    m_algorithm->init(data);
+    if(m_algorithm && m_start > -1 && m_end > -1){
+        GridData data = collectData();
+        m_algorithm->init(data);
     }
 
     if(!timer->isActive()){
@@ -208,6 +217,8 @@ void Pathfinding::clearGrid()
         timer->stop();
     }
     m_model->clearModel();
+    m_start = -1;
+    m_end = -1;
 }
 
 void Pathfinding::deleateitem(const int index)
@@ -256,6 +267,9 @@ void Pathfinding::handleClick(const int index)
         break;
     case ClickType::Wall:
         setWallIndex(index);
+        break;
+    case ClickType::WeightNode:
+        setWeightNode(index, m_currentWeight);
         break;
     default:
         break;

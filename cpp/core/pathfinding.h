@@ -24,6 +24,7 @@ public:
         TargetNode,
         Deleate,
         Wall,
+        WeightNode,
         Count
     };
     Q_ENUM(ClickType)
@@ -32,9 +33,10 @@ public:
     explicit Pathfinding(QObject *parent = nullptr);
 
     Q_INVOKABLE void setAlgorithm(int index);
-    Q_INVOKABLE void setStartIndex(const int index);
-    Q_INVOKABLE void setEndIndex(const int index);
-    Q_INVOKABLE void setWallIndex(const int index);
+    void setStartIndex(const int index);
+    void setEndIndex(const int index);
+    void setWeightNode(const int index, const int weight);
+    void setWallIndex(const int index);
     Q_INVOKABLE void handleClick(const int index = -1);
     void clearGrid();
     ClickType clickType();
