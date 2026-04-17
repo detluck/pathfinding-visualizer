@@ -1,0 +1,267 @@
+{
+    "classes": [
+        {
+            "className": "Pathfinding",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "lineNumber": 17,
+                    "name": "ClickType",
+                    "values": [
+                        "Start",
+                        "Pause",
+                        "Resume",
+                        "Stop",
+                        "Clear",
+                        "StartNode",
+                        "TargetNode",
+                        "Deleate",
+                        "Wall",
+                        "WeightNode",
+                        "Count"
+                    ]
+                }
+            ],
+            "lineNumber": 10,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 13,
+                    "lineNumber": 35,
+                    "name": "setAlgorithm",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 14,
+                    "lineNumber": 40,
+                    "name": "handleClick",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 15,
+                    "isCloned": true,
+                    "lineNumber": 40,
+                    "name": "handleClick",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "weight",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 16,
+                    "lineNumber": 41,
+                    "name": "addWeight",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "lineNumber": 13,
+                    "name": "type",
+                    "notify": "clickTypeChanged",
+                    "read": "clickType",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "ClickType",
+                    "user": false,
+                    "write": "setClickType"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "lineNumber": 14,
+                    "name": "availableWeights",
+                    "notify": "availableWeightsChanged",
+                    "read": "availableWeights",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QVariantList",
+                    "user": false,
+                    "write": "setAvailableWeights"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "lineNumber": 15,
+                    "name": "currentWeight",
+                    "notify": "currentWeightChanged",
+                    "read": "currentWeight",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setCurrentWeight"
+                }
+            ],
+            "qualifiedClassName": "Pathfinding",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "lineNumber": 60,
+                    "name": "clickTypeChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "lineNumber": 61,
+                    "name": "availableWeightsChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 2,
+                    "lineNumber": 62,
+                    "name": "currentWeightChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 3,
+                    "lineNumber": 63,
+                    "name": "finished",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "level",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 4,
+                    "lineNumber": 64,
+                    "name": "toast",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "type",
+                            "type": "Pathfinding::ClickType"
+                        }
+                    ],
+                    "index": 5,
+                    "lineNumber": 51,
+                    "name": "setClickType",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 6,
+                    "lineNumber": 52,
+                    "name": "startAlgorithm",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 7,
+                    "lineNumber": 53,
+                    "name": "stopAlgorithm",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 8,
+                    "lineNumber": 54,
+                    "name": "resumeAlgorithm",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "speed",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 9,
+                    "lineNumber": 55,
+                    "name": "setSpeed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "list",
+                            "type": "QVariantList"
+                        }
+                    ],
+                    "index": 10,
+                    "lineNumber": 56,
+                    "name": "setAvailableWeights",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "weight",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 11,
+                    "lineNumber": 57,
+                    "name": "setCurrentWeight",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "index": 12,
+                    "lineNumber": 67,
+                    "name": "onStep",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "pathfinding.h",
+    "outputRevision": 69
+}

@@ -1,0 +1,63 @@
+{
+    "formatRevision": 1,
+    "modules": [
+        {
+            "moduleFiles": [
+                {
+                    "entries": [
+                        {
+                            "codegenResult": 0,
+                            "column": 17,
+                            "durationMicroseconds": 468,
+                            "functionName": "renderType",
+                            "line": 8,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 17,
+                            "durationMicroseconds": 179,
+                            "functionName": "textFormat",
+                            "line": 9,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 12,
+                            "durationMicroseconds": 3311,
+                            "functionName": "color",
+                            "line": 11,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 19,
+                            "durationMicroseconds": 186,
+                            "functionName": "fontSizeMode",
+                            "line": 12,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 12,
+                            "durationMicroseconds": 271,
+                            "functionName": "elide",
+                            "line": 14,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 24,
+                            "durationMicroseconds": 177,
+                            "functionName": "verticalAlignment",
+                            "line": 15,
+                            "message": ""
+                        }
+                    ],
+                    "filePath": "C:/Projects/Main/pathfinding-visualizer/ui/components/StyledText.qml"
+                }
+            ],
+            "moduleId": "Pathfinding(Pathfinder)"
+        }
+    ]
+}

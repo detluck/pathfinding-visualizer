@@ -2,19 +2,21 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import QtQuick.Effects
 import "../theme"
 
 Button {
     id: root
 
-    property color hoverColor: Theme.current.hoverBtn
-    property color textColor: Theme.current.textPrimary
-    property color backgroundColor: "transparent"
+    property color hoverColor: Theme.primaryHover
+    property color backgroundColor: Theme.primary
     property alias radius: background.radius
     property alias fontSize: label.font.pixelSize
+    property bool useSquare: false
+    property color labelColor: useSquare? Theme.bgBaseReverse: Theme.bgBase
     property string svgPath: ""
     property color squareColor: "transparent"
-    property bool useSquare: false
+    property color svgColor: Theme.bgBase
     property string tipText: ""
     property color borderColor: "transparent"
 
@@ -33,17 +35,13 @@ Button {
     background: Rectangle {
         id: background
         anchors.fill: parent
-        color: root.hovered || root.highlighted ? root.hoverColor : root.backgroundColor
+        color: (root.hovered || root.highlighted) ? root.hoverColor : (root.useSquare ? "transparent" : root.backgroundColor)
         border.width: 0
-        radius: 12
+        radius: 20
     }
 
-    // Wir setzen die Row direkt als contentItem
     contentItem: Row {
         spacing: 8
-
-        // Da die Row das contentItem ist, richtet sie sich
-        // automatisch nach den Paddings des Buttons aus.
 
         Rectangle {
             visible: root.useSquare
@@ -53,24 +51,46 @@ Button {
             border.color: root.borderColor
             radius: 2
             anchors.verticalCenter: parent.verticalCenter
+
+            Behavior on color {
+                ColorAnimation { duration: 150 }
+            }
         }
 
-        Image {
-            id: svgIcon
-            source: root.svgPath
+        Item {
             height: root.iconSize
             width: root.iconSize
-            sourceSize.height: height
-            sourceSize.width: width
-            fillMode: Image.PreserveAspectFit
-            visible: root.svgPath !== "" && !root.useSquare
             anchors.verticalCenter: parent.verticalCenter
+            visible: root.svgPath !== "" && !root.useSquare
+
+            Image {
+                id: svgIcon
+                source: root.svgPath
+                sourceSize.height: parent.height
+                sourceSize.width: parent.width
+                fillMode: Image.PreserveAspectFit
+                visible: false
+            }
+
+            MultiEffect {
+                id: svgEffect
+                source: svgIcon
+                anchors.fill: parent
+                colorization: 1.0
+                colorizationColor: root.svgColor
+
+                Behavior on colorizationColor {
+                    ColorAnimation {
+                        duration: 250
+                    }
+                }
+            }
         }
 
         StyledText {
             id: label
             text: root.text
-            color: root.textColor
+            color: root.labelColor
             anchors.verticalCenter: parent.verticalCenter
         }
     }

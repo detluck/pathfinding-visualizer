@@ -1,0 +1,175 @@
+{
+    "formatRevision": 1,
+    "modules": [
+        {
+            "moduleFiles": [
+                {
+                    "entries": [
+                        {
+                            "codegenResult": 0,
+                            "column": 21,
+                            "durationMicroseconds": 652,
+                            "functionName": "onWidthChanged",
+                            "line": 7,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 22,
+                            "durationMicroseconds": 160,
+                            "functionName": "onHeightChanged",
+                            "line": 8,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 12,
+                            "durationMicroseconds": 6599,
+                            "functionName": "color",
+                            "line": 10,
+                            "message": "Cannot load property bgGrid from const QMetaObject."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 5,
+                            "durationMicroseconds": 820,
+                            "functionName": "updateGridSize",
+                            "line": 14,
+                            "message": "Cannot access value for name gridModel"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 28,
+                            "durationMicroseconds": 210,
+                            "functionName": "onCompleted",
+                            "line": 23,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 16,
+                            "durationMicroseconds": 932,
+                            "functionName": "model",
+                            "line": 28,
+                            "message": "Cannot access value for name gridModel"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 16,
+                            "durationMicroseconds": 2242,
+                            "functionName": "width",
+                            "line": 30,
+                            "message": "Cannot access value for name gridModel"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 17,
+                            "durationMicroseconds": 852,
+                            "functionName": "height",
+                            "line": 31,
+                            "message": "Cannot access value for name gridModel"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 273,
+                            "functionName": "centerIn",
+                            "line": 29,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 24,
+                            "durationMicroseconds": 187,
+                            "functionName": "isHovered",
+                            "line": 39,
+                            "message": "Cannot access value for name index"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 19,
+                            "durationMicroseconds": 1839,
+                            "functionName": "color",
+                            "line": 40,
+                            "message": "Cannot access value for name type"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 22,
+                            "durationMicroseconds": 721,
+                            "functionName": "opacity",
+                            "line": 59,
+                            "message": "Cannot access value for name type"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 22,
+                            "durationMicroseconds": 318,
+                            "functionName": "svgPath",
+                            "line": 60,
+                            "message": "Cannot access value for name type"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 13,
+                            "durationMicroseconds": 0,
+                            "functionName": "getRightSVG",
+                            "line": 61,
+                            "message": "Functions without type annotations won't be compiled"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 17,
+                            "durationMicroseconds": 0,
+                            "functionName": "tileIndexAt",
+                            "line": 75,
+                            "message": "Functions without type annotations won't be compiled"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 17,
+                            "durationMicroseconds": 0,
+                            "functionName": "paintTile",
+                            "line": 92,
+                            "message": "Functions without type annotations won't be compiled"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 372,
+                            "functionName": "onPressed",
+                            "line": 97,
+                            "message": "Cannot generate efficient code for call to untyped JavaScript function"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 36,
+                            "durationMicroseconds": 2278,
+                            "functionName": "onPositionChanged",
+                            "line": 98,
+                            "message": "Cannot generate efficient code for call to untyped JavaScript function"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 368,
+                            "functionName": "onExited",
+                            "line": 102,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 139,
+                            "functionName": "fill",
+                            "line": 71,
+                            "message": ""
+                        }
+                    ],
+                    "filePath": "C:/Projects/Main/pathfinding-visualizer/ui/components/PathGrid.qml"
+                }
+            ],
+            "moduleId": "Pathfinding(Pathfinder)"
+        }
+    ]
+}

@@ -7,12 +7,15 @@ Text{
 
     renderType: Text.NativeRendering
     textFormat: Text.PlainText
-    font.family: Theme.font.family.main
-    font.pixelSize: Theme.font.size.normal
+    font.pixelSize: 16
+    color: Theme.textMain
     fontSizeMode: Text.Fit
     minimumPixelSize: 10
     elide: Text.ElideRight
     verticalAlignment: Text.AlignVCenter
-    leftPadding: 10
+
+    Behavior on color {
+        ColorAnimation { duration: 150 }
+    }
 
 }

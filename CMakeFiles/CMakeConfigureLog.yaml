@@ -19,7 +19,7 @@ events:
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler: C:/Projects/tools/emsdk/upstream/emscripten/em++.bat 
-      Build flags: -DQT_QML_DEBUG
+      Build flags: 
       Id flags:  
       
       The output was:
@@ -45,11 +45,11 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-z0n0d2"
-      binary: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-z0n0d2"
+      source: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-ltfyua"
+      binary: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-ltfyua"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Projects/tools/emsdk/upstream/emscripten/emscan-deps"
-      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -63,17 +63,17 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-z0n0d2'
+        Change Dir: 'C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-ltfyua'
         
-        Run Build Command(s): C:/Qt/Tools/Ninja/ninja.exe -v cmTC_191cf
-        [1/2] C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat   -DQT_QML_DEBUG    -v -MD -MT CMakeFiles/cmTC_191cf.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles\\cmTC_191cf.dir\\CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_191cf.dir/CMakeCXXCompilerABI.cpp.o -c C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
-         "C:/Projects/tools/emsdk/upstream/bin\\clang++.exe" -target wasm32-unknown-emscripten -fignore-exceptions -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --sysroot=C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot -DEMSCRIPTEN -Xclang -iwithsysroot/include\\fakesdl -Xclang -iwithsysroot/include\\compat -DQT_QML_DEBUG -v -MD -MT CMakeFiles/cmTC_191cf.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles\\cmTC_191cf.dir\\CMakeCXXCompilerABI.cpp.o.d -oCMakeFiles/cmTC_191cf.dir/CMakeCXXCompilerABI.cpp.o -c C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): C:/Qt/Tools/Ninja/ninja.exe -v cmTC_7c737
+        [1/2] C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat   -v -MD -MT CMakeFiles/cmTC_7c737.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles\\cmTC_7c737.dir\\CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_7c737.dir/CMakeCXXCompilerABI.cpp.o -c C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
+         "C:/Projects/tools/emsdk/upstream/bin\\clang++.exe" -target wasm32-unknown-emscripten -fignore-exceptions -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --sysroot=C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot -DEMSCRIPTEN -Xclang -iwithsysroot/include\\fakesdl -Xclang -iwithsysroot/include\\compat -v -MD -MT CMakeFiles/cmTC_7c737.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles\\cmTC_7c737.dir\\CMakeCXXCompilerABI.cpp.o.d -oCMakeFiles/cmTC_7c737.dir/CMakeCXXCompilerABI.cpp.o -c C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
         clang version 21.0.0git (https:/github.com/llvm/llvm-project 57025b42c43b2f14f7e58692bc19cd53d1b8a45e)
         Target: wasm32-unknown-emscripten
         Thread model: posix
         InstalledDir: C:\\Projects\\tools\\emsdk\\upstream\\bin
          (in-process)
-         "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\bin\\\\clang++.exe" -cc1 -triple wasm32-unknown-emscripten -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=none -ffp-contract=on -fno-rounding-math -mconstructor-aliases -target-cpu generic -fvisibility=hidden -debugger-tuning=gdb "-fdebug-compilation-dir=C:\\\\Projects\\\\Main\\\\pathfinding-visualizer\\\\build\\\\WebAssembly_Qt_6_10_2_single_threaded-Debug\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-z0n0d2" -v "-fcoverage-compilation-dir=C:\\\\Projects\\\\Main\\\\pathfinding-visualizer\\\\build\\\\WebAssembly_Qt_6_10_2_single_threaded-Debug\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-z0n0d2" -resource-dir "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\lib\\\\clang\\\\21" -dependency-file "CMakeFiles\\\\cmTC_191cf.dir\\\\CMakeCXXCompilerABI.cpp.o.d" -MT CMakeFiles/cmTC_191cf.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D EMSCRIPTEN -D QT_QML_DEBUG -isysroot "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/wasm32-emscripten/c++/v1" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/c++/v1" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\lib\\\\clang\\\\21\\\\include" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/wasm32-emscripten" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include" -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fignore-exceptions -fexceptions "-iwithsysroot/include\\\\fakesdl" "-iwithsysroot/include\\\\compat" -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr -o CMakeFiles/cmTC_191cf.dir/CMakeCXXCompilerABI.cpp.o -x c++ C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
+         "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\bin\\\\clang++.exe" -cc1 -triple wasm32-unknown-emscripten -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=none -ffp-contract=on -fno-rounding-math -mconstructor-aliases -target-cpu generic -fvisibility=hidden -debugger-tuning=gdb "-fdebug-compilation-dir=C:\\\\Projects\\\\Main\\\\pathfinding-visualizer\\\\build\\\\WebAssembly_Qt_6_10_2_single_threaded-Debug\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-ltfyua" -v "-fcoverage-compilation-dir=C:\\\\Projects\\\\Main\\\\pathfinding-visualizer\\\\build\\\\WebAssembly_Qt_6_10_2_single_threaded-Debug\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-ltfyua" -resource-dir "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\lib\\\\clang\\\\21" -dependency-file "CMakeFiles\\\\cmTC_7c737.dir\\\\CMakeCXXCompilerABI.cpp.o.d" -MT CMakeFiles/cmTC_7c737.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D EMSCRIPTEN -isysroot "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/wasm32-emscripten/c++/v1" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/c++/v1" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\lib\\\\clang\\\\21\\\\include" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/wasm32-emscripten" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include" -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fignore-exceptions -fexceptions "-iwithsysroot/include\\\\fakesdl" "-iwithsysroot/include\\\\compat" -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr -o CMakeFiles/cmTC_7c737.dir/CMakeCXXCompilerABI.cpp.o -x c++ C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 21.0.0git based upon LLVM 21.0.0git default target x86_64-pc-windows-msvc
         ignoring nonexistent directory "C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot/include/wasm32-emscripten/c++/v1"
         ignoring nonexistent directory "C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot/include/wasm32-emscripten"
@@ -83,12 +83,12 @@ events:
          C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot/include\\compat
          C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot/include/c++/v1
          C:\\Projects\\tools\\emsdk\\upstream\\lib\\clang\\21\\include
-         C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot/include\x0d
+         C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot/include
         End of search list.\x0d
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat -DQT_QML_DEBUG -v CMakeFiles/cmTC_191cf.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_191cf.js   && cd ."
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat  -v CMakeFiles/cmTC_7c737.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_7c737.js   && cd ."
          "C:/Projects/tools/emsdk/upstream/bin\\clang.exe" --version
-         "C:/Projects/tools/emsdk/upstream/bin\\wasm-ld.exe" -o cmTC_191cf.wasm CMakeFiles/cmTC_191cf.dir/CMakeCXXCompilerABI.cpp.o -LC:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot\\lib\\wasm32-emscripten -LC:\\Projects\\tools\\emsdk\\upstream\\emscripten\\src\\lib -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lcompiler_rt -lc++-noexcept -lc++abi-debug-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr C:\\Users\\timyn\\AppData\\Local\\Temp\\tmprrtrsqxvlibemscripten_js_symbols.so --strip-debug --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=_emscripten_stack_restore --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --stack-first --table-base=1
-         "C:/Projects/tools/emsdk/upstream/bin\\llvm-objcopy.exe" cmTC_191cf.wasm cmTC_191cf.wasm --remove-section=.debug* --remove-section=producers --remove-section=name
+         "C:/Projects/tools/emsdk/upstream/bin\\wasm-ld.exe" -o cmTC_7c737.wasm CMakeFiles/cmTC_7c737.dir/CMakeCXXCompilerABI.cpp.o -LC:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot\\lib\\wasm32-emscripten -LC:\\Projects\\tools\\emsdk\\upstream\\emscripten\\src\\lib -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lcompiler_rt -lc++-noexcept -lc++abi-debug-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr C:\\Users\\timyn\\AppData\\Local\\Temp\\tmp8tw4w69dlibemscripten_js_symbols.so --strip-debug --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=_emscripten_stack_restore --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --stack-first --table-base=1
+         "C:/Projects/tools/emsdk/upstream/bin\\llvm-objcopy.exe" cmTC_7c737.wasm cmTC_7c737.wasm --remove-section=.debug* --remove-section=producers --remove-section=name
          "C:/Projects/tools/emsdk/node/22.16.0_64bit/bin/node.exe" C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\tools\\compiler.mjs -\x0d
         
       exitCode: 0
@@ -126,17 +126,17 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-z0n0d2']
+        ignore line: [Change Dir: 'C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-ltfyua']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Qt/Tools/Ninja/ninja.exe -v cmTC_191cf]
-        ignore line: [[1/2] C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat   -DQT_QML_DEBUG    -v -MD -MT CMakeFiles/cmTC_191cf.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles\\cmTC_191cf.dir\\CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_191cf.dir/CMakeCXXCompilerABI.cpp.o -c C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
-        ignore line: [ "C:/Projects/tools/emsdk/upstream/bin\\clang++.exe" -target wasm32-unknown-emscripten -fignore-exceptions -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --sysroot=C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot -DEMSCRIPTEN -Xclang -iwithsysroot/include\\fakesdl -Xclang -iwithsysroot/include\\compat -DQT_QML_DEBUG -v -MD -MT CMakeFiles/cmTC_191cf.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles\\cmTC_191cf.dir\\CMakeCXXCompilerABI.cpp.o.d -oCMakeFiles/cmTC_191cf.dir/CMakeCXXCompilerABI.cpp.o -c C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): C:/Qt/Tools/Ninja/ninja.exe -v cmTC_7c737]
+        ignore line: [[1/2] C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat   -v -MD -MT CMakeFiles/cmTC_7c737.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles\\cmTC_7c737.dir\\CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_7c737.dir/CMakeCXXCompilerABI.cpp.o -c C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "C:/Projects/tools/emsdk/upstream/bin\\clang++.exe" -target wasm32-unknown-emscripten -fignore-exceptions -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --sysroot=C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot -DEMSCRIPTEN -Xclang -iwithsysroot/include\\fakesdl -Xclang -iwithsysroot/include\\compat -v -MD -MT CMakeFiles/cmTC_7c737.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles\\cmTC_7c737.dir\\CMakeCXXCompilerABI.cpp.o.d -oCMakeFiles/cmTC_7c737.dir/CMakeCXXCompilerABI.cpp.o -c C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang version 21.0.0git (https:/github.com/llvm/llvm-project 57025b42c43b2f14f7e58692bc19cd53d1b8a45e)]
         ignore line: [Target: wasm32-unknown-emscripten]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: C:\\Projects\\tools\\emsdk\\upstream\\bin]
         ignore line: [ (in-process)]
-        ignore line: [ "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\bin\\\\clang++.exe" -cc1 -triple wasm32-unknown-emscripten -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=none -ffp-contract=on -fno-rounding-math -mconstructor-aliases -target-cpu generic -fvisibility=hidden -debugger-tuning=gdb "-fdebug-compilation-dir=C:\\\\Projects\\\\Main\\\\pathfinding-visualizer\\\\build\\\\WebAssembly_Qt_6_10_2_single_threaded-Debug\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-z0n0d2" -v "-fcoverage-compilation-dir=C:\\\\Projects\\\\Main\\\\pathfinding-visualizer\\\\build\\\\WebAssembly_Qt_6_10_2_single_threaded-Debug\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-z0n0d2" -resource-dir "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\lib\\\\clang\\\\21" -dependency-file "CMakeFiles\\\\cmTC_191cf.dir\\\\CMakeCXXCompilerABI.cpp.o.d" -MT CMakeFiles/cmTC_191cf.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D EMSCRIPTEN -D QT_QML_DEBUG -isysroot "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/wasm32-emscripten/c++/v1" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/c++/v1" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\lib\\\\clang\\\\21\\\\include" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/wasm32-emscripten" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include" -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fignore-exceptions -fexceptions "-iwithsysroot/include\\\\fakesdl" "-iwithsysroot/include\\\\compat" -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr -o CMakeFiles/cmTC_191cf.dir/CMakeCXXCompilerABI.cpp.o -x c++ C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\bin\\\\clang++.exe" -cc1 -triple wasm32-unknown-emscripten -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=none -ffp-contract=on -fno-rounding-math -mconstructor-aliases -target-cpu generic -fvisibility=hidden -debugger-tuning=gdb "-fdebug-compilation-dir=C:\\\\Projects\\\\Main\\\\pathfinding-visualizer\\\\build\\\\WebAssembly_Qt_6_10_2_single_threaded-Debug\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-ltfyua" -v "-fcoverage-compilation-dir=C:\\\\Projects\\\\Main\\\\pathfinding-visualizer\\\\build\\\\WebAssembly_Qt_6_10_2_single_threaded-Debug\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-ltfyua" -resource-dir "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\lib\\\\clang\\\\21" -dependency-file "CMakeFiles\\\\cmTC_7c737.dir\\\\CMakeCXXCompilerABI.cpp.o.d" -MT CMakeFiles/cmTC_7c737.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D EMSCRIPTEN -isysroot "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/wasm32-emscripten/c++/v1" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/c++/v1" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\lib\\\\clang\\\\21\\\\include" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/wasm32-emscripten" -internal-isystem "C:\\\\Projects\\\\tools\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include" -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fignore-exceptions -fexceptions "-iwithsysroot/include\\\\fakesdl" "-iwithsysroot/include\\\\compat" -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr -o CMakeFiles/cmTC_7c737.dir/CMakeCXXCompilerABI.cpp.o -x c++ C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 21.0.0git based upon LLVM 21.0.0git default target x86_64-pc-windows-msvc]
         ignore line: [ignoring nonexistent directory "C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot/include/wasm32-emscripten/c++/v1"]
         ignore line: [ignoring nonexistent directory "C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot/include/wasm32-emscripten"]
@@ -146,15 +146,15 @@ events:
         ignore line: [ C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot/include\\compat]
         ignore line: [ C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot/include/c++/v1]
         ignore line: [ C:\\Projects\\tools\\emsdk\\upstream\\lib\\clang\\21\\include]
-        ignore line: [ C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot/include\x0d]
+        ignore line: [ C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot/include]
         ignore line: [End of search list.\x0d]
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat -DQT_QML_DEBUG -v CMakeFiles/cmTC_191cf.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_191cf.js   && cd ."]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat  -v CMakeFiles/cmTC_7c737.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_7c737.js   && cd ."]
         ignore line: [ "C:/Projects/tools/emsdk/upstream/bin\\clang.exe" --version]
-        link line: [ "C:/Projects/tools/emsdk/upstream/bin\\wasm-ld.exe" -o cmTC_191cf.wasm CMakeFiles/cmTC_191cf.dir/CMakeCXXCompilerABI.cpp.o -LC:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot\\lib\\wasm32-emscripten -LC:\\Projects\\tools\\emsdk\\upstream\\emscripten\\src\\lib -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lcompiler_rt -lc++-noexcept -lc++abi-debug-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr C:\\Users\\timyn\\AppData\\Local\\Temp\\tmprrtrsqxvlibemscripten_js_symbols.so --strip-debug --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=_emscripten_stack_restore --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --stack-first --table-base=1]
+        link line: [ "C:/Projects/tools/emsdk/upstream/bin\\wasm-ld.exe" -o cmTC_7c737.wasm CMakeFiles/cmTC_7c737.dir/CMakeCXXCompilerABI.cpp.o -LC:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot\\lib\\wasm32-emscripten -LC:\\Projects\\tools\\emsdk\\upstream\\emscripten\\src\\lib -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lcompiler_rt -lc++-noexcept -lc++abi-debug-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr C:\\Users\\timyn\\AppData\\Local\\Temp\\tmp8tw4w69dlibemscripten_js_symbols.so --strip-debug --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=_emscripten_stack_restore --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --stack-first --table-base=1]
           arg [C:/Projects/tools/emsdk/upstream/bin\\wasm-ld.exe] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_191cf.wasm] ==> ignore
-          arg [CMakeFiles/cmTC_191cf.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [cmTC_7c737.wasm] ==> ignore
+          arg [CMakeFiles/cmTC_7c737.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-LC:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot\\lib\\wasm32-emscripten] ==> dir [C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\cache\\sysroot\\lib\\wasm32-emscripten]
           arg [-LC:\\Projects\\tools\\emsdk\\upstream\\emscripten\\src\\lib] ==> dir [C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\src\\lib]
           arg [-lGL-getprocaddr] ==> lib [GL-getprocaddr]
@@ -174,7 +174,7 @@ events:
           arg [-enable-emscripten-sjlj] ==> ignore
           arg [-mllvm] ==> ignore
           arg [-disable-lsr] ==> ignore
-          arg [C:\\Users\\timyn\\AppData\\Local\\Temp\\tmprrtrsqxvlibemscripten_js_symbols.so] ==> ignore
+          arg [C:\\Users\\timyn\\AppData\\Local\\Temp\\tmp8tw4w69dlibemscripten_js_symbols.so] ==> ignore
           arg [--strip-debug] ==> ignore
           arg [--export=emscripten_stack_get_end] ==> ignore
           arg [--export=emscripten_stack_get_free] ==> ignore
@@ -200,7 +200,7 @@ events:
           arg [--no-entry] ==> ignore
           arg [--stack-first] ==> ignore
           arg [--table-base=1] ==> ignore
-        ignore line: [ "C:/Projects/tools/emsdk/upstream/bin\\llvm-objcopy.exe" cmTC_191cf.wasm cmTC_191cf.wasm --remove-section=.debug* --remove-section=producers --remove-section=name]
+        ignore line: [ "C:/Projects/tools/emsdk/upstream/bin\\llvm-objcopy.exe" cmTC_7c737.wasm cmTC_7c737.wasm --remove-section=.debug* --remove-section=producers --remove-section=name]
         ignore line: [ "C:/Projects/tools/emsdk/node/22.16.0_64bit/bin/node.exe" C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\tools\\compiler.mjs -\x0d]
         ignore line: []
         ignore line: []
@@ -218,26 +218,26 @@ events:
       - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
       - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/FindWrapAtomic.cmake:36 (check_cxx_source_compiles)"
-      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtc/package-manager/maintenance_tool_provider.cmake:340 (find_package)"
+      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtcreator/cmake-helper/maintenance_tool_provider.cmake:259 (find_package)"
       - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:39 (_qt_internal_find_third_party_dependencies)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:42 (include)"
-      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtc/package-manager/maintenance_tool_provider.cmake:333 (find_package)"
+      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtcreator/cmake-helper/maintenance_tool_provider.cmake:252 (find_package)"
       - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake:40 (include)"
-      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtc/package-manager/maintenance_tool_provider.cmake:315 (find_package)"
-      - "CMakeLists.txt:14 (find_package)"
+      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtcreator/cmake-helper/maintenance_tool_provider.cmake:234 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
     checks:
       - "Performing Test HAVE_STDATOMIC"
     directories:
-      source: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-iyhmsi"
-      binary: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-iyhmsi"
+      source: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-t684xu"
+      binary: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-t684xu"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Projects/tools/emsdk/upstream/emscripten/emscan-deps"
-      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
       CMAKE_MODULE_PATH: "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/platforms;C:/Projects/tools/emsdk/upstream/emscripten/cmake/Modules;C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6;C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin"
@@ -250,11 +250,11 @@ events:
       variable: "HAVE_STDATOMIC"
       cached: true
       stdout: |
-        Change Dir: 'C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-iyhmsi'
+        Change Dir: 'C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-t684xu'
         
-        Run Build Command(s): C:/Qt/Tools/Ninja/ninja.exe -v cmTC_cb898
-        [1/2] C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat -DHAVE_STDATOMIC  -DQT_QML_DEBUG  -std=gnu++17 -MD -MT CMakeFiles/cmTC_cb898.dir/src.cxx.o -MF CMakeFiles\\cmTC_cb898.dir\\src.cxx.o.d -o CMakeFiles/cmTC_cb898.dir/src.cxx.o -c C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-iyhmsi/src.cxx
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat -DQT_QML_DEBUG  CMakeFiles/cmTC_cb898.dir/src.cxx.o -o cmTC_cb898.js   && cd ."
+        Run Build Command(s): C:/Qt/Tools/Ninja/ninja.exe -v cmTC_7a07a
+        [1/2] C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat -DHAVE_STDATOMIC  -std=gnu++17 -MD -MT CMakeFiles/cmTC_7a07a.dir/src.cxx.o -MF CMakeFiles\\cmTC_7a07a.dir\\src.cxx.o.d -o CMakeFiles/cmTC_7a07a.dir/src.cxx.o -c C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-t684xu/src.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat   CMakeFiles/cmTC_7a07a.dir/src.cxx.o -o cmTC_7a07a.js   && cd ."
         
       exitCode: 0
   -
@@ -263,26 +263,26 @@ events:
       - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
       - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/FindWrapRt.cmake:23 (check_cxx_source_compiles)"
-      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtc/package-manager/maintenance_tool_provider.cmake:340 (find_package)"
+      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtcreator/cmake-helper/maintenance_tool_provider.cmake:259 (find_package)"
       - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:39 (_qt_internal_find_third_party_dependencies)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:42 (include)"
-      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtc/package-manager/maintenance_tool_provider.cmake:333 (find_package)"
+      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtcreator/cmake-helper/maintenance_tool_provider.cmake:252 (find_package)"
       - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake:40 (include)"
-      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtc/package-manager/maintenance_tool_provider.cmake:315 (find_package)"
-      - "CMakeLists.txt:14 (find_package)"
+      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtcreator/cmake-helper/maintenance_tool_provider.cmake:234 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
     checks:
       - "Performing Test HAVE_GETTIME"
     directories:
-      source: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-8l4mbl"
-      binary: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-8l4mbl"
+      source: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-6y0ftz"
+      binary: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-6y0ftz"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Projects/tools/emsdk/upstream/emscripten/emscan-deps"
-      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
       CMAKE_MODULE_PATH: "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/platforms;C:/Projects/tools/emsdk/upstream/emscripten/cmake/Modules;C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6;C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin"
@@ -295,11 +295,11 @@ events:
       variable: "HAVE_GETTIME"
       cached: true
       stdout: |
-        Change Dir: 'C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-8l4mbl'
+        Change Dir: 'C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-6y0ftz'
         
-        Run Build Command(s): C:/Qt/Tools/Ninja/ninja.exe -v cmTC_025b2
-        [1/2] C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat -DHAVE_GETTIME  -DQT_QML_DEBUG  -std=gnu++17 -MD -MT CMakeFiles/cmTC_025b2.dir/src.cxx.o -MF CMakeFiles\\cmTC_025b2.dir\\src.cxx.o.d -o CMakeFiles/cmTC_025b2.dir/src.cxx.o -c C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-8l4mbl/src.cxx
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat -DQT_QML_DEBUG  CMakeFiles/cmTC_025b2.dir/src.cxx.o -o cmTC_025b2.js   && cd ."
+        Run Build Command(s): C:/Qt/Tools/Ninja/ninja.exe -v cmTC_2237e
+        [1/2] C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat -DHAVE_GETTIME  -std=gnu++17 -MD -MT CMakeFiles/cmTC_2237e.dir/src.cxx.o -MF CMakeFiles\\cmTC_2237e.dir\\src.cxx.o.d -o CMakeFiles/cmTC_2237e.dir/src.cxx.o -c C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-6y0ftz/src.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat   CMakeFiles/cmTC_2237e.dir/src.cxx.o -o cmTC_2237e.js   && cd ."
         
       exitCode: 0
   -
@@ -308,26 +308,26 @@ events:
       - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
       - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/FindWrapRt.cmake:34 (check_cxx_source_compiles)"
-      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtc/package-manager/maintenance_tool_provider.cmake:340 (find_package)"
+      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtcreator/cmake-helper/maintenance_tool_provider.cmake:259 (find_package)"
       - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:39 (_qt_internal_find_third_party_dependencies)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:42 (include)"
-      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtc/package-manager/maintenance_tool_provider.cmake:333 (find_package)"
+      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtcreator/cmake-helper/maintenance_tool_provider.cmake:252 (find_package)"
       - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake:40 (include)"
-      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtc/package-manager/maintenance_tool_provider.cmake:315 (find_package)"
-      - "CMakeLists.txt:14 (find_package)"
+      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtcreator/cmake-helper/maintenance_tool_provider.cmake:234 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
     checks:
       - "Performing Test HAVE_SHM_OPEN_SHM_UNLINK"
     directories:
-      source: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-07oo0t"
-      binary: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-07oo0t"
+      source: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-g8lgni"
+      binary: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-g8lgni"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Projects/tools/emsdk/upstream/emscripten/emscan-deps"
-      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
       CMAKE_MODULE_PATH: "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/platforms;C:/Projects/tools/emsdk/upstream/emscripten/cmake/Modules;C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6;C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin"
@@ -340,11 +340,11 @@ events:
       variable: "HAVE_SHM_OPEN_SHM_UNLINK"
       cached: true
       stdout: |
-        Change Dir: 'C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-07oo0t'
+        Change Dir: 'C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-g8lgni'
         
-        Run Build Command(s): C:/Qt/Tools/Ninja/ninja.exe -v cmTC_856d2
-        [1/2] C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat -DHAVE_SHM_OPEN_SHM_UNLINK  -DQT_QML_DEBUG  -std=gnu++17 -MD -MT CMakeFiles/cmTC_856d2.dir/src.cxx.o -MF CMakeFiles\\cmTC_856d2.dir\\src.cxx.o.d -o CMakeFiles/cmTC_856d2.dir/src.cxx.o -c C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-07oo0t/src.cxx
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat -DQT_QML_DEBUG  CMakeFiles/cmTC_856d2.dir/src.cxx.o -o cmTC_856d2.js   && cd ."
+        Run Build Command(s): C:/Qt/Tools/Ninja/ninja.exe -v cmTC_846e5
+        [1/2] C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat -DHAVE_SHM_OPEN_SHM_UNLINK  -std=gnu++17 -MD -MT CMakeFiles/cmTC_846e5.dir/src.cxx.o -MF CMakeFiles\\cmTC_846e5.dir\\src.cxx.o.d -o CMakeFiles/cmTC_846e5.dir/src.cxx.o -c C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-g8lgni/src.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat   CMakeFiles/cmTC_846e5.dir/src.cxx.o -o cmTC_846e5.js   && cd ."
         
       exitCode: 0
   -
@@ -353,26 +353,26 @@ events:
       - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
       - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules/FindEGL.cmake:128 (check_cxx_source_compiles)"
-      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtc/package-manager/maintenance_tool_provider.cmake:340 (find_package)"
+      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtcreator/cmake-helper/maintenance_tool_provider.cmake:259 (find_package)"
       - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:40 (_qt_internal_find_third_party_dependencies)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:40 (include)"
-      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtc/package-manager/maintenance_tool_provider.cmake:333 (find_package)"
+      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtcreator/cmake-helper/maintenance_tool_provider.cmake:252 (find_package)"
       - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake:40 (include)"
-      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtc/package-manager/maintenance_tool_provider.cmake:315 (find_package)"
-      - "CMakeLists.txt:14 (find_package)"
+      - "build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtcreator/cmake-helper/maintenance_tool_provider.cmake:234 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
     checks:
       - "Performing Test HAVE_EGL"
     directories:
-      source: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-62312g"
-      binary: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-62312g"
+      source: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-1bjdmz"
+      binary: "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-1bjdmz"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Projects/tools/emsdk/upstream/emscripten/emscan-deps"
-      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
       CMAKE_MODULE_PATH: "C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/platforms;C:/Projects/tools/emsdk/upstream/emscripten/cmake/Modules;C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6;C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.10.2/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin"
@@ -385,11 +385,11 @@ events:
       variable: "HAVE_EGL"
       cached: true
       stdout: |
-        Change Dir: 'C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-62312g'
+        Change Dir: 'C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-1bjdmz'
         
-        Run Build Command(s): C:/Qt/Tools/Ninja/ninja.exe -v cmTC_d36f5
-        [1/2] C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat -DHAVE_EGL  -DQT_QML_DEBUG  -std=gnu++17 -MD -MT CMakeFiles/cmTC_d36f5.dir/src.cxx.o -MF CMakeFiles\\cmTC_d36f5.dir\\src.cxx.o.d -o CMakeFiles/cmTC_d36f5.dir/src.cxx.o -c C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-62312g/src.cxx
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat -DQT_QML_DEBUG  CMakeFiles/cmTC_d36f5.dir/src.cxx.o -o cmTC_d36f5.js   && cd ."
+        Run Build Command(s): C:/Qt/Tools/Ninja/ninja.exe -v cmTC_8333c
+        [1/2] C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat -DHAVE_EGL  -std=gnu++17 -MD -MT CMakeFiles/cmTC_8333c.dir/src.cxx.o -MF CMakeFiles\\cmTC_8333c.dir\\src.cxx.o.d -o CMakeFiles/cmTC_8333c.dir/src.cxx.o -c C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-1bjdmz/src.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Projects\\tools\\emsdk\\upstream\\emscripten\\em++.bat   CMakeFiles/cmTC_8333c.dir/src.cxx.o -o cmTC_8333c.js   && cd ."
         
       exitCode: 0
 ...

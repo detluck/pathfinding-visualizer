@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="/qt/qml/Pathfinding/">
+    <file alias="Main.qml">C:/Projects/Main/pathfinding-visualizer/Main.qml</file>
+    <file alias="ui/components/ControlPanel.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/ControlPanel.qml</file>
+    <file alias="ui/components/PathGrid.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/PathGrid.qml</file>
+    <file alias="ui/components/GridTile.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/GridTile.qml</file>
+    <file alias="ui/components/StyledButton.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/StyledButton.qml</file>
+    <file alias="ui/components/StyledSlider.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/StyledSlider.qml</file>
+    <file alias="ui/components/AlgoSelector.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/AlgoSelector.qml</file>
+    <file alias="ui/components/StyledText.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/StyledText.qml</file>
+    <file alias="ui/components/WeightButton.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/WeightButton.qml</file>
+    <file alias="ui/components/Toaster.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/Toaster.qml</file>
+    <file alias="ui/components/StatusBar.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/StatusBar.qml</file>
+    <file alias="ui/components/SpeedSlider.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/SpeedSlider.qml</file>
+    <file alias="ui/theme/Theme.qml">C:/Projects/Main/pathfinding-visualizer/ui/theme/Theme.qml</file>
+  </qresource>
+</RCC>
+

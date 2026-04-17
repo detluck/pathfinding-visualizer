@@ -1,0 +1,196 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-6272d039cf570a1c3925.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "PathfindingVisualizer",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Pathfinder::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pathfinder-Debug-1b1cc41475e74084c506.json",
+					"name" : "Pathfinder",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Pathfinder_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pathfinder_autogen-Debug-e7058d77ad2df7e5f0f6.json",
+					"name" : "Pathfinder_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Pathfinder_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pathfinder_autogen_timestamp_deps-Debug-5f576f61acac42417a42.json",
+					"name" : "Pathfinder_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Pathfinder_copy_qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pathfinder_copy_qml-Debug-7c6c7e69ddd82443fbe3.json",
+					"name" : "Pathfinder_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Pathfinder_copy_res::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pathfinder_copy_res-Debug-6c2e542b4d43c8597bd9.json",
+					"name" : "Pathfinder_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Pathfinder_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pathfinder_qmllint-Debug-5ebc628d283ab3d2cedf.json",
+					"name" : "Pathfinder_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Pathfinder_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pathfinder_qmllint_json-Debug-f02d2bb93bd4cd114a5b.json",
+					"name" : "Pathfinder_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Pathfinder_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pathfinder_qmllint_module-Debug-18055c0a448221200ce1.json",
+					"name" : "Pathfinder_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Pathfinder_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pathfinder_qmltyperegistration-Debug-8f916b9eb849dd499f2e.json",
+					"name" : "Pathfinder_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-9139cb87c0c4b0923cbe.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-cdbd2f15379eee77789e.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-c6251483bb844c35478f.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-2fae9f0f150be208ecd6.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-0de78f425dd21891ef1a.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_qmlls_build_ini_file::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_qmlls_build_ini_file-Debug-b382a40b51533b3d302f.json",
+					"name" : "generate_qmlls_build_ini_file",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_Pathfinder_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_Pathfinder_aotstats_target-Debug-ad66d624eb1fee29acff.json",
+					"name" : "module_Pathfinder_aotstats_target",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug",
+		"source" : "C:/Projects/Main/pathfinding-visualizer"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

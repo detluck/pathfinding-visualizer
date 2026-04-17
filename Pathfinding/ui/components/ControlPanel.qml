@@ -3,10 +3,11 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import App.Controller 1.0
+import Pathfinding
 
 Rectangle {
     id: root
-    color: "white"
+    color: Theme.bgBase
 
     Layout.fillWidth: true
     Layout.preferredHeight: parent ? parent.height * 0.35 : 280
@@ -53,7 +54,7 @@ Rectangle {
 
             RowLayout {
                 Layout.fillWidth: true
-                Layout.fillHeight: true   // 🔥 wichtig!
+                Layout.fillHeight: true
                 spacing: 40
 
                 ColumnLayout {
@@ -68,20 +69,7 @@ Rectangle {
                         svgPath: "../assets/svgs/start.svg"
                         highlighted: controller.type === Controller.Start
                         onClicked: {
-                            controller.setClickType(Controller.Start)
-                            controller.handleClick()
-                            cursorHelper.resetCursor()
-                        }
-                    }
-
-                    StyledButton {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                        text: "Terminate"
-                        svgPath: "../assets/svgs/terminate.svg"
-                        highlighted: controller.type === Controller.Stop
-                        onClicked: {
-                            controller.setClickType(Controller.Stop)
+                            controller.type = Controller.Start
                             controller.handleClick()
                             cursorHelper.resetCursor()
                         }
@@ -94,9 +82,21 @@ Rectangle {
                         svgPath: "../assets/svgs/pause.svg"
                         highlighted: controller.type === Controller.Pause
                         onClicked: {
-                            controller.setClickType(Controller.Pause)
+                            controller.type = Controller.Pause
                             controller.handleClick()
                             cursorHelper.resetCursor()
+                        }
+                    }
+
+                    StyledButton {
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        text: "Delete Item"
+                        svgPath: "../assets/svgs/delete.svg"
+                        highlighted: controller.type === Controller.Deleate
+                        onClicked: {
+                            controller.type = Controller.Deleate
+                            changeCursor()
                         }
                     }
 
@@ -108,7 +108,7 @@ Rectangle {
                         tipText: "clears the entire grid"
                         highlighted: controller.type === Controller.Clear
                         onClicked: {
-                            controller.setClickType(Controller.Clear)
+                            controller.type = Controller.Clear
                             controller.handleClick()
                             cursorHelper.resetCursor()
                         }
@@ -127,7 +127,7 @@ Rectangle {
                         svgPath: "../assets/svgs/startNode.svg"
                         highlighted: controller.type === Controller.StartNode
                         onClicked: {
-                            controller.setClickType(Controller.StartNode)
+                            controller.type = Controller.StartNode
                             changeCursor()
                         }
                     }
@@ -139,7 +139,7 @@ Rectangle {
                         svgPath: "../assets/svgs/endNode.svg"
                         highlighted: controller.type === Controller.TargetNode
                         onClicked: {
-                            controller.setClickType(Controller.TargetNode)
+                            controller.type = Controller.TargetNode
                             changeCursor()
                         }
                     }
@@ -151,21 +151,14 @@ Rectangle {
                         svgPath: "../assets/svgs/wall.svg"
                         highlighted: controller.type === Controller.Wall
                         onClicked: {
-                            controller.setClickType(Controller.Wall)
+                            controller.type = Controller.Wall
                             changeCursor()
                         }
                     }
 
-                    StyledButton {
+                    WeightButton{
                         Layout.fillWidth: true
                         Layout.fillHeight: true
-                        text: "Delete Item"
-                        svgPath: "../assets/svgs/delete.svg"
-                        highlighted: controller.type === Controller.Deleate
-                        onClicked: {
-                            controller.setClickType(Controller.Deleate)
-                            changeCursor()
-                        }
                     }
                 }
 
@@ -178,7 +171,7 @@ Rectangle {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         useSquare: true
-                        borderColor: "skyblue"
+                        borderColor: Theme.empty
                         text: "Unvisited Node"
                         hoverEnabled: false
                     }
@@ -187,7 +180,7 @@ Rectangle {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         useSquare: true
-                        squareColor: "blue"
+                        squareColor: Theme.visited
                         text: "Visited Node"
                         hoverEnabled: false
                     }
@@ -196,9 +189,12 @@ Rectangle {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         useSquare: true
-                        squareColor: "yellow"
+                        squareColor: Theme.path
                         text: "Shortest Path"
                         hoverEnabled: false
+                        onClicked: {
+                            controller.toast("test", 2)
+                        }
                     }
 
                     Item { Layout.fillHeight: true }

@@ -1,0 +1,16 @@
+-I
+C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug
+-I
+C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/Pathfinding
+-I
+C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug
+-I
+C:/Qt/6.10.2/wasm_singlethread/qml
+--resource
+C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qt/rcc/qmake_Pathfinding.qrc
+--resource
+C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qt/rcc/Pathfinder_raw_qml_0.qrc
+--resource
+C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qt/rcc/Pathfinder_raw_res_0.qrc
+--module
+Pathfinding

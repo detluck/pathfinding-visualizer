@@ -30,13 +30,13 @@ CMAKE_CROSSCOMPILING_EMULATOR:FILEPATH=C:/Projects/tools/emsdk/node/22.16.0_64bi
 CMAKE_CXX_COMPILER:STRING=C:/Projects/tools/emsdk/upstream/emscripten/em++.bat
 
 //Flags used by the CXX compiler during all build types.
-CMAKE_CXX_FLAGS:STRING=-DQT_QML_DEBUG
+CMAKE_CXX_FLAGS:STRING=
 
 //Flags used by the CXX compiler during DEBUG builds.
 CMAKE_CXX_FLAGS_DEBUG:STRING=-g
 
 //No help, variable specified on the command line.
-CMAKE_CXX_FLAGS_INIT:STRING=-DQT_QML_DEBUG
+CMAKE_CXX_FLAGS_INIT:STRING=
 
 //Flags used by the CXX compiler during MINSIZEREL builds.
 CMAKE_CXX_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
@@ -135,8 +135,8 @@ CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Qt/Tools/mingw1310_64/bin/ld.exe
 
-//Program used to build from build.ninja files.
-CMAKE_MAKE_PROGRAM:FILEPATH=C:/Qt/Tools/Ninja/ninja.exe
+//No help, variable specified on the command line.
+CMAKE_MAKE_PROGRAM:STRING=C:/Qt/Tools/Ninja/ninja.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -174,7 +174,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //No help, variable specified on the command line.
-CMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtc/package-manager/auto-setup.cmake
+CMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtcreator/cmake-helper/qtcreator-project.cmake
 
 //Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=PathfindingVisualizer
@@ -300,14 +300,11 @@ QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH:STRING=
 //Additional directories where find(Qt6 ...) components are searched
 QT_ADDITIONAL_PACKAGES_PREFIX_PATH:STRING=
 
-//Use CLI mode for Qt Creator's MaintenanceTool find_package provider
-QT_CREATOR_MAINTENANCE_TOOL_PROVIDER_USE_CLI:BOOL=OFF
+//No help, variable specified on the command line.
+QT_CREATOR_ENABLE_MAINTENANCE_TOOL_PROVIDER:BOOL=ON
 
-//Skip Qt Creator's MaintenanceTool find_package provider
-QT_CREATOR_SKIP_MAINTENANCE_TOOL_PROVIDER:BOOL=OFF
-
-//Skip Qt Creator's package manager auto-setup
-QT_CREATOR_SKIP_PACKAGE_MANAGER_SETUP:BOOL=OFF
+//No help, variable specified on the command line.
+QT_CREATOR_ENABLE_PACKAGE_MANAGER_SETUP:BOOL=ON
 
 //Qt Creator source groups extensions
 QT_CREATOR_SOURCE_GROUPS:BOOL=ON
@@ -733,8 +730,6 @@ CMAKE_INSTALL_SHAREDSTATEDIR-ADVANCED:INTERNAL=1
 CMAKE_INSTALL_SYSCONFDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_MAKE_PROGRAM
-CMAKE_MAKE_PROGRAM-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS
 CMAKE_MODULE_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_DEBUG
@@ -828,6 +823,7 @@ PKG_EGL_STATIC_LIBS_L:INTERNAL=
 PKG_EGL_STATIC_LIBS_OTHER:INTERNAL=
 PKG_EGL_STATIC_LIBS_PATHS:INTERNAL=
 PKG_EGL_VERSION:INTERNAL=
+QTCREATOR_CMAKE_HELPER_DIRECTORY:INTERNAL=C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qtcreator/cmake-helper
 //Qt feature: abstractbutton (from target Qt6::Widgets)
 QT_FEATURE_abstractbutton:INTERNAL=ON
 //Qt feature: abstractslider (from target Qt6::Widgets)
