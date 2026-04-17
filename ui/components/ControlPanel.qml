@@ -193,7 +193,7 @@ Rectangle {
                         text: "Shortest Path"
                         hoverEnabled: false
                         onClicked: {
-                            Theme.toggleTheme()
+                            controller.toast("test", 2)
                         }
                     }
 

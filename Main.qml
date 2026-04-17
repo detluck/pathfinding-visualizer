@@ -24,5 +24,8 @@ Window{
             Layout.fillHeight: true
             Layout.fillWidth: true
         }
+        StatusBar{
+            Layout.fillWidth: true
+        }
     }
 }

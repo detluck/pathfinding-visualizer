@@ -12,9 +12,11 @@ Button {
     property color backgroundColor: Theme.primary
     property alias radius: background.radius
     property alias fontSize: label.font.pixelSize
+    property bool useSquare: false
+    property color labelColor: useSquare? Theme.bgBaseReverse: Theme.bgBase
     property string svgPath: ""
     property color squareColor: "transparent"
-    property bool useSquare: false
+    property color svgColor: Theme.bgBase
     property string tipText: ""
     property color borderColor: "transparent"
 
@@ -75,7 +77,7 @@ Button {
                 source: svgIcon
                 anchors.fill: parent
                 colorization: 1.0
-                colorizationColor: Theme.bgBase
+                colorizationColor: root.svgColor
 
                 Behavior on colorizationColor {
                     ColorAnimation {
@@ -88,7 +90,7 @@ Button {
         StyledText {
             id: label
             text: root.text
-            color: root.useSquare? Theme.bgBaseReverse: Theme.bgBase
+            color: root.labelColor
             anchors.verticalCenter: parent.verticalCenter
         }
     }

@@ -36,6 +36,10 @@ QtObject {
     property color weightMiddle: isDark? "#fab387": "#fe640b"
     property color weightHeavy: isDark? "#eba0ac": "#e64553"
 
+    //status
+    property color warning: isDark? "#f9e2af": "#df8e1d"
+    property color error: isDark? "#f38ba8": "#d20f39"
+
     function toggleTheme() {
         isDark = !isDark
     }

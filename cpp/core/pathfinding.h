@@ -61,6 +61,7 @@ signals:
     void availableWeightsChanged();
     void currentWeightChanged();
     void finished();
+    void toast(QString message, int level);
 
 private slots:
     void onStep();

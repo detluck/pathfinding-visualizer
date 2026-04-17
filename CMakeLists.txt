@@ -45,6 +45,9 @@ qt_add_qml_module(Pathfinder
         ui/components/StyledSlider.qml
         ui/components/AlgoSelector.qml
         ui/components/StyledText.qml
+        ui/components/WeightButton.qml
+        ui/components/Toaster.qml
+        ui/components/StatusBar.qml
 
         ui/components/SpeedSlider.qml
         ui/theme/Theme.qml
@@ -59,11 +62,11 @@ qt_add_qml_module(Pathfinder
         ui/assets/svgs/delete.svg
         ui/assets/svgs/wall.svg
         ui/assets/svgs/weight.svg
+        ui/assets/svgs/error.svg
+        ui/assets/svgs/warning.svg
+        ui/assets/svgs/status.svg
         ui/assets/fonts/JetBrainsMono-Bold.ttf
         ui/assets/fonts/JetBrainsMono-Regular.ttf
-        QML_FILES ui/components/WeightButton.qml
-        QML_FILES ui/components/Toaster.qml
-        QML_FILES ui/components/StatusBar.qml
 )
 
 target_link_libraries(Pathfinder PRIVATE Qt6::Quick Qt6::Qml Qt6::Gui Qt6::Svg Qt6::QuickControls2)
