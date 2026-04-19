@@ -28,6 +28,8 @@ set(src_and_dest_list
     "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/Pathfinding/ui/components/SpeedSlider.qml"
     "C:/Projects/Main/pathfinding-visualizer/ui/theme/Theme.qml"
     "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/Pathfinding/ui/theme/Theme.qml"
+    "C:/Projects/Main/pathfinding-visualizer/ui/components/StyledIcon.qml"
+    "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/Pathfinding/ui/components/StyledIcon.qml"
 
 )
 set(timestamp_file "C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/.qt/Pathfinder_qml.txt")

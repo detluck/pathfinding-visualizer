@@ -10,7 +10,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "showMessage",
-                            "line": 13,
+                            "line": 14,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -18,15 +18,23 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "switchColor",
-                            "line": 23,
+                            "line": 32,
                             "message": "Functions without type annotations won't be compiled"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 18,
+                            "durationMicroseconds": 0,
+                            "functionName": "opacity",
+                            "line": 46,
+                            "message": "Could not find property \"opacity\"."
                         },
                         {
                             "codegenResult": 0,
                             "column": 17,
-                            "durationMicroseconds": 695,
+                            "durationMicroseconds": 414,
                             "functionName": "svgPath",
-                            "line": 38,
+                            "line": 48,
                             "message": ""
                         },
                         {
@@ -34,7 +42,7 @@
                             "column": 15,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 46,
+                            "line": 56,
                             "message": "Could not find property \"text\"."
                         },
                         {
@@ -42,32 +50,48 @@
                             "column": 18,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 47,
+                            "line": 57,
                             "message": "Could not find property \"visible\"."
                         },
                         {
                             "codegenResult": 2,
                             "column": 21,
-                            "durationMicroseconds": 395,
+                            "durationMicroseconds": 183,
                             "functionName": "labelColor",
-                            "line": 48,
+                            "line": 58,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
                         {
                             "codegenResult": 2,
                             "column": 19,
-                            "durationMicroseconds": 266,
+                            "durationMicroseconds": 137,
                             "functionName": "svgColor",
-                            "line": 49,
+                            "line": 59,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 23,
+                            "column": 33,
                             "durationMicroseconds": 0,
-                            "functionName": "fill",
-                            "line": 35,
-                            "message": "Could not find property \"fill\"."
+                            "functionName": "verticalCenter",
+                            "line": 44,
+                            "message": "Could not find property \"verticalCenter\"."
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 30,
+                            "durationMicroseconds": 68,
+                            "functionName": "type",
+                            "line": 64,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 22,
+                            "durationMicroseconds": 48,
+                            "functionName": "onTriggered",
+                            "line": 73,
+                            "message": "Cannot find name isShown"
                         }
                     ],
                     "filePath": "C:/Projects/Main/pathfinding-visualizer/ui/components/Toaster.qml"

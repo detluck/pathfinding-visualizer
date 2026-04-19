@@ -26,5 +26,6 @@ C:/Projects/Main/pathfinding-visualizer/ui/components/Toaster.qml
 C:/Projects/Main/pathfinding-visualizer/ui/components/StatusBar.qml
 C:/Projects/Main/pathfinding-visualizer/ui/components/SpeedSlider.qml
 C:/Projects/Main/pathfinding-visualizer/ui/theme/Theme.qml
+C:/Projects/Main/pathfinding-visualizer/ui/components/StyledIcon.qml
 --json
 C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threaded-Debug/Pathfinder_qmllint.json

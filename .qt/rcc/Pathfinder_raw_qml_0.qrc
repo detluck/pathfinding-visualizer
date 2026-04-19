@@ -13,6 +13,7 @@
     <file alias="ui/components/StatusBar.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/StatusBar.qml</file>
     <file alias="ui/components/SpeedSlider.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/SpeedSlider.qml</file>
     <file alias="ui/theme/Theme.qml">C:/Projects/Main/pathfinding-visualizer/ui/theme/Theme.qml</file>
+    <file alias="ui/components/StyledIcon.qml">C:/Projects/Main/pathfinding-visualizer/ui/components/StyledIcon.qml</file>
   </qresource>
 </RCC>
 

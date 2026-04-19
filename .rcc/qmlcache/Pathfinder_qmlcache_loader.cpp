@@ -96,6 +96,13 @@ namespace _qt_qml_Pathfinding_ui_theme_Theme_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _qt_qml_Pathfinding_ui_components_StyledIcon_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -123,6 +130,7 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Pathfinding/ui/components/StatusBar.qml"), &QmlCacheGeneratedCode::_qt_qml_Pathfinding_ui_components_StatusBar_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Pathfinding/ui/components/SpeedSlider.qml"), &QmlCacheGeneratedCode::_qt_qml_Pathfinding_ui_components_SpeedSlider_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Pathfinding/ui/theme/Theme.qml"), &QmlCacheGeneratedCode::_qt_qml_Pathfinding_ui_theme_Theme_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Pathfinding/ui/components/StyledIcon.qml"), &QmlCacheGeneratedCode::_qt_qml_Pathfinding_ui_components_StyledIcon_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

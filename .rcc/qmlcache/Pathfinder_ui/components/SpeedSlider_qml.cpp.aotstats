@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 2,
                             "column": 25,
-                            "durationMicroseconds": 862,
+                            "durationMicroseconds": 164,
                             "functionName": "onValueChanged",
                             "line": 42,
                             "message": "Type (component in C:/Projects/Main/pathfinding-visualizer/ui/components/SpeedSlider.qml)::parent with type QQuickItem does not have a property valueChanged for calling"
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 467,
+                            "durationMicroseconds": 150,
                             "functionName": "x",
                             "line": 15,
                             "message": ""
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 625,
+                            "durationMicroseconds": 189,
                             "functionName": "y",
                             "line": 16,
                             "message": ""
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 202,
+                            "durationMicroseconds": 54,
                             "functionName": "width",
                             "line": 19,
                             "message": ""
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 0,
                             "column": 21,
-                            "durationMicroseconds": 151,
+                            "durationMicroseconds": 34,
                             "functionName": "height",
                             "line": 20,
                             "message": ""
@@ -48,7 +48,7 @@
                         {
                             "codegenResult": 0,
                             "column": 24,
-                            "durationMicroseconds": 350,
+                            "durationMicroseconds": 111,
                             "functionName": "width",
                             "line": 25,
                             "message": ""
@@ -56,7 +56,7 @@
                         {
                             "codegenResult": 0,
                             "column": 25,
-                            "durationMicroseconds": 248,
+                            "durationMicroseconds": 55,
                             "functionName": "height",
                             "line": 26,
                             "message": ""
@@ -64,7 +64,7 @@
                         {
                             "codegenResult": 2,
                             "column": 24,
-                            "durationMicroseconds": 4692,
+                            "durationMicroseconds": 1967,
                             "functionName": "color",
                             "line": 27,
                             "message": "Cannot load property slider from const QMetaObject."
@@ -72,7 +72,7 @@
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 524,
+                            "durationMicroseconds": 251,
                             "functionName": "x",
                             "line": 33,
                             "message": ""
@@ -80,7 +80,7 @@
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 393,
+                            "durationMicroseconds": 185,
                             "functionName": "y",
                             "line": 34,
                             "message": ""
@@ -88,7 +88,7 @@
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 343,
+                            "durationMicroseconds": 161,
                             "functionName": "color",
                             "line": 38,
                             "message": ""

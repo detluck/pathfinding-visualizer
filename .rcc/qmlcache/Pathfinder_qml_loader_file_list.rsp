@@ -17,3 +17,4 @@ C:/Projects/Main/pathfinding-visualizer/build/WebAssembly_Qt_6_10_2_single_threa
 /qt/qml/Pathfinding/ui/components/StatusBar.qml
 /qt/qml/Pathfinding/ui/components/SpeedSlider.qml
 /qt/qml/Pathfinding/ui/theme/Theme.qml
+/qt/qml/Pathfinding/ui/components/StyledIcon.qml

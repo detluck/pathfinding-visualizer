@@ -14,5 +14,6 @@ Toaster 1.0 ui/components/Toaster.qml
 StatusBar 1.0 ui/components/StatusBar.qml
 SpeedSlider 1.0 ui/components/SpeedSlider.qml
 Theme 1.0 ui/theme/Theme.qml
+StyledIcon 1.0 ui/components/StyledIcon.qml
 depends QtQuick
 

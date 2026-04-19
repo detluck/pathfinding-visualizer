@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 0,
                             "column": 12,
-                            "durationMicroseconds": 627,
+                            "durationMicroseconds": 326,
                             "functionName": "scale",
                             "line": 12,
                             "message": ""
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 8,
-                            "durationMicroseconds": 229,
+                            "durationMicroseconds": 127,
                             "functionName": "z",
                             "line": 13,
                             "message": ""
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 2,
                             "column": 19,
-                            "durationMicroseconds": 7749,
+                            "durationMicroseconds": 3599,
                             "functionName": "color",
                             "line": 10,
                             "message": "Cannot load property empty from const QMetaObject."
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 0,
                             "column": 17,
-                            "durationMicroseconds": 250,
+                            "durationMicroseconds": 147,
                             "functionName": "height",
                             "line": 31,
                             "message": ""
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 140,
+                            "durationMicroseconds": 71,
                             "functionName": "width",
                             "line": 32,
                             "message": ""
@@ -48,7 +48,7 @@
                         {
                             "codegenResult": 2,
                             "column": 18,
-                            "durationMicroseconds": 344,
+                            "durationMicroseconds": 220,
                             "functionName": "visible",
                             "line": 34,
                             "message": "Cannot access value for name type"
@@ -56,7 +56,7 @@
                         {
                             "codegenResult": 0,
                             "column": 33,
-                            "durationMicroseconds": 249,
+                            "durationMicroseconds": 121,
                             "functionName": "verticalCenter",
                             "line": 33,
                             "message": ""
@@ -64,7 +64,7 @@
                         {
                             "codegenResult": 0,
                             "column": 21,
-                            "durationMicroseconds": 219,
+                            "durationMicroseconds": 147,
                             "functionName": "source",
                             "line": 38,
                             "message": ""
@@ -72,7 +72,7 @@
                         {
                             "codegenResult": 0,
                             "column": 23,
-                            "durationMicroseconds": 158,
+                            "durationMicroseconds": 105,
                             "functionName": "fillMode",
                             "line": 41,
                             "message": ""
@@ -80,7 +80,7 @@
                         {
                             "codegenResult": 0,
                             "column": 32,
-                            "durationMicroseconds": 187,
+                            "durationMicroseconds": 105,
                             "functionName": "height",
                             "line": 39,
                             "message": ""
@@ -88,7 +88,7 @@
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 206,
+                            "durationMicroseconds": 77,
                             "functionName": "width",
                             "line": 40,
                             "message": ""
@@ -96,7 +96,7 @@
                         {
                             "codegenResult": 0,
                             "column": 21,
-                            "durationMicroseconds": 139,
+                            "durationMicroseconds": 84,
                             "functionName": "source",
                             "line": 47,
                             "message": ""
@@ -104,7 +104,7 @@
                         {
                             "codegenResult": 2,
                             "column": 32,
-                            "durationMicroseconds": 189,
+                            "durationMicroseconds": 36,
                             "functionName": "colorizationColor",
                             "line": 50,
                             "message": "Cannot load property bgBaseReverse from const QMetaObject."
@@ -112,7 +112,7 @@
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 153,
+                            "durationMicroseconds": 58,
                             "functionName": "fill",
                             "line": 48,
                             "message": ""

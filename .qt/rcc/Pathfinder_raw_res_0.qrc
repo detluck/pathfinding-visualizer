@@ -13,6 +13,8 @@
     <file alias="ui/assets/svgs/error.svg">C:/Projects/Main/pathfinding-visualizer/ui/assets/svgs/error.svg</file>
     <file alias="ui/assets/svgs/warning.svg">C:/Projects/Main/pathfinding-visualizer/ui/assets/svgs/warning.svg</file>
     <file alias="ui/assets/svgs/status.svg">C:/Projects/Main/pathfinding-visualizer/ui/assets/svgs/status.svg</file>
+    <file alias="ui/assets/svgs/light.svg">C:/Projects/Main/pathfinding-visualizer/ui/assets/svgs/light.svg</file>
+    <file alias="ui/assets/svgs/dark.svg">C:/Projects/Main/pathfinding-visualizer/ui/assets/svgs/dark.svg</file>
     <file alias="ui/assets/fonts/JetBrainsMono-Bold.ttf">C:/Projects/Main/pathfinding-visualizer/ui/assets/fonts/JetBrainsMono-Bold.ttf</file>
     <file alias="ui/assets/fonts/JetBrainsMono-Regular.ttf">C:/Projects/Main/pathfinding-visualizer/ui/assets/fonts/JetBrainsMono-Regular.ttf</file>
   </qresource>

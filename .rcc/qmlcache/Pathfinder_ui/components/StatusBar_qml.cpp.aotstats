@@ -8,33 +8,97 @@
                         {
                             "codegenResult": 0,
                             "column": 12,
-                            "durationMicroseconds": 5592,
+                            "durationMicroseconds": 3183,
                             "functionName": "color",
-                            "line": 6,
+                            "line": 7,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 23,
-                            "durationMicroseconds": 238,
-                            "functionName": "left",
+                            "durationMicroseconds": 78,
+                            "functionName": "fill",
                             "line": 11,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 33,
-                            "durationMicroseconds": 239,
+                            "durationMicroseconds": 90,
                             "functionName": "verticalCenter",
-                            "line": 12,
+                            "line": 14,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 81,
+                            "functionName": "alignment",
+                            "line": 21,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 19,
+                            "durationMicroseconds": 174,
+                            "functionName": "text",
+                            "line": 32,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 28,
+                            "durationMicroseconds": 135,
+                            "functionName": "onClicked",
+                            "line": 35,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 58,
+                            "functionName": "fill",
+                            "line": 34,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 26,
+                            "durationMicroseconds": 152,
+                            "functionName": "imageSource",
+                            "line": 42,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 25,
+                            "durationMicroseconds": 105,
+                            "functionName": "imageColor",
+                            "line": 43,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 28,
+                            "durationMicroseconds": 109,
+                            "functionName": "onClicked",
+                            "line": 47,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 38,
+                            "functionName": "fill",
+                            "line": 46,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 17,
-                            "durationMicroseconds": 224,
+                            "durationMicroseconds": 79,
                             "functionName": "target",
-                            "line": 17,
+                            "line": 53,
                             "message": "Cannot access value for name controller"
                         },
                         {
@@ -42,7 +106,7 @@
                             "column": 9,
                             "durationMicroseconds": 0,
                             "functionName": "onToast",
-                            "line": 19,
+                            "line": 55,
                             "message": "Functions without type annotations won't be compiled"
                         }
                     ],
