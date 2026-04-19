@@ -69,7 +69,7 @@ Build dependencies:
 -   [`cmake`](https://cmake.org)
 -   [`ninja`](https://github.com/ninja-build/ninja)
 
-To install the shell manually, install all dependencies, then:
+To install the app manually, install all dependencies, then:
 
 # 1. Clone this repo
 ```sh
