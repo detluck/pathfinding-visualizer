@@ -65,8 +65,11 @@ qt_add_qml_module(Pathfinder
         ui/assets/svgs/error.svg
         ui/assets/svgs/warning.svg
         ui/assets/svgs/status.svg
+        ui/assets/svgs/light.svg
+        ui/assets/svgs/dark.svg
         ui/assets/fonts/JetBrainsMono-Bold.ttf
         ui/assets/fonts/JetBrainsMono-Regular.ttf
+        QML_FILES ui/components/StyledIcon.qml
 )
 
 target_link_libraries(Pathfinder PRIVATE Qt6::Quick Qt6::Qml Qt6::Gui Qt6::Svg Qt6::QuickControls2)

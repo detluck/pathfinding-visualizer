@@ -13,6 +13,7 @@ ComboBox{
     property int bHeight: 50
 
     model: ["Dijkstra", "A*", "BFS"]
+    currentIndex: -1
 
     delegate: ItemDelegate{
         id: delegate
@@ -34,9 +35,9 @@ ComboBox{
     }
 
     contentItem: StyledText{
-        leftPadding: 1
+        leftPadding: 5
         rightPadding: root.indicator.width + root.spacing
-        text: root.displayText
+        text: currentIndex === -1? "Pick an algorithm": root.displayText
         color: root.pressed? root.pressedColor: root.textColor
     }
 
@@ -77,7 +78,7 @@ ComboBox{
         }
 
         background: Rectangle{
-            radius: root.radius
+            radius: 10
             color: root.backgroundColor
         }
     }

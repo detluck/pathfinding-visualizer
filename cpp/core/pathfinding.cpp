@@ -31,15 +31,15 @@ void Pathfinding::setAlgorithm(int index)
     {
     case AlgorithmType::Dijkstra:
         m_algorithm = std::make_unique<Dijkstra>();
-        qDebug() << "Dijkstra aktiv";
+        emit toast("Dijkstra aktivated", 1);
         break;
     case AlgorithmType::Astar:
         m_algorithm = std::make_unique<AStar>();
-        qDebug() << "AStar aktiv";
+        emit toast("A* aktivated", 1);
         break;
     case AlgorithmType::Bfs:
         m_algorithm = std::make_unique<Bfs>();
-        qDebug() << "Bfs aktiv";
+        emit toast("Dijkstra aktivated", 1);
         break;
     default:
         break;
@@ -53,7 +53,6 @@ void Pathfinding::setClickType(ClickType type)
         return;
     }
     m_type = type;
-    qDebug() << "ClickType set" << type;
     emit clickTypeChanged();
 }
 
@@ -76,6 +75,7 @@ void Pathfinding::setCurrentWeight(const int weight){
     }
     m_currentWeight = weight;
     emit currentWeightChanged();
+    emit toast("Weight " + QString::number(m_currentWeight) + " was selected", 1);
 }
 
 void Pathfinding::setAvailableWeights(const QVariantList list){
@@ -107,13 +107,11 @@ void Pathfinding::setStartIndex(const int index)
 {
     if(m_start != -1)
     {
-        qDebug() << "changing nodetype to empty";
         m_model->setNodeType(NodeType::Empty, m_start);
     }
     if(isValid(index))
     {
         m_start = index;
-        qDebug() << "Setting start index in model";
         m_model->setNodeType(NodeType::Start, m_start);
     }
 }
@@ -135,7 +133,7 @@ void Pathfinding::setWeightNode(const int index, const int weight)
 {
     if(weight >= 0 && isValid(index)){
         m_model->setNodeType(NodeType::WeightNode, index, weight);
-        qDebug() << "Weight set " << weight;
+        emit toast("Weight was set: " + QString::number(weight), 1);
     }
 }
 
@@ -149,20 +147,25 @@ void Pathfinding::setWallIndex(const int index)
 
 void Pathfinding::startAlgorithm()
 {
-    if(m_algorithm && isValid(m_start) && isValid(m_end)){
-        if(m_algorithm->state() == AlgoState::Stopped){
-            m_model->clearVisited();
-        }
-        GridData data = collectData();
-        m_algorithm->init(data);
+    if(m_algorithm){
+        if(isValid(m_start) && isValid(m_end)){
+            if(m_algorithm->state() == AlgoState::Stopped){
+                m_model->clearVisited();
+            }
+            GridData data = collectData();
+            m_algorithm->init(data);
 
-        if(!timer->isActive()){
-            timer->start();
+            if(!timer->isActive()){
+                timer->start();
+            }
+        }
+        else{
+            emit toast("No start or end node with valid index", 2);
         }
     }
 
     else {
-        qDebug() << "Error: trying to start, but no algorithm selected or start/end index not valid!";
+        emit toast("No algorithm has been set", 2);
     }
 }
 
@@ -261,7 +264,6 @@ void Pathfinding::handleClick(const int index)
         clearGrid();
         break;
     case ClickType::StartNode:
-        qDebug() << "Starting startNode";
         setStartIndex(index);
         break;
     case ClickType::TargetNode:
@@ -295,7 +297,7 @@ void Pathfinding::addWeight(const int weight)
         return a.toInt() < b.toInt();
     });
     if(m_availableWeights.contains(weight)){
-        qDebug() << "Weight added";
+        emit toast("New weight added", 1);
     }
 
     emit availableWeightsChanged();
@@ -339,6 +341,7 @@ void Pathfinding::onStep()
             timer->stop();
             m_model->reconstructPath(m_algorithm->getPath());
             emit finished();
+            emit toast("Finished", 1);
             break;
     }
 }

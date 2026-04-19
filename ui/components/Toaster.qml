@@ -9,14 +9,23 @@ Item {
 
     property string message: ""
     property int level: 0
+    property bool isShown: false
 
     function showMessage(message, level){
         if(message && message.trim().length > 0){
-            root.message = message;
-        }
-
-        if(level > 0 && level < 4){
-             root.level = level;
+            switch(level){
+                case 1:
+                    root.message = message;
+                    timer.start();
+                    break;
+                case 2: root.message = "[Warning] " + message; break;
+                case 3: root.message = "[Error] " + message; break;
+                default: root.message = message; break;
+            }
+            if(level > 0 && level < 4){
+                 root.level = level;
+            }
+            isShown = true;
         }
     }
 
@@ -32,8 +41,9 @@ Item {
     StyledButton{
         id: statusButton
 
-        anchors.fill: parent
-
+        anchors.verticalCenter: parent.verticalCenter
+        hoverEnabled: false
+        opacity: root.isShown? 1.0: 0.0
         backgroundColor: "transparent"
         svgPath:{
             switch(root.level){
@@ -44,9 +54,26 @@ Item {
             }
         }
         text: root.message
-        visible: root.message != ""
+        visible: root.message != "" && root.isShown
         labelColor: root.switchColor(root.level)
         svgColor: root.switchColor(root.level)
+
+        Behavior on opacity {
+            NumberAnimation {
+                duration: 300
+                easing.type: Easing.InOutQuad
+            }
+        }
+    }
+
+    Timer{
+        id: timer
+
+        interval: 5000
+        onTriggered: {
+            isShown = false
+            root.message = ""
+        }
     }
 
 }

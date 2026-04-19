@@ -14,7 +14,8 @@ Button {
     property alias fontSize: label.font.pixelSize
     property bool useSquare: false
     property color labelColor: useSquare? Theme.bgBaseReverse: Theme.bgBase
-    property string svgPath: ""
+    property alias svgPath: icon.imageSource
+    property alias label: label
     property color squareColor: "transparent"
     property color svgColor: Theme.bgBase
     property string tipText: ""
@@ -40,8 +41,9 @@ Button {
         radius: 20
     }
 
-    contentItem: Row {
+    contentItem: RowLayout {
         spacing: 8
+        width: root.availableWidth
 
         Rectangle {
             visible: root.useSquare
@@ -50,48 +52,30 @@ Button {
             color: root.squareColor
             border.color: root.borderColor
             radius: 2
-            anchors.verticalCenter: parent.verticalCenter
+            Layout.alignment: Qt.AlignVCenter
 
             Behavior on color {
                 ColorAnimation { duration: 150 }
             }
         }
 
-        Item {
+        StyledIcon{
+            id: icon
             height: root.iconSize
             width: root.iconSize
-            anchors.verticalCenter: parent.verticalCenter
-            visible: root.svgPath !== "" && !root.useSquare
-
-            Image {
-                id: svgIcon
-                source: root.svgPath
-                sourceSize.height: parent.height
-                sourceSize.width: parent.width
-                fillMode: Image.PreserveAspectFit
-                visible: false
-            }
-
-            MultiEffect {
-                id: svgEffect
-                source: svgIcon
-                anchors.fill: parent
-                colorization: 1.0
-                colorizationColor: root.svgColor
-
-                Behavior on colorizationColor {
-                    ColorAnimation {
-                        duration: 250
-                    }
-                }
-            }
+            visible: imageSource !== "" && !root.useSquare
+            imageColor: root.svgColor
         }
 
         StyledText {
             id: label
             text: root.text
             color: root.labelColor
-            anchors.verticalCenter: parent.verticalCenter
+            Layout.alignment: Qt.AlignVCenter
+        }
+
+        Item {
+            Layout.fillWidth: true
         }
     }
 
