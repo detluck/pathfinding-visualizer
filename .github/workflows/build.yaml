@@ -85,7 +85,7 @@ jobs:
         if: runner.os == 'macOS'
         run: |
           mkdir -p dist
-          ditto -c -k --sequesterRsrc --keepParent "${{ github.workspace }}/install/app.app" "dist/PathfindingVisualizer-macos.zip"
+          ditto -c -k --sequesterRsrc --keepParent "${{ github.workspace }}/install/Pathfinder.app" "dist/PathfindingVisualizer-macos.zip"
 
       # ==========================================
       # 4. GITHUB RELEASE UPLOAD
