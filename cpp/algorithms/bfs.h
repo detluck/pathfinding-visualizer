@@ -1,21 +1,12 @@
-#ifndef DIJKSTRA_H
-#define DIJKSTRA_H
+#ifndef BFS_H
+#define BFS_H
 #include "ialgorithm.h"
 #include <queue>
 
-struct NodeRecord {
-    int index;
-    int cost;
-
-    bool operator>(const NodeRecord& other) const {
-        return cost > other.cost;
-    }
-};
-
-class Dijkstra: public IAlgorithm
+class Bfs: public IAlgorithm
 {
 public:
-    ~Dijkstra() override = default;
+    ~Bfs() override = default;
     void run(const GridData& data) override;
     void setState(const AlgoState algoState) override;
     void init(const GridData& data) override;
@@ -30,15 +21,12 @@ private:
 
 private:
     std::vector<int> m_cameFrom;
-    
-    std::priority_queue<NodeRecord, std::vector<NodeRecord>, std::greater<NodeRecord>> m_queue;
-    
-    std::vector<int> m_costs;
-
+    std::queue<int> m_queue;
     std::vector<bool> m_visited;
+    std::vector<int> m_parent;
     GridData m_data;
     AlgoState m_state = AlgoState::Stopped;
 };
 
 
-#endif // DIJKSTRA_H
+#endif

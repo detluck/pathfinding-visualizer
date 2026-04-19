@@ -4,6 +4,7 @@
 enum class AlgorithmType{
     Dijkstra,
     Astar,
+    Bfs,
     Count
 };
 

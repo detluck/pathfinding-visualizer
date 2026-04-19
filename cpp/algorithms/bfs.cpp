@@ -1,76 +1,70 @@
-#include "dijkstra.h"
+#include "bfs.h"
 #include <queue> 
 #include <algorithm>
-#include <climits>
 
 
-void Dijkstra::setState(const AlgoState algoState)
+void Bfs::setState(const AlgoState algoState)
 {
     if(m_state != algoState){
         m_state = algoState;
     }
 }
 
-void Dijkstra::init(const GridData &data)
+void Bfs::init(const GridData &data)
 {
     m_data = data;
 
-    m_queue = std::priority_queue<NodeRecord, std::vector<NodeRecord>, std::greater<NodeRecord>>();
-    
-    m_costs = std::vector<int>(data.nodes.size(), INT_MAX);
-    m_costs[m_data.startIndex] = 0;
-
-    m_queue.push({m_data.startIndex, 0});
-
+    m_queue = std::queue<int>();
+    m_queue.push(m_data.startIndex);
     m_visited = std::vector<bool> (data.nodes.size(), false);
     m_visited[m_data.startIndex] = true;
     m_cameFrom = std::vector<int>(m_data.nodes.size(), -1);
     m_state = AlgoState::Running;
 }
 
-void Dijkstra::run(const GridData& data)
+void Bfs::run(const GridData& data)
 {
     init(data);
 }
 
-StepResult Dijkstra::step()
+StepResult Bfs::step()
 {
-    if(m_state == AlgoState::Stopped) return {StepResultType::Finished, -1};
-    if(m_state == AlgoState::Paused)return {StepResultType::Paused, -1};
-    if(m_queue.empty()) {
+    //stopped, thread stops
+    if(m_state == AlgoState::Stopped){
+        return {StepResultType::Finished, -1};
+    }
+
+    //paused code not doing anything, thread continue
+    if(m_state == AlgoState::Paused){
+        return {StepResultType::Paused, -1};
+    }
+
+    if(m_queue.empty()){
         m_state = AlgoState::Stopped;
         return {StepResultType::Finished, -1};
     }
-    
 
-    int current = m_queue.top().index;
+    int current = m_queue.front();
     m_queue.pop();
 
-    if(current == m_data.endIndex) {
+    if(current == m_data.endIndex){
         m_state = AlgoState::Stopped;
         return {StepResultType::Finished, current};
     }
-    
+
     processNode(current);
+
+    //return current node index for signal emit in worker
     return {StepResultType::Running, current};
 }
 
-void Dijkstra::processNode(int current) {
-    auto current_neighbors = neighbors(current);
-    for(int next : current_neighbors) {
-        int stepCost = 1 + m_data.nodes[next].weight;
-        int newCost = m_costs[current] + stepCost;
+void Bfs::blazzingRun(){
+    while(step().state == StepResultType::Running) {
 
-        if(newCost < m_costs[next]) {
-            m_costs[next] = newCost;
-            m_cameFrom[next] = current;
-            m_queue.push({next, newCost});
-            m_visited[next] = true;
-        }
     }
 }
 
-std::vector<int> Dijkstra::getPath()
+std::vector<int> Bfs::getPath()
 {
     std::vector<int> path;
     int current = m_data.endIndex;
@@ -93,7 +87,12 @@ std::vector<int> Dijkstra::getPath()
     return path;
 }
 
-std::vector<int> Dijkstra::neighbors(int current)
+AlgoState Bfs::state()
+{
+    return m_state;
+}
+
+std::vector<int> Bfs::neighbors(int current)
 {
 
     //ToDO: optimize function to calculate neighbors for @current Node using @m_data
@@ -145,13 +144,18 @@ std::vector<int> Dijkstra::neighbors(int current)
     return neighbors;
 }
 
-void Dijkstra::blazzingRun(){
-    while(step().state == StepResultType::Running) {
-
-    }
-}
-
-AlgoState Dijkstra::state()
+void Bfs::processNode(int current)
 {
-    return m_state;
+    std::vector<int> current_neighbors = neighbors(current);
+    for(int next : current_neighbors) {
+
+            if(!m_visited[next]){
+
+                m_visited[next] = true;
+
+                m_cameFrom[next] = current;
+
+                m_queue.push(next);
+            }
+        }
 }

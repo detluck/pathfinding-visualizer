@@ -1,9 +1,11 @@
 #include "pathfinding.h"
 #include "cpp/algorithms/algorithmType.h"
-#include "cpp/algorithms/dijkstra.h"
+#include "cpp/algorithms/bfs.h"
 #include "cpp/algorithms/astar.h"
+#include "cpp/algorithms/dijkstra.h"
 #include "cpp/model/gridmodel.h"
 #include <QDebug>
+#include <algorithm>
 
 Pathfinding::Pathfinding(QObject *parent)
     :QObject(parent), m_model(new GridModel(this))
@@ -11,6 +13,11 @@ Pathfinding::Pathfinding(QObject *parent)
     timer = new QTimer(this);
     timer->setInterval(50);
     connect(timer, &QTimer::timeout, this, &Pathfinding::onStep);
+
+    QSettings settings("GoonSoft", "Pathfinder");
+    QVariant defaultWeights = QVariantList{10, 20, 40, 60, 80, 100};
+
+    m_availableWeights = settings.value("customWeights", defaultWeights).toList();
 }
 
 void Pathfinding::setAlgorithm(int index)
@@ -24,11 +31,15 @@ void Pathfinding::setAlgorithm(int index)
     {
     case AlgorithmType::Dijkstra:
         m_algorithm = std::make_unique<Dijkstra>();
-        qDebug() << "Dijkstra aktiv";
+        emit toast("Dijkstra aktivated", 1);
         break;
     case AlgorithmType::Astar:
         m_algorithm = std::make_unique<AStar>();
-        qDebug() << "AStar aktiv";
+        emit toast("A* aktivated", 1);
+        break;
+    case AlgorithmType::Bfs:
+        m_algorithm = std::make_unique<Bfs>();
+        emit toast("Dijkstra aktivated", 1);
         break;
     default:
         break;
@@ -42,7 +53,6 @@ void Pathfinding::setClickType(ClickType type)
         return;
     }
     m_type = type;
-    qDebug() << "ClickType set" << type;
     emit clickTypeChanged();
 }
 
@@ -51,17 +61,57 @@ Pathfinding::ClickType Pathfinding::clickType()
     return m_type;
 }
 
+int Pathfinding::currentWeight(){
+    return m_currentWeight;
+}
+
+QVariantList Pathfinding::availableWeights(){
+    return m_availableWeights;
+}
+
+void Pathfinding::setCurrentWeight(const int weight){
+    if(weight == m_currentWeight){
+        return;
+    }
+    m_currentWeight = weight;
+    emit currentWeightChanged();
+    emit toast("Weight " + QString::number(m_currentWeight) + " was selected", 1);
+}
+
+void Pathfinding::setAvailableWeights(const QVariantList list){
+    if(list == m_availableWeights){
+        return;
+    }
+
+    QVariantList validated;
+
+    for(const QVariant &item: list){
+        bool ok;
+        int weight = item.toInt(&ok);
+
+        if(ok && weight > 0 && !validated.contains(weight) && validated.size() < 12){
+            validated.append(weight);
+        }
+    }
+
+    if(m_availableWeights != validated){
+        m_availableWeights = validated;
+
+        QSettings settings("GoonSoft", "Pathfinder");
+        settings.value("customWeights", m_availableWeights);
+        emit availableWeightsChanged();
+    }
+}
+
 void Pathfinding::setStartIndex(const int index)
 {
     if(m_start != -1)
     {
-        qDebug() << "changing nodetype to empty";
         m_model->setNodeType(NodeType::Empty, m_start);
     }
     if(isValid(index))
     {
         m_start = index;
-        qDebug() << "Setting start index in model";
         m_model->setNodeType(NodeType::Start, m_start);
     }
 }
@@ -79,6 +129,14 @@ void Pathfinding::setEndIndex(const int index)
     }
 }
 
+void Pathfinding::setWeightNode(const int index, const int weight)
+{
+    if(weight >= 0 && isValid(index)){
+        m_model->setNodeType(NodeType::WeightNode, index, weight);
+        emit toast("Weight was set: " + QString::number(weight), 1);
+    }
+}
+
 void Pathfinding::setWallIndex(const int index)
 {
     if(isValid(index))
@@ -90,11 +148,24 @@ void Pathfinding::setWallIndex(const int index)
 void Pathfinding::startAlgorithm()
 {
     if(m_algorithm){
-    GridData data = collectData();
-    m_algorithm->init(data);
+        if(isValid(m_start) && isValid(m_end)){
+            if(m_algorithm->state() == AlgoState::Stopped){
+                m_model->clearVisited();
+            }
+            GridData data = collectData();
+            m_algorithm->init(data);
+
+            if(!timer->isActive()){
+                timer->start();
+            }
+        }
+        else{
+            emit toast("No start or end node with valid index", 2);
+        }
     }
-    if(!timer->isActive()){
-        timer->start();
+
+    else {
+        emit toast("No algorithm has been set", 2);
     }
 }
 
@@ -154,6 +225,8 @@ void Pathfinding::clearGrid()
         timer->stop();
     }
     m_model->clearModel();
+    m_start = -1;
+    m_end = -1;
 }
 
 void Pathfinding::deleateitem(const int index)
@@ -191,7 +264,6 @@ void Pathfinding::handleClick(const int index)
         clearGrid();
         break;
     case ClickType::StartNode:
-        qDebug() << "Starting startNode";
         setStartIndex(index);
         break;
     case ClickType::TargetNode:
@@ -203,9 +275,32 @@ void Pathfinding::handleClick(const int index)
     case ClickType::Wall:
         setWallIndex(index);
         break;
+    case ClickType::WeightNode:
+        setWeightNode(index, m_currentWeight);
+        break;
     default:
         break;
     }
+}
+
+void Pathfinding::addWeight(const int weight)
+{
+    if (weight <= 1 || weight > 1000) {
+        return;
+    }
+    if (m_availableWeights.contains(weight)) {
+        setCurrentWeight(weight);
+        return;
+    }
+    m_availableWeights.append(weight);
+    std::sort(m_availableWeights.begin(), m_availableWeights.end(), [](const QVariant &a, const QVariant &b) {
+        return a.toInt() < b.toInt();
+    });
+    if(m_availableWeights.contains(weight)){
+        emit toast("New weight added", 1);
+    }
+
+    emit availableWeightsChanged();
 }
 
 GridModel *Pathfinding::gridModel()
@@ -222,13 +317,17 @@ GridData Pathfinding::collectData()
     data.height = m_model->height();
     data.startIndex = m_start;
     data.endIndex = m_end;
-    data.nodes = m_model->nodeTypes();
+    data.nodes = m_model->getNodes();
 
     return data;
 }
 
 void Pathfinding::onStep()
 {
+    if(!m_algorithm) {
+        timer->stop();
+        return;
+    }
     auto result = m_algorithm->step();
 
     switch(result.state) {
@@ -242,6 +341,7 @@ void Pathfinding::onStep()
             timer->stop();
             m_model->reconstructPath(m_algorithm->getPath());
             emit finished();
+            emit toast("Finished", 1);
             break;
     }
 }

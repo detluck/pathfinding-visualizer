@@ -4,7 +4,7 @@
 #include <vector>
 
 struct GridData{
-    std::vector<NodeType> nodes;
+    std::vector<Node> nodes;
     int width;
     int height;
     int startIndex;

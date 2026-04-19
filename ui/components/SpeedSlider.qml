@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls.Basic
+import Pathfinding
 
 Rectangle{
     signal valueChanged(real value);
@@ -23,7 +24,7 @@ Rectangle{
             Rectangle {
                 width: control.visualPosition * parent.width
                 height: parent.height
-                color: "#21be2b"
+                color: Theme.slider
                 radius: 2
             }
         }
