@@ -104,3 +104,4 @@ cmake --build .
 * [ ] **Algorithm Expansion:** Add support for Breadth-First Search (BFS), and Depth-First Search (DFS).
 * [ ] **Visual Polish:** Implement smooth path animations and transition effects.
 * [ ] **Complex Grids:** Support for weighted edges (terrain costs) and advanced heuristic visualizations.
+* [ ] **Travelling Salesperson Problem (TSP) Integration:** A major upcoming feature is the implementation of a multi-destination pathfinding mode, solving a grid-based version of the Travelling Salesperson Problem.
