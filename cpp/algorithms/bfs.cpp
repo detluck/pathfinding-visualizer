@@ -58,12 +58,6 @@ StepResult Bfs::step()
     return {StepResultType::Running, current};
 }
 
-void Bfs::blazzingRun(){
-    while(step().state == StepResultType::Running) {
-
-    }
-}
-
 std::vector<int> Bfs::getPath()
 {
     std::vector<int> path;

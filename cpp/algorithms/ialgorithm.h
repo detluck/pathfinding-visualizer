@@ -37,7 +37,6 @@ public:
     virtual StepResult step() = 0;
     virtual std::vector<int> getPath() = 0;
     virtual AlgoState state() = 0;
-    virtual void blazzingRun() = 0;
 
 private:
     virtual std::vector<int> neighbors(int current) = 0;

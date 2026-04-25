@@ -43,8 +43,8 @@ Rectangle {
                 Item { Layout.fillWidth: true }
 
                 SpeedSlider {
-                    Layout.preferredWidth: 200
-                    onValueChanged: controller.setSpeed(value)
+                    Layout.preferredWidth: 230
+                    onValueChanged: (value) => controller.setSpeed(value)
                 }
 
                 AlgoSelector {

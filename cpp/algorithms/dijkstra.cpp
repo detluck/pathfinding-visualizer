@@ -1,157 +1,189 @@
 #include "dijkstra.h"
-#include <queue> 
+#include "cpp/algorithms/ialgorithm.h"
 #include <algorithm>
 #include <climits>
+#include <queue>
 
-
-void Dijkstra::setState(const AlgoState algoState)
-{
-    if(m_state != algoState){
-        m_state = algoState;
-    }
+void Dijkstra::setState(const AlgoState algoState) {
+  if (m_state != algoState) {
+    m_state = algoState;
+  }
 }
 
-void Dijkstra::init(const GridData &data)
-{
-    m_data = data;
+void Dijkstra::init(const GridData &data) {
+  m_data = data;
 
-    m_queue = std::priority_queue<NodeRecord, std::vector<NodeRecord>, std::greater<NodeRecord>>();
-    
-    m_costs = std::vector<int>(data.nodes.size(), INT_MAX);
-    m_costs[m_data.startIndex] = 0;
+  m_queue = std::priority_queue<NodeRecord, std::vector<NodeRecord>,
+                                std::greater<NodeRecord>>();
 
-    m_queue.push({m_data.startIndex, 0});
+  m_costs = std::vector<int>(data.nodes.size(), INT_MAX);
+  m_costs[m_data.startIndex] = 0;
 
-    m_visited = std::vector<bool> (data.nodes.size(), false);
-    m_visited[m_data.startIndex] = true;
-    m_cameFrom = std::vector<int>(m_data.nodes.size(), -1);
-    m_state = AlgoState::Running;
+  m_queue.push({m_data.startIndex, 0});
+
+  m_visited = std::vector<bool>(data.nodes.size(), false);
+  m_visited[m_data.startIndex] = true;
+  m_cameFrom = std::vector<int>(m_data.nodes.size(), -1);
+  m_state = AlgoState::Running;
 }
 
-void Dijkstra::run(const GridData& data)
-{
-    init(data);
+void Dijkstra::init(const GridData &data, int start) {
+  m_data = data;
+  m_data.startIndex = start;
+  m_queue = std::priority_queue<NodeRecord, std::vector<NodeRecord>,
+                                std::greater<NodeRecord>>();
+
+  m_costs = std::vector<int>(data.nodes.size(), INT_MAX);
+  m_costs[m_data.startIndex] = 0;
+
+  m_queue.push({m_data.startIndex, 0});
+
+  m_visited = std::vector<bool>(data.nodes.size(), false);
+  m_visited[m_data.startIndex] = true;
+  m_cameFrom = std::vector<int>(m_data.nodes.size(), -1);
+  m_state = AlgoState::Running;
 }
 
-StepResult Dijkstra::step()
-{
-    if(m_state == AlgoState::Stopped) return {StepResultType::Finished, -1};
-    if(m_state == AlgoState::Paused)return {StepResultType::Paused, -1};
-    if(m_queue.empty()) {
-        m_state = AlgoState::Stopped;
-        return {StepResultType::Finished, -1};
-    }
-    
+void Dijkstra::run(const GridData &data) { init(data); }
 
-    int current = m_queue.top().index;
-    m_queue.pop();
+StepResult Dijkstra::step() {
+  if (m_state == AlgoState::Stopped)
+    return {StepResultType::Finished, -1};
+  if (m_state == AlgoState::Paused)
+    return {StepResultType::Paused, -1};
+  if (m_queue.empty()) {
+    m_state = AlgoState::Stopped;
+    return {StepResultType::Finished, -1};
+  }
 
-    if(current == m_data.endIndex) {
-        m_state = AlgoState::Stopped;
-        return {StepResultType::Finished, current};
-    }
-    
-    processNode(current);
-    return {StepResultType::Running, current};
+  int current = m_queue.top().index;
+  m_queue.pop();
+
+  if (current == m_data.endIndex) {
+    m_state = AlgoState::Stopped;
+    return {StepResultType::Finished, current};
+  }
+
+  processNode(current);
+  return {StepResultType::Running, current};
 }
 
 void Dijkstra::processNode(int current) {
-    auto current_neighbors = neighbors(current);
-    for(int next : current_neighbors) {
-        int stepCost = 1 + m_data.nodes[next].weight;
-        int newCost = m_costs[current] + stepCost;
+  auto current_neighbors = neighbors(current);
+  for (int next : current_neighbors) {
+    int stepCost = 1 + m_data.nodes[next].weight;
+    int newCost = m_costs[current] + stepCost;
 
-        if(newCost < m_costs[next]) {
-            m_costs[next] = newCost;
-            m_cameFrom[next] = current;
-            m_queue.push({next, newCost});
-            m_visited[next] = true;
-        }
+    if (newCost < m_costs[next]) {
+      m_costs[next] = newCost;
+      m_cameFrom[next] = current;
+      m_queue.push({next, newCost});
+      m_visited[next] = true;
     }
+  }
 }
 
-std::vector<int> Dijkstra::getPath()
-{
-    std::vector<int> path;
-    int current = m_data.endIndex;
-    //in case of problems: change to this line instead if(m_cameFrom[current] == -1)
-    if (current < 0 || current >= m_cameFrom.size() || m_cameFrom[current] == -1) {
-        return path;
-    }
-    while (current != m_data.startIndex) {
-        path.push_back(current);
-        current = m_cameFrom[current];
-        //in case of problems: comment lower line
-        if (current == -1 || path.size() > m_data.nodes.size()) break;
-    }
-    // we got a path but it is reversed.
-    // so we add the start node at the very end
-    path.push_back(m_data.startIndex);
-    // and reveerse our path 
-    std::reverse(path.begin(), path.end());
-    m_state = AlgoState::Stopped;
+std::vector<int> Dijkstra::getPath() {
+  std::vector<int> path;
+  int current = m_data.endIndex;
+  // in case of problems: change to this line instead if(m_cameFrom[current] ==
+  // -1)
+  if (current < 0 || current >= m_cameFrom.size() ||
+      m_cameFrom[current] == -1) {
     return path;
+  }
+  while (current != m_data.startIndex) {
+    path.push_back(current);
+    current = m_cameFrom[current];
+    // in case of problems: comment lower line
+    if (current == -1 || path.size() > m_data.nodes.size())
+      break;
+  }
+  // we got a path but it is reversed.
+  // so we add the start node at the very end
+  path.push_back(m_data.startIndex);
+  // and reveerse our path
+  std::reverse(path.begin(), path.end());
+  m_state = AlgoState::Stopped;
+  return path;
 }
 
-std::vector<int> Dijkstra::neighbors(int current)
-{
+std::vector<int> Dijkstra::getPath(int end) {
+  std::vector<int> path;
+  int current = end;
+  // in case of problems: change to this line instead if(m_cameFrom[current] ==
+  // -1)
+  if (current < 0 || current >= m_cameFrom.size() ||
+      m_cameFrom[current] == -1) {
+    return path;
+  }
+  while (current != m_data.startIndex) {
+    path.push_back(current);
+    current = m_cameFrom[current];
+    // in case of problems: comment lower line
+    if (current == -1 || path.size() > m_data.nodes.size())
+      break;
+  }
+  // we got a path but it is reversed.
+  // so we add the start node at the very end
+  path.push_back(m_data.startIndex);
+  // and reveerse our path
+  std::reverse(path.begin(), path.end());
+  m_state = AlgoState::Stopped;
+  return path;
+}
 
-    //ToDO: optimize function to calculate neighbors for @current Node using @m_data
-    std::vector<int> neighbors;
+std::vector<int> Dijkstra::neighbors(int current) {
 
+  // ToDO: optimize function to calculate neighbors for @current Node using
+  // @m_data
+  std::vector<int> neighbors;
+
+  /**
+   * there are formulas for calculating rows and columns from grid
+   * we are lucky that we have grid so we can count it by these two formula
+   */
+  int row = current / m_data.width;
+  int col = current % m_data.width;
+  /**
+   * created two arrays with directions
+   * (-1,0) - up
+   * (1,0) - down
+   * (0,-1) - left
+   * (0, 1) - right
+   */
+  int deltaRow[] = {-1, 1, 0, 0};
+  int deltaCol[] = {0, 0, -1, 1};
+  /**
+   * our loop that looks for neighbors
+   * it counts until 4 because we have 4 directions: 0,1,2,3;
+   */
+  for (int i = 0; i < 4; i++) {
     /**
-     * there are formulas for calculating rows and columns from grid
-     * we are lucky that we have grid so we can count it by these two formula
+     * inside we calculate these 4 directions by checking them with i
+     * i = 0 for checking upper cell
+     * i = 1 for checking lower cell
+     * and so on.
      */
-    int row = current / m_data.width;
-    int col = current % m_data.width;
-    /**
-     * created two arrays with directions
-     * (-1,0) - up
-     * (1,0) - down
-     * (0,-1) - left
-     * (0, 1) - right
-     */
-    int deltaRow[] = {-1,1,0,0};
-    int deltaCol[] = {0,0,-1,1};
-    /**
-     * our loop that looks for neighbors
-     * it counts until 4 because we have 4 directions: 0,1,2,3;
-     */
-    for(int i = 0; i < 4; i++){
-        /**
-         * inside we calculate these 4 directions by checking them with i
-         * i = 0 for checking upper cell
-         * i = 1 for checking lower cell
-         * and so on.
-         */
-        int next_row = row + deltaRow[i];
-        int next_col = col + deltaCol[i];
+    int next_row = row + deltaRow[i];
+    int next_col = col + deltaCol[i];
 
-        if (next_row >= 0 && next_row < m_data.height && next_col >= 0 && next_col < m_data.width) {
+    if (next_row >= 0 && next_row < m_data.height && next_col >= 0 &&
+        next_col < m_data.width) {
 
-            int index = next_row * m_data.width + next_col;
-            /**
-             * we converted our 2D coordinates into our 1D array
-             * so now we can check whether this position has already been in our queue
-             * if it has not, and if the position is not the wall
-             * then we put our position in the visited list
-             */
-            if(m_data.nodes[index].type != NodeType::Wall) {
-                neighbors.push_back(index);
-            }
-        }
+      int index = next_row * m_data.width + next_col;
+      /**
+       * we converted our 2D coordinates into our 1D array
+       * so now we can check whether this position has already been in our queue
+       * if it has not, and if the position is not the wall
+       * then we put our position in the visited list
+       */
+      if (m_data.nodes[index].type != NodeType::Wall) {
+        neighbors.push_back(index);
+      }
     }
-    return neighbors;
+  }
+  return neighbors;
 }
 
-void Dijkstra::blazzingRun(){
-    while(step().state == StepResultType::Running) {
-
-    }
-}
-
-AlgoState Dijkstra::state()
-{
-    return m_state;
-}
+AlgoState Dijkstra::state() { return m_state; }
