@@ -26,6 +26,9 @@ set(PROJECT_SOURCES
     cpp/algorithms/bfs.h cpp/algorithms/bfs.cpp
     cpp/algorithms/dijkstra.h cpp/algorithms/dijkstra.cpp
     cpp/algorithms/algorithmType.h
+    cpp/algorithms/tsp/itspalgorithm.h
+    cpp/algorithms/tsp/bruteforce
+
 )
 
 qt_add_executable(Pathfinder MACOSX_BUNDLE
@@ -85,11 +88,11 @@ install(TARGETS Pathfinder
 )
 
 if(NOT EMSCRIPTEN)
-    qt_generate_deploy_qml_app_script(
+  qt_generate_deploy_qml_app_script(
         TARGET Pathfinder
         OUTPUT_SCRIPT deploy_qml_script
     )
-    install(SCRIPT ${deploy_qml_script})
+  install(SCRIPT ${deploy_qml_script})
 endif()
 
 qt_finalize_executable(Pathfinder)

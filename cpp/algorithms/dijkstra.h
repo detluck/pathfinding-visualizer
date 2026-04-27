@@ -21,6 +21,8 @@ public:
   AlgoState state() override;
   void init(const GridData &data, int start);
   std::vector<int> getPath(int end);
+  void blazingDijkstra();
+  int getCostTo(int index);
 
 private:
   std::vector<int> neighbors(int current) override;

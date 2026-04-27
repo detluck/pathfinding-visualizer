@@ -6,6 +6,9 @@
 #include "cpp/model/gridmodel.h"
 #include <QDebug>
 #include <algorithm>
+#include <qlist.h>
+#include <qpair.h>
+#include <vector>
 
 Pathfinding::Pathfinding(QObject *parent)
     : QObject(parent), m_model(new GridModel(this)) {
@@ -165,15 +168,15 @@ void Pathfinding::resumeAlgorithm() {
 
 void Pathfinding::setSpeed(const int speed) {
   if (speed == 100) {
-        timer->setInterval(0);
+    timer->setInterval(0);
 
-      if(timer->isActive()){
-        timer->stop();
-          timer->start();
+    if (timer->isActive()) {
+      timer->stop();
+      timer->start();
 
-        emit finished();
-        emit toast("Blazing run finished", 1);
-      }
+      emit finished();
+      emit toast("Blazing run finished", 1);
+    }
     return;
   }
   int sppedDelay = (100 - speed);
@@ -304,3 +307,46 @@ void Pathfinding::onStep() {
     break;
   }
 }
+
+void Pathfinding::runTsp() {}
+
+void Pathfinding::buildTsp() {
+  m_distanceMatrix.clear();
+  m_pathes.clear();
+
+  QList<int> allTargets;
+  if (m_start != -1)
+    allTargets.append(m_start);
+  allTargets.append(m_targets);
+
+  if (m_targets.size() < 2) {
+    emit toast("Tsp needs more nodes", 2);
+    return;
+  }
+
+  Dijkstra dijkstra;
+
+  for (int start : allTargets) {
+    dijkstra.init(collectData(), start);
+    dijkstra.blazingDijkstra();
+
+    for (int end : allTargets) {
+
+      if (end == start)
+        continue;
+
+      std::vector<int> path = dijkstra.getPath(end);
+      int cost = dijkstra.getCostTo(end);
+
+      if (!path.empty() && cost != -1) {
+        auto key = qMakePair(start, end);
+        m_distanceMatrix.insert(key, cost);
+        m_pathes.insert(key, path);
+      }
+    }
+  }
+
+  m_tspAlgorithm->init(m_distanceMatrix, m_start, m_targets);
+}
+
+void Pathfinding::visualizeTsp(const QList<int> &order) {}

@@ -186,4 +186,23 @@ std::vector<int> Dijkstra::neighbors(int current) {
   return neighbors;
 }
 
+void Dijkstra::blazingDijkstra() {
+  while (!m_queue.empty()) {
+    int current = m_queue.top().index;
+    m_queue.pop();
+
+    if (current == m_data.endIndex) {
+      return;
+    }
+
+    processNode(current);
+  }
+}
+
+int Dijkstra::getCostTo(int index) {
+  if (index < 0 || index >= m_costs.size()) {
+    return -1;
+  }
+  return m_costs[index];
+}
 AlgoState Dijkstra::state() { return m_state; }

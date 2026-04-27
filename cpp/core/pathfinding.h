@@ -1,6 +1,7 @@
 #ifndef PATHFINDING_H
 #define PATHFINDING_H
 #include "cpp/algorithms/ialgorithm.h"
+#include "cpp/algorithms/tsp/itspalgorithm.h"
 #include "cpp/model/gridmodel.h"
 #include <QList>
 #include <QMap>
@@ -9,6 +10,8 @@
 #include <QSettings>
 #include <QTimer>
 #include <QVariantList>
+#include <memory>
+#include <qtmetamacros.h>
 #include <vector>
 
 class Pathfinding : public QObject {
@@ -45,6 +48,7 @@ public:
   void setWallIndex(const int index);
   Q_INVOKABLE void handleClick(const int index = -1);
   Q_INVOKABLE void addWeight(const int weight);
+  Q_INVOKABLE void runTsp();
   void clearGrid();
   ClickType clickType();
   void deleateitem(const int index);
@@ -71,6 +75,8 @@ signals:
 
 private slots:
   void onStep();
+  void buildTsp();
+  void visualizeTsp(const QList<int> &order);
 
 private:
   GridData collectData();
@@ -86,6 +92,7 @@ private:
   QList<int> m_targets;
   QMap<QPair<int, int>, int> m_distanceMatrix;
   QMap<QPair<int, int>, std::vector<int>> m_pathes;
+  std::unique_ptr<ITspAlgorithm> m_tspAlgorithm;
 };
 
 #endif
