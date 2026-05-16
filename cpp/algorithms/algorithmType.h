@@ -8,4 +8,9 @@ enum class AlgorithmType{
     Count
 };
 
+enum class TspAlgorithmType{
+    Bruteforce,
+    Count
+};
+
 #endif // ALGORITHMTYPE_H

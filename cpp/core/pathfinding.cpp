@@ -3,6 +3,7 @@
 #include "cpp/algorithms/astar.h"
 #include "cpp/algorithms/bfs.h"
 #include "cpp/algorithms/dijkstra.h"
+#include "cpp/algorithms/tsp/bruteforce.h"
 #include "cpp/model/gridmodel.h"
 #include <QDebug>
 #include <algorithm>
@@ -46,6 +47,22 @@ void Pathfinding::setAlgorithm(int index) {
   }
 }
 
+void Pathfinding::setTspAlgorithm(int index)
+{
+    if (index < 0 || index >= static_cast<int>(TspAlgorithmType::Count)) {
+        return;
+    }
+    auto type = static_cast<TspAlgorithmType>(index);
+    switch(type){
+        case TspAlgorithmType::Bruteforce:
+            m_tspAlgorithm = std::make_unique<Bruteforce>();
+            emit toast("Brute force was set", 1);
+            break;
+        default:
+            break;
+    }
+}
+
 void Pathfinding::setClickType(ClickType type) {
   if (type == m_type) {
     return;
@@ -57,6 +74,16 @@ void Pathfinding::setClickType(ClickType type) {
 Pathfinding::ClickType Pathfinding::clickType() { return m_type; }
 
 int Pathfinding::currentWeight() { return m_currentWeight; }
+
+void Pathfinding::setAppMode(AppMode mode)
+{
+    if (mode == m_mode){
+        return;
+    }
+    m_mode = mode;
+    qDebug() << mode << "Mode activated";
+    emit appModeChanged();
+}
 
 QVariantList Pathfinding::availableWeights() { return m_availableWeights; }
 
@@ -198,6 +225,11 @@ void Pathfinding::clearGrid() {
   m_model->clearModel();
   m_start = -1;
   m_end = -1;
+}
+
+Pathfinding::AppMode Pathfinding::appMode()
+{
+    return m_mode;
 }
 
 void Pathfinding::deleateitem(const int index) {

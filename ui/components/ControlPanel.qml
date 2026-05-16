@@ -40,15 +40,27 @@ Rectangle {
                     text: "Pathfinding-Visualizer"
                 }
 
-                Item { Layout.fillWidth: true }
-
                 SpeedSlider {
                     Layout.preferredWidth: 230
                     onValueChanged: (value) => controller.setSpeed(value)
                 }
 
+                AlgoSelector{
+                    Layout.preferredWidth: 200
+                    label: "TSP algorithms  "
+                    model: ["Brute force", "2 OPT"]
+                    onCurrentIndexChanged: {
+                        controller.setTspAlgorithm(currentIndex);
+                    }
+                }
+
                 AlgoSelector {
                     Layout.preferredWidth: 200
+                    label: "Pathfinding algorithms"
+                    model: ["Dijkstra", "A*", "BFS"]
+                    onCurrentIndexChanged: {
+                        controller.setAlgorithm(currentIndex);
+                    }
                 }
             }
 
@@ -167,6 +179,59 @@ Rectangle {
                     Layout.preferredWidth: 140
                     spacing: 10
 
+                    Switch {
+                        id: modeSwitch
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: 30
+
+                        text: checked ? "TSP Mode" : "Pathfinding Mode"
+                        checked: controller.appMode === Controller.TSP
+
+                        onClicked: {
+                            controller.appMode = checked ? Controller.TSP : Controller.Pathfinding
+                        }
+
+                        indicator: Rectangle {
+                            implicitWidth: 54
+                            implicitHeight: 28
+
+                            x: modeSwitch.leftPadding
+                            y: parent.height / 2 - height / 2
+
+                            radius: height / 2
+
+                            color: modeSwitch.checked ? Theme.slider: Theme.surface1
+                            border.color: modeSwitch.checked ? "#17a81a" : "#d1d1d6"
+
+                            Behavior on color {
+                                ColorAnimation { duration: 200 }
+                            }
+
+                            Rectangle {
+                                y: 2
+                                x: modeSwitch.checked ? parent.width - width - 2 : 2
+
+                                width: parent.height - 4
+                                height: parent.height - 4
+                                radius: width / 2
+
+                                color: Theme.switchFg
+
+                                border.color: "#d1d1d6"
+                                border.width: modeSwitch.checked ? 0 : 1
+
+                                Behavior on x {
+                                    NumberAnimation { duration: 200; easing.type: Easing.OutQuad }
+                                }
+                            }
+                        }
+
+                        contentItem: StyledText {
+                            text: modeSwitch.text
+                            leftPadding: modeSwitch.indicator.width + 10
+                        }
+                    }
+
                     StyledButton {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
@@ -193,7 +258,7 @@ Rectangle {
                         text: "Shortest Path"
                         hoverEnabled: false
                         onClicked: {
-                            controller.toast("test", 2)
+                            controller.appMode = Controller.TSP
                         }
                     }
 

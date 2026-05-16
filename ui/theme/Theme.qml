@@ -19,6 +19,7 @@ QtObject {
     property color surface1: isDark ? "#45475a" : "#bcc0cc"
     property color surface2: isDark ? "#585b70" : "#acb0be"
     property color slider: isDark? "#a6e3a1": "#40a02b"
+    property color switchFg: "#cdd6f4"
 
     property color textMain: isDark ? "#cdd6f4" : "#4c4f69"
     property color textSub: isDark ? "#bac2de" : "#5c5f77"

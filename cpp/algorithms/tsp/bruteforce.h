@@ -2,7 +2,7 @@
 #include "cpp/algorithms/tsp/itspalgorithm.h"
 #include <vector>
 
-class Bruteforce : ITspAlgorithm {
+class Bruteforce : public ITspAlgorithm {
 
 public:
   void init(const QMap<QPair<int, int>, int> distanceMatrix, const int start,

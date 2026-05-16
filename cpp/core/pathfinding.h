@@ -22,6 +22,7 @@ class Pathfinding : public QObject {
                  setAvailableWeights NOTIFY availableWeightsChanged)
   Q_PROPERTY(int currentWeight READ currentWeight WRITE setCurrentWeight NOTIFY
                  currentWeightChanged)
+  Q_PROPERTY(AppMode appMode READ appMode WRITE setAppMode NOTIFY appModeChanged)
 public:
   enum class ClickType {
     Start,
@@ -38,10 +39,17 @@ public:
   };
   Q_ENUM(ClickType)
 
+  enum class AppMode{
+      TSP,
+      Pathfinding
+  };
+  Q_ENUM(AppMode)
+
 public:
   explicit Pathfinding(QObject *parent = nullptr);
 
   Q_INVOKABLE void setAlgorithm(int index);
+  Q_INVOKABLE void setTspAlgorithm(int index);
   void setStartIndex(const int index);
   void setEndIndex(const int index);
   void setWeightNode(const int index, const int weight);
@@ -51,6 +59,7 @@ public:
   Q_INVOKABLE void runTsp();
   void clearGrid();
   ClickType clickType();
+  AppMode appMode();
   void deleateitem(const int index);
   bool isValid(const int index);
   GridModel *gridModel();
@@ -58,6 +67,7 @@ public:
   int currentWeight();
 
 public slots:
+  void setAppMode(Pathfinding::AppMode mode);
   void setClickType(Pathfinding::ClickType type);
   void startAlgorithm();
   void stopAlgorithm();
@@ -68,6 +78,7 @@ public slots:
 
 signals:
   void clickTypeChanged();
+  void appModeChanged();
   void availableWeightsChanged();
   void currentWeightChanged();
   void finished();
@@ -80,7 +91,9 @@ private slots:
 
 private:
   GridData collectData();
+  AppMode m_mode = AppMode::Pathfinding;
   std::unique_ptr<IAlgorithm> m_algorithm;
+  std::unique_ptr<ITspAlgorithm> m_tspAlgorithm;
   ClickType m_type;
   GridModel *m_model;
   int m_start;
@@ -92,7 +105,6 @@ private:
   QList<int> m_targets;
   QMap<QPair<int, int>, int> m_distanceMatrix;
   QMap<QPair<int, int>, std::vector<int>> m_pathes;
-  std::unique_ptr<ITspAlgorithm> m_tspAlgorithm;
 };
 
 #endif

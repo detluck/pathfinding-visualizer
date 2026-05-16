@@ -27,7 +27,7 @@ set(PROJECT_SOURCES
     cpp/algorithms/dijkstra.h cpp/algorithms/dijkstra.cpp
     cpp/algorithms/algorithmType.h
     cpp/algorithms/tsp/itspalgorithm.h
-    cpp/algorithms/tsp/bruteforce
+    cpp/algorithms/tsp/bruteforce.h cpp/algorithms/tsp/bruteforce.cpp
 
 )
 
