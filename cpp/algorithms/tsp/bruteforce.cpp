@@ -1,4 +1,6 @@
 #include "bruteforce.h"
+#include "cpp/algorithms/algorithmType.h"
+#include "cpp/algorithms/tsp/itspalgorithm.h"
 #include <algorithm>
 #include <limits>
 #include <qlist.h>
@@ -10,31 +12,31 @@ void Bruteforce::init(const QMap<QPair<int, int>, int> distanceMatrix,
   m_start = start;
   m_matrix = distanceMatrix;
   m_targets = targets;
+  m_finished = false;
 }
-QList<int> Bruteforce::solve() {
-  if (m_targets.empty())
-    return {m_start};
+TspStepResult Bruteforce::step() {
+  if (m_finished || m_targets.empty())
+    return {StepResultType::Finished, m_bestPath, m_bestPath};
 
-  QList<int> bestOrder;
-  int shortestDistance = std::numeric_limits<int>::infinity();
-  std::vector<int> currentRoute = {m_targets.begin(), m_targets.end()};
+  m_shortestDistance = std::numeric_limits<int>::max();
+  m_currentPath = {m_targets.begin(), m_targets.end()};
   // sort the vector so the next_permutation could work correctly
-  std::sort(currentRoute.begin(), currentRoute.end());
+  std::sort(m_currentPath.begin(), m_currentPath.end());
 
-  do {
-    int distance = calculateRouteDistance(currentRoute);
-    if (distance < shortestDistance) {
-      shortestDistance = distance;
+  int distance = calculateRouteDistance(m_currentPath);
+  if (distance < m_shortestDistance) {
+    m_shortestDistance = distance;
 
-      bestOrder = {currentRoute.begin(), currentRoute.end()};
-    }
-  } while (std::next_permutation(currentRoute.begin(), currentRoute.end()));
+    m_bestPath = {m_currentPath.begin(), m_currentPath.end()};
+  }
 
-  QList<int> finalPaht;
-  finalPaht.append(m_start);
-  finalPaht.append(bestOrder);
+  QList<int> stepPath = QList<int>(m_currentPath.begin(), m_currentPath.end());
 
-  return finalPaht;
+  if (!std::next_permutation(m_currentPath.begin(), m_currentPath.end())) {
+    m_finished = true;
+  }
+
+  return {StepResultType::Running, stepPath, m_bestPath};
 }
 
 int Bruteforce::calculateRouteDistance(const std::vector<int> &route) {
@@ -50,6 +52,11 @@ int Bruteforce::calculateRouteDistance(const std::vector<int> &route) {
 
     current = next;
   }
+  auto returnKey = qMakePair(current, m_start);
+  if (!m_matrix.contains(returnKey)) {
+    return std::numeric_limits<int>::max();
+  }
+  total += m_matrix.value(returnKey);
 
   return total;
 }

@@ -1,6 +1,7 @@
 #ifndef IALGORITHM_H
 #define IALGORITHM_H
 #include "cpp/model/node.h"
+#include "algorithmType.h"
 #include <vector>
 
 struct GridData{
@@ -15,12 +16,6 @@ enum class AlgoState{
     Running,
     Paused,
     Stopped
-};
-
-enum class StepResultType{
-    Running,
-    Paused,
-    Finished
 };
 
 struct StepResult {

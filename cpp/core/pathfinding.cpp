@@ -3,6 +3,7 @@
 #include "cpp/algorithms/astar.h"
 #include "cpp/algorithms/bfs.h"
 #include "cpp/algorithms/dijkstra.h"
+#include "cpp/algorithms/ialgorithm.h"
 #include "cpp/algorithms/tsp/bruteforce.h"
 #include "cpp/model/gridmodel.h"
 #include <QDebug>
@@ -47,20 +48,19 @@ void Pathfinding::setAlgorithm(int index) {
   }
 }
 
-void Pathfinding::setTspAlgorithm(int index)
-{
-    if (index < 0 || index >= static_cast<int>(TspAlgorithmType::Count)) {
-        return;
-    }
-    auto type = static_cast<TspAlgorithmType>(index);
-    switch(type){
-        case TspAlgorithmType::Bruteforce:
-            m_tspAlgorithm = std::make_unique<Bruteforce>();
-            emit toast("Brute force was set", 1);
-            break;
-        default:
-            break;
-    }
+void Pathfinding::setTspAlgorithm(int index) {
+  if (index < 0 || index >= static_cast<int>(TspAlgorithmType::Count)) {
+    return;
+  }
+  auto type = static_cast<TspAlgorithmType>(index);
+  switch (type) {
+  case TspAlgorithmType::Bruteforce:
+    m_tspAlgorithm = std::make_unique<Bruteforce>();
+    emit toast("Brute force was set", 1);
+    break;
+  default:
+    break;
+  }
 }
 
 void Pathfinding::setClickType(ClickType type) {
@@ -75,14 +75,13 @@ Pathfinding::ClickType Pathfinding::clickType() { return m_type; }
 
 int Pathfinding::currentWeight() { return m_currentWeight; }
 
-void Pathfinding::setAppMode(AppMode mode)
-{
-    if (mode == m_mode){
-        return;
-    }
-    m_mode = mode;
-    qDebug() << mode << "Mode activated";
-    emit appModeChanged();
+void Pathfinding::setAppMode(AppMode mode) {
+  if (mode == m_mode) {
+    return;
+  }
+  m_mode = mode;
+  qDebug() << mode << "Mode activated";
+  emit appModeChanged();
 }
 
 QVariantList Pathfinding::availableWeights() { return m_availableWeights; }
@@ -138,13 +137,16 @@ void Pathfinding::setEndIndex(const int index) {
     m_targets.removeOne(m_end);
   }
   if (m_end != -1 && m_mode == AppMode::TSP && m_targets.size() > 7) {
-    emit toast("Target limit has been reached, max. " + QString::number(m_targets.size() + 1), 1);
+    emit toast("Target limit has been reached, max. " +
+                   QString::number(m_targets.size() + 1),
+               1);
     return;
   }
   if (isValid(index)) {
     m_end = index;
     m_model->setNodeType(NodeType::End, m_end);
-    if(!m_targets.contains(m_end)) m_targets.append(index);
+    if (!m_targets.contains(m_end))
+      m_targets.append(index);
     qDebug() << m_targets;
   }
 }
@@ -163,44 +165,44 @@ void Pathfinding::setWallIndex(const int index) {
 }
 
 void Pathfinding::startAlgorithm() {
-    if (m_mode == AppMode::Pathfinding) {
-        if (m_algorithm) {
-            if (isValid(m_start) && isValid(m_end)) {
-                if (m_algorithm->state() == AlgoState::Stopped) {
-                    m_model->clearVisited();
-                }
-                GridData data = collectData();
-                m_algorithm->init(data);
-
-                if (!timer->isActive()) {
-                    timer->start();
-                }
-            } else {
-                emit toast("No start or end node with valid index", 2);
-            }
-        } else {
-            emit toast("No algorithm has been set", 2);
+  if (m_mode == AppMode::Pathfinding) {
+    if (m_algorithm) {
+      if (isValid(m_start) && isValid(m_end)) {
+        if (m_algorithm->state() == AlgoState::Stopped) {
+          m_model->clearVisited();
         }
+        GridData data = collectData();
+        m_algorithm->init(data);
+
+        if (!timer->isActive()) {
+          timer->start();
+        }
+      } else {
+        emit toast("No start or end node with valid index", 2);
+      }
+    } else {
+      emit toast("No algorithm has been set", 2);
+    }
+  }
+
+  else if (m_mode == AppMode::TSP) {
+    if (m_start == -1 || m_targets.isEmpty()) {
+      emit toast("TSP needs a start and at least one target", 2);
+      return;
+    }
+    if (!m_tspAlgorithm) {
+      emit toast("No TSP algorithm has been set", 2);
+      return;
     }
 
-    else if (m_mode == AppMode::TSP) {
-        if (m_start == -1 || m_targets.isEmpty()) {
-            emit toast("TSP needs a start and at least one target", 2);
-            return;
-        }
-        if (!m_tspAlgorithm) {
-            emit toast("No TSP algorithm has been set", 2);
-            return;
-        }
+    m_model->clearVisited();
 
-        m_model->clearVisited();
-
-        buildTsp();
-        QList<int> bestOrder = m_tspAlgorithm->solve();
-        visualizeTsp(bestOrder);
-
-        emit toast("TSP calculation finished", 1);
+    buildTsp();
+    if (!timer->isActive()) {
+      timer->start();
     }
+    emit toast("TSP calculation finished", 1);
+  }
 }
 
 void Pathfinding::stopAlgorithm() {
@@ -255,22 +257,21 @@ void Pathfinding::clearGrid() {
   qDebug() << m_targets;
 }
 
-Pathfinding::AppMode Pathfinding::appMode()
-{
-    return m_mode;
-}
+Pathfinding::AppMode Pathfinding::appMode() { return m_mode; }
 
 void Pathfinding::deleateitem(const int index) {
   if (timer->isActive()) {
     timer->stop();
   }
   if (isValid(index)) {
-    if (index == m_start) m_start = -1;
-    if (index == m_end) m_end = -1;
+    if (index == m_start)
+      m_start = -1;
+    if (index == m_end)
+      m_end = -1;
     m_model->setNodeType(NodeType::Empty, index);
-    if(!m_targets.isEmpty() && m_targets.contains(index)){
-        m_targets.removeOne(index);
-        qDebug() << m_targets;
+    if (!m_targets.isEmpty() && m_targets.contains(index)) {
+      m_targets.removeOne(index);
+      qDebug() << m_targets;
     }
   }
 }
@@ -352,25 +353,54 @@ GridData Pathfinding::collectData() {
 }
 
 void Pathfinding::onStep() {
-  if (!m_algorithm) {
-    timer->stop();
-    return;
-  }
-  auto result = m_algorithm->step();
 
-  switch (result.state) {
-  case StepResultType::Running:
-    m_model->setNodeType(NodeType::Visited, result.index);
-    break;
-  case StepResultType::Paused:
-    // do nothing
-    break;
-  case StepResultType::Finished:
-    timer->stop();
-    m_model->reconstructPath(m_algorithm->getPath());
-    emit finished();
-    emit toast("Finished", 1);
-    break;
+  if (m_mode == AppMode::Pathfinding) {
+    if (!m_algorithm) {
+      timer->stop();
+      return;
+    }
+    auto result = m_algorithm->step();
+
+    switch (result.state) {
+    case StepResultType::Running:
+      m_model->setNodeType(NodeType::Visited, result.index);
+      break;
+    case StepResultType::Paused:
+      // do nothing
+      break;
+    case StepResultType::Finished:
+      timer->stop();
+      m_model->reconstructPath(m_algorithm->getPath());
+      emit finished();
+      emit toast("Finished", 1);
+      break;
+    }
+  } else if (m_mode == AppMode::TSP) {
+    if (!m_tspAlgorithm) {
+      timer->stop();
+      return;
+    }
+    auto result = m_tspAlgorithm->step();
+    QList<int> fullPath = {m_start};
+    switch (result.state) {
+    case StepResultType::Running:
+      m_model->clearVisited();
+      fullPath.append(result.currentPath);
+      fullPath.append(m_start);
+      visualizeTsp(fullPath);
+      break;
+    case StepResultType::Paused:
+      // do nothing
+      break;
+    case StepResultType::Finished:
+      timer->stop();
+      fullPath.append(result.bestPathSoFar);
+      fullPath.append(m_start);
+      visualizeTsp(fullPath);
+      emit finished();
+      emit toast("Finished", 1);
+      break;
+    }
   }
 }
 
@@ -393,7 +423,10 @@ void Pathfinding::buildTsp() {
   Dijkstra dijkstra;
 
   for (int start : allTargets) {
-    dijkstra.init(collectData(), start);
+    GridData data = collectData();
+    data.endIndex = -1;
+    data.startIndex = start;
+    dijkstra.init(data, start);
     dijkstra.blazingDijkstra();
 
     for (int end : allTargets) {
@@ -402,6 +435,7 @@ void Pathfinding::buildTsp() {
         continue;
 
       std::vector<int> path = dijkstra.getPath(end);
+      // m_model->reconstructPath(path);
       int cost = dijkstra.getCostTo(end);
 
       if (!path.empty() && cost != -1) {
@@ -415,4 +449,23 @@ void Pathfinding::buildTsp() {
   m_tspAlgorithm->init(m_distanceMatrix, m_start, m_targets);
 }
 
-void Pathfinding::visualizeTsp(const QList<int> &order) {}
+void Pathfinding::visualizeTsp(const QList<int> &order) {
+  if (order.size() < 2)
+    return;
+
+  std::vector<int> fullTspRoute;
+  for (int i = 0; i < order.size() - 1; ++i) {
+    int start = order[i];
+    int end = order[i + 1];
+    auto key = qMakePair(start, end);
+    if (m_pathes.contains(key)) {
+      std::vector<int> segment = m_pathes.value(key);
+      for (size_t j = (i == 0 ? 0 : 1); j < segment.size(); ++j) {
+        fullTspRoute.push_back(segment[j]);
+      }
+    }
+  }
+  if (!fullTspRoute.empty()) {
+    m_model->reconstructPath(fullTspRoute);
+  }
+}

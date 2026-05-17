@@ -13,4 +13,10 @@ enum class TspAlgorithmType{
     Count
 };
 
+enum class StepResultType{
+    Running,
+    Paused,
+    Finished
+};
+
 #endif // ALGORITHMTYPE_H
