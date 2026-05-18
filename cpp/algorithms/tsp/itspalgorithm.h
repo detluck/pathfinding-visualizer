@@ -9,7 +9,6 @@
 struct TspStepResult {
   StepResultType state;
   QList<int> currentPath;
-  QList<int> bestPathSoFar;
 };
 class ITspAlgorithm {
 public:

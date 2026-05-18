@@ -28,6 +28,7 @@ set(PROJECT_SOURCES
     cpp/algorithms/algorithmType.h
     cpp/algorithms/tsp/itspalgorithm.h
     cpp/algorithms/tsp/bruteforce.h cpp/algorithms/tsp/bruteforce.cpp
+    cpp/algorithms/tsp/nearestneighbor.h cpp/algorithms/tsp/nearestneighbor.cpp
 
 )
 
