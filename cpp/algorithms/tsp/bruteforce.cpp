@@ -13,15 +13,14 @@ void Bruteforce::init(const QMap<QPair<int, int>, int> distanceMatrix,
   m_matrix = distanceMatrix;
   m_targets = targets;
   m_finished = false;
-}
-TspStepResult Bruteforce::step() {
-  if (m_finished || m_targets.empty())
-    return {StepResultType::Finished, m_bestPath, m_bestPath};
-
   m_shortestDistance = std::numeric_limits<int>::max();
   m_currentPath = {m_targets.begin(), m_targets.end()};
   // sort the vector so the next_permutation could work correctly
   std::sort(m_currentPath.begin(), m_currentPath.end());
+}
+TspStepResult Bruteforce::step() {
+  if (m_finished || m_targets.empty())
+    return {StepResultType::Finished, m_bestPath, m_bestPath};
 
   int distance = calculateRouteDistance(m_currentPath);
   if (distance < m_shortestDistance) {
@@ -34,6 +33,7 @@ TspStepResult Bruteforce::step() {
 
   if (!std::next_permutation(m_currentPath.begin(), m_currentPath.end())) {
     m_finished = true;
+    return {StepResultType::Finished, stepPath, m_bestPath};
   }
 
   return {StepResultType::Running, stepPath, m_bestPath};
@@ -47,7 +47,7 @@ int Bruteforce::calculateRouteDistance(const std::vector<int> &route) {
     auto key = qMakePair(current, next);
 
     if (!m_matrix.contains(key))
-      return std::numeric_limits<int>::infinity();
+      return std::numeric_limits<int>::max();
     total += m_matrix.value(key);
 
     current = next;

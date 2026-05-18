@@ -384,7 +384,8 @@ void Pathfinding::onStep() {
     QList<int> fullPath = {m_start};
     switch (result.state) {
     case StepResultType::Running:
-      m_model->clearVisited();
+      qDebug() << "Running";
+      m_model->markInAktive();
       fullPath.append(result.currentPath);
       fullPath.append(m_start);
       visualizeTsp(fullPath);
@@ -394,6 +395,8 @@ void Pathfinding::onStep() {
       break;
     case StepResultType::Finished:
       timer->stop();
+      qDebug() << "finished";
+      m_model->markInAktive();
       fullPath.append(result.bestPathSoFar);
       fullPath.append(m_start);
       visualizeTsp(fullPath);
@@ -435,7 +438,7 @@ void Pathfinding::buildTsp() {
         continue;
 
       std::vector<int> path = dijkstra.getPath(end);
-      // m_model->reconstructPath(path);
+      m_model->reconstructInactivePath(path);
       int cost = dijkstra.getCostTo(end);
 
       if (!path.empty() && cost != -1) {
