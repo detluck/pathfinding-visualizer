@@ -5,9 +5,11 @@
 #include "cpp/algorithms/dijkstra.h"
 #include "cpp/algorithms/ialgorithm.h"
 #include "cpp/algorithms/tsp/bruteforce.h"
+#include "cpp/algorithms/tsp/nearestneighbor.h"
 #include "cpp/model/gridmodel.h"
 #include <QDebug>
 #include <algorithm>
+#include <memory>
 #include <qlist.h>
 #include <qpair.h>
 #include <vector>
@@ -27,6 +29,9 @@ Pathfinding::Pathfinding(QObject *parent)
 void Pathfinding::setAlgorithm(int index) {
   if (index < 0 || index >= static_cast<int>(AlgorithmType::Count)) {
     return;
+  }
+  if (m_mode == AppMode::Pathfinding) {
+    emit toast("Turn on the Pathfinding mode", 1);
   }
   auto type = static_cast<AlgorithmType>(index);
 
@@ -52,11 +57,18 @@ void Pathfinding::setTspAlgorithm(int index) {
   if (index < 0 || index >= static_cast<int>(TspAlgorithmType::Count)) {
     return;
   }
+  if (m_mode == AppMode::Pathfinding) {
+    emit toast("Turn on the TSP mode", 1);
+  }
   auto type = static_cast<TspAlgorithmType>(index);
   switch (type) {
   case TspAlgorithmType::Bruteforce:
     m_tspAlgorithm = std::make_unique<Bruteforce>();
-    emit toast("Brute force was set", 1);
+    emit toast("Brute force aktivated", 1);
+    break;
+  case TspAlgorithmType::NearestNeighbor:
+    m_tspAlgorithm = std::make_unique<NearestNeighbor>();
+    emit toast("Nearest Neighbor activated", 1);
     break;
   default:
     break;

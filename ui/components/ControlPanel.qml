@@ -48,7 +48,7 @@ Rectangle {
                 AlgoSelector {
                     Layout.preferredWidth: 200
                     label: "Pick TSP"
-                    model: ["Brute force", "2 OPT"]
+                    model: ["Brute force", "Nearest Neighbor"]
                     onCurrentIndexChanged: {
                         controller.setTspAlgorithm(currentIndex);
                     }

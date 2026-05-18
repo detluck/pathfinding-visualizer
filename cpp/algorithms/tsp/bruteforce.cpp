@@ -20,7 +20,7 @@ void Bruteforce::init(const QMap<QPair<int, int>, int> distanceMatrix,
 }
 TspStepResult Bruteforce::step() {
   if (m_finished || m_targets.empty())
-    return {StepResultType::Finished, m_bestPath, m_bestPath};
+    return {StepResultType::Finished, m_bestPath};
 
   int distance = calculateRouteDistance(m_currentPath);
   if (distance < m_shortestDistance) {
@@ -33,10 +33,10 @@ TspStepResult Bruteforce::step() {
 
   if (!std::next_permutation(m_currentPath.begin(), m_currentPath.end())) {
     m_finished = true;
-    return {StepResultType::Finished, stepPath, m_bestPath};
+    return {StepResultType::Finished, stepPath};
   }
 
-  return {StepResultType::Running, stepPath, m_bestPath};
+  return {StepResultType::Running, stepPath};
 }
 
 int Bruteforce::calculateRouteDistance(const std::vector<int> &route) {
