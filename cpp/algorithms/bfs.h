@@ -11,7 +11,6 @@ public:
     void setState(const AlgoState algoState) override;
     void init(const GridData& data) override;
     StepResult step() override;
-    void blazzingRun() override;
     std::vector<int> getPath() override;
     AlgoState state() override;
 

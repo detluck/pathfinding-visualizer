@@ -1,6 +1,7 @@
 #ifndef IALGORITHM_H
 #define IALGORITHM_H
 #include "cpp/model/node.h"
+#include "algorithmType.h"
 #include <vector>
 
 struct GridData{
@@ -17,12 +18,6 @@ enum class AlgoState{
     Stopped
 };
 
-enum class StepResultType{
-    Running,
-    Paused,
-    Finished
-};
-
 struct StepResult {
     StepResultType state;
     int index;
@@ -37,7 +32,6 @@ public:
     virtual StepResult step() = 0;
     virtual std::vector<int> getPath() = 0;
     virtual AlgoState state() = 0;
-    virtual void blazzingRun() = 0;
 
 private:
     virtual std::vector<int> neighbors(int current) = 0;

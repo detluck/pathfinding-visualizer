@@ -1,32 +1,30 @@
 import QtQuick
-import QtQuick.Layouts
 import QtQuick.Effects
 import App.Controller 1.0
 import Pathfinding
 
-Rectangle{
+Rectangle {
     id: root
     property string svgPath: ""
     border.color: Theme.empty
     property bool isHovered
-    scale: isHovered? 1.6: 1.0
-    z: isHovered? 10: 0
-
-    Behavior on color { ColorAnimation { duration: 150 } }
-
-    // Image {
-    //     id: svgIcon
-    //     source: root.svgPath
-    //     height: root.height
-    //     width: height
-    //     sourceSize.height: height
-    //     sourceSize.width: width
-    //     Layout.alignment: verticalAlignment
-    //     fillMode: Image.PreserveAspectFit
-    //     visible: root.svgPath !== "" && type !== 0
-    //     asynchronous: true
-    // }
-
+    z: isHovered ? 10 : 0
+    Behavior on color {
+        ColorAnimation {
+            duration: 150
+        }
+    }
+    Behavior on scale {
+        NumberAnimation {
+            duration: 150
+            easing.type: Easing.OutBack
+        }
+    }
+    Behavior on radius {
+        NumberAnimation {
+            duration: 150
+        }
+    }
     Item {
         height: root.height
         width: height
@@ -56,10 +54,4 @@ Rectangle{
             }
         }
     }
-
-
-    Behavior on scale {
-        NumberAnimation { duration: 150 }
-    }
-
 }

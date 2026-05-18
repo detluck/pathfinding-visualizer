@@ -1,166 +1,169 @@
 #include "gridmodel.h"
+#include "cpp/model/node.h"
 #include <QDebug>
 
-GridModel::GridModel(QObject* parent, int width, int height) : QAbstractListModel(parent) {
-    m_width = width;
-    m_height = height;
-    if(width > 0 && height > 0){
-        m_model.resize(width*height);
-    }
-}
-
-int GridModel::rowCount(const QModelIndex &parent) const
-{
-    return m_model.size();
-}
-
-QHash<int, QByteArray> GridModel::roleNames() const
-{
-    return {
-            {TypeRole, "type"},
-            {WeightRole, "weight"}
-    };
-}
-
-QVariant GridModel::data(const QModelIndex &index, int role) const
-{
-    if(!index.isValid()){
-        return QVariant();
-    }
-    const Node &node = m_model[index.row()];
-
-    if(role == TypeRole){
-        return static_cast<int>(node.type);
-    }
-    if(role == WeightRole){
-        return node.weight;
-    }
-    return QVariant();
-}
-
-void GridModel::resizeModel(int width, int height)
-{
-    if(m_width == width && m_height == height) {
-        return;
-    }
-
-    beginResetModel();
-
-    m_width = width;
-    m_height = height;
-    m_model.clear();
-
+GridModel::GridModel(QObject *parent, int width, int height)
+    : QAbstractListModel(parent) {
+  m_width = width;
+  m_height = height;
+  if (width > 0 && height > 0) {
     m_model.resize(width * height);
-
-    endResetModel();
-    emit dimensionsChanged();
+  }
 }
 
-int GridModel::width()
-{
-    return m_width;
+int GridModel::rowCount(const QModelIndex &parent) const {
+  return m_model.size();
 }
 
-int GridModel::height()
-{
-    return m_height;
+QHash<int, QByteArray> GridModel::roleNames() const {
+  return {{TypeRole, "type"}, {WeightRole, "weight"}};
 }
 
-std::vector<NodeType> GridModel::nodeTypes() const
-{
-    std::vector<NodeType> types;
-    types.reserve(m_model.size());
+QVariant GridModel::data(const QModelIndex &index, int role) const {
+  if (!index.isValid()) {
+    return QVariant();
+  }
+  const Node &node = m_model[index.row()];
 
-    for(const Node& node: m_model)
-    {
-        types.push_back(node.type);
+  if (role == TypeRole) {
+    return static_cast<int>(node.type);
+  }
+  if (role == WeightRole) {
+    return node.weight;
+  }
+  return QVariant();
+}
+
+void GridModel::resizeModel(int width, int height) {
+  if (m_width == width && m_height == height) {
+    return;
+  }
+
+  beginResetModel();
+
+  m_width = width;
+  m_height = height;
+  m_model.clear();
+
+  m_model.resize(width * height);
+
+  endResetModel();
+  emit dimensionsChanged();
+}
+
+int GridModel::width() { return m_width; }
+
+int GridModel::height() { return m_height; }
+
+std::vector<NodeType> GridModel::nodeTypes() const {
+  std::vector<NodeType> types;
+  types.reserve(m_model.size());
+
+  for (const Node &node : m_model) {
+    types.push_back(node.type);
+  }
+  return types;
+}
+
+std::vector<Node> GridModel::getNodes() const {
+  return std::vector<Node>(m_model.begin(), m_model.end());
+}
+
+void GridModel::clearModel() {
+  for (int i = 0; i < m_model.size(); i++) {
+    m_model[i].type = NodeType::Empty;
+    m_model[i].weight = 0;
+  }
+  QModelIndex start = createIndex(0, 0);
+  QModelIndex end = createIndex(m_model.size() - 1, 0);
+  emit dataChanged(start, end, {TypeRole, WeightRole});
+}
+
+void GridModel::clearVisited() {
+  for (int i = 0; i < m_model.size(); i++) {
+    if (m_model[i].type == NodeType::Visited ||
+        m_model[i].type == NodeType::Path) {
+      m_model[i].type = NodeType::Empty;
+      m_model[i].weight = 0;
     }
-    return types;
+  }
+  QModelIndex start = createIndex(0, 0);
+  QModelIndex end = createIndex(m_model.size() - 1, 0);
+  emit dataChanged(start, end, {TypeRole, WeightRole});
 }
 
-std::vector<Node> GridModel::getNodes() const
-{
-    return std::vector<Node>(m_model.begin(), m_model.end());
+void GridModel::setNodeType(const NodeType type, const int index,
+                            const int weight) {
+  if (index < 0 || index >= m_model.size()) {
+    return;
+  }
+  Node &node = m_model[index];
+  // if the cell being changed to empty, we make its weight = 0
+  if (type == NodeType::Empty) {
+    node.weight = 0;
+  }
+  // if we draw a cell with a weight, we save that weight
+  else if (type == NodeType::WeightNode) {
+    node.weight = weight;
+  }
+
+  switch (type) {
+  case NodeType::Visited:
+    // dont override start/end
+    if (node.type == NodeType::Start || node.type == NodeType::End)
+      return;
+    node.type = NodeType::Visited;
+    break;
+
+  case NodeType::Wall:
+    if (node.type == NodeType::Empty || node.type == NodeType::WeightNode)
+      node.type = NodeType::Wall;
+    break;
+
+  case NodeType::Path:
+    // dont override start/end
+    if (node.type == NodeType::Start || node.type == NodeType::End)
+      return;
+    node.type = NodeType::Path;
+    break;
+
+  case NodeType::InactivePath:
+    if (node.type == NodeType::Start || node.type == NodeType::End)
+      return;
+    node.type = NodeType::InactivePath;
+    break;
+
+  default:
+    node.type = type;
+    break;
+  }
+  // qDebug() << "type now" << static_cast<int>(m_model[index].type) << "index"
+  // << index;
+  QModelIndex modelIndex = createIndex(index, 0);
+  emit dataChanged(modelIndex, modelIndex, {TypeRole, WeightRole});
 }
 
-void GridModel::clearModel()
-{
-    for(int i = 0; i<m_model.size(); i++)
-    {
-        m_model[i].type = NodeType::Empty;
-        m_model[i].weight = 0;
-    }
-    QModelIndex start = createIndex(0,0);
-    QModelIndex end = createIndex(m_model.size() - 1, 0);
-    emit dataChanged(start, end, {TypeRole, WeightRole});
+void GridModel::reconstructPath(const std::vector<int> &path) {
+  for (int index : path) {
+    setNodeType(NodeType::Path, index);
+  }
 }
 
-void GridModel::clearVisited()
-{
-    for(int i = 0; i<m_model.size(); i++)
-    {
-        if(m_model[i].type == NodeType::Visited || m_model[i].type == NodeType::Path){
-            m_model[i].type = NodeType::Empty;
-            m_model[i].weight = 0;
-        }
-    }
-    QModelIndex start = createIndex(0,0);
-    QModelIndex end = createIndex(m_model.size() - 1, 0);
-    emit dataChanged(start, end, {TypeRole, WeightRole});
+void GridModel::reconstructInactivePath(const std::vector<int> &path) {
+  for (int index : path) {
+    setNodeType(NodeType::InactivePath, index);
+  }
 }
 
-void GridModel::setNodeType(const NodeType type, const int index, const int weight)
-{
-    if(index < 0 || index >= m_model.size())
-    {
-        return;
+void GridModel::markInAktive() {
+  for (int i = 0; i < m_model.size(); i++) {
+    if (m_model[i].type == NodeType::Path ||
+        m_model[i].type == NodeType::Visited) {
+      m_model[i].type = NodeType::InactivePath;
+      m_model[i].weight = 0;
     }
-    Node& node = m_model[index];
-    //if the cell being changed to empty, we make its weight = 0
-    if (type == NodeType::Empty) {
-        node.weight = 0;
-    }
-    // if we draw a cell with a weight, we save that weight
-    else if (type == NodeType::WeightNode) {
-        node.weight = weight; 
-    }
-
-    switch(type) {
-    case NodeType::Visited:
-        // dont override start/end
-        if(node.type == NodeType::Start || node.type == NodeType::End)
-            return;
-        node.type = NodeType::Visited;
-        break;
-
-    case NodeType::Wall:
-        if(node.type == NodeType::Empty || node.type == NodeType::WeightNode)
-            node.type = NodeType::Wall;
-        break;
-
-    case NodeType::Path:
-        // dont override start/end
-        if(node.type == NodeType::Start || node.type == NodeType::End)
-            return;
-        node.type = NodeType::Path;
-        break;
-
-    default:
-        node.type = type;
-        break;
-    }
-    //qDebug() << "type now" << static_cast<int>(m_model[index].type) << "index" << index;
-    QModelIndex modelIndex = createIndex(index, 0);
-    emit dataChanged(modelIndex, modelIndex, {TypeRole, WeightRole});
-
+  }
+  QModelIndex start = createIndex(0, 0);
+  QModelIndex end = createIndex(m_model.size() - 1, 0);
+  emit dataChanged(start, end, {TypeRole, WeightRole});
 }
-
-void GridModel::reconstructPath(const std::vector<int>& path)
-{
-    for( int index: path){
-        setNodeType(NodeType::Path, index);
-    }
-}
-
-
-

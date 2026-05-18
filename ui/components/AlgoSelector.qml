@@ -9,10 +9,10 @@ ComboBox{
     property color pressedColor: Theme.surface2
     property color textColor: Theme.textMain
     property color backgroundColor: Theme.surface0
+    property string label: ""
     property int bWidth: 100
     property int bHeight: 50
 
-    model: ["Dijkstra", "A*", "BFS"]
     currentIndex: -1
 
     delegate: ItemDelegate{
@@ -37,7 +37,7 @@ ComboBox{
     contentItem: StyledText{
         leftPadding: 5
         rightPadding: root.indicator.width + root.spacing
-        text: currentIndex === -1? "Pick an algorithm": root.displayText
+        text: currentIndex === -1? root.label: root.displayText
         color: root.pressed? root.pressedColor: root.textColor
     }
 
@@ -88,9 +88,5 @@ ComboBox{
         implicitWidth: root.bWidth
         radius: 6
         color: root.backgroundColor
-    }
-
-    onCurrentIndexChanged: {
-        controller.setAlgorithm(currentIndex);
     }
 }

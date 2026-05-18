@@ -8,4 +8,15 @@ enum class AlgorithmType{
     Count
 };
 
+enum class TspAlgorithmType{
+    Bruteforce,
+    Count
+};
+
+enum class StepResultType{
+    Running,
+    Paused,
+    Finished
+};
+
 #endif // ALGORITHMTYPE_H

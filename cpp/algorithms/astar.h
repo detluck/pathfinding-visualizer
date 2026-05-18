@@ -12,7 +12,6 @@ public:
     StepResult step() override;
     std::vector<int> getPath() override;
     AlgoState state() override;
-    void blazzingRun() override;
 
 private:
     std::vector<int> neighbors(int current) override;

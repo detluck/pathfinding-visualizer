@@ -40,15 +40,27 @@ Rectangle {
                     text: "Pathfinding-Visualizer"
                 }
 
-                Item { Layout.fillWidth: true }
-
                 SpeedSlider {
-                    Layout.preferredWidth: 200
-                    onValueChanged: controller.setSpeed(value)
+                    Layout.preferredWidth: 230
+                    onValueChanged: value => controller.setSpeed(value)
                 }
 
                 AlgoSelector {
                     Layout.preferredWidth: 200
+                    label: "Pick TSP"
+                    model: ["Brute force", "2 OPT"]
+                    onCurrentIndexChanged: {
+                        controller.setTspAlgorithm(currentIndex);
+                    }
+                }
+
+                AlgoSelector {
+                    Layout.preferredWidth: 200
+                    label: "Pick Pathfinding"
+                    model: ["Dijkstra", "A*", "BFS"]
+                    onCurrentIndexChanged: {
+                        controller.setAlgorithm(currentIndex);
+                    }
                 }
             }
 
@@ -69,9 +81,9 @@ Rectangle {
                         svgPath: "../assets/svgs/start.svg"
                         highlighted: controller.type === Controller.Start
                         onClicked: {
-                            controller.type = Controller.Start
-                            controller.handleClick()
-                            cursorHelper.resetCursor()
+                            controller.type = Controller.Start;
+                            controller.handleClick();
+                            cursorHelper.resetCursor();
                         }
                     }
 
@@ -82,9 +94,9 @@ Rectangle {
                         svgPath: "../assets/svgs/pause.svg"
                         highlighted: controller.type === Controller.Pause
                         onClicked: {
-                            controller.type = Controller.Pause
-                            controller.handleClick()
-                            cursorHelper.resetCursor()
+                            controller.type = Controller.Pause;
+                            controller.handleClick();
+                            cursorHelper.resetCursor();
                         }
                     }
 
@@ -95,8 +107,8 @@ Rectangle {
                         svgPath: "../assets/svgs/delete.svg"
                         highlighted: controller.type === Controller.Deleate
                         onClicked: {
-                            controller.type = Controller.Deleate
-                            changeCursor()
+                            controller.type = Controller.Deleate;
+                            changeCursor();
                         }
                     }
 
@@ -108,9 +120,9 @@ Rectangle {
                         tipText: "clears the entire grid"
                         highlighted: controller.type === Controller.Clear
                         onClicked: {
-                            controller.type = Controller.Clear
-                            controller.handleClick()
-                            cursorHelper.resetCursor()
+                            controller.type = Controller.Clear;
+                            controller.handleClick();
+                            cursorHelper.resetCursor();
                         }
                     }
                 }
@@ -127,8 +139,8 @@ Rectangle {
                         svgPath: "../assets/svgs/startNode.svg"
                         highlighted: controller.type === Controller.StartNode
                         onClicked: {
-                            controller.type = Controller.StartNode
-                            changeCursor()
+                            controller.type = Controller.StartNode;
+                            changeCursor();
                         }
                     }
 
@@ -139,8 +151,8 @@ Rectangle {
                         svgPath: "../assets/svgs/endNode.svg"
                         highlighted: controller.type === Controller.TargetNode
                         onClicked: {
-                            controller.type = Controller.TargetNode
-                            changeCursor()
+                            controller.type = Controller.TargetNode;
+                            changeCursor();
                         }
                     }
 
@@ -151,12 +163,12 @@ Rectangle {
                         svgPath: "../assets/svgs/wall.svg"
                         highlighted: controller.type === Controller.Wall
                         onClicked: {
-                            controller.type = Controller.Wall
-                            changeCursor()
+                            controller.type = Controller.Wall;
+                            changeCursor();
                         }
                     }
 
-                    WeightButton{
+                    WeightButton {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                     }
@@ -166,6 +178,64 @@ Rectangle {
                     Layout.fillHeight: true
                     Layout.preferredWidth: 140
                     spacing: 10
+
+                    Switch {
+                        id: modeSwitch
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: 30
+
+                        text: checked ? "TSP Mode" : "Pathfinding Mode"
+                        checked: controller.appMode === Controller.TSP
+
+                        onClicked: {
+                            controller.appMode = checked ? Controller.TSP : Controller.Pathfinding;
+                        }
+
+                        indicator: Rectangle {
+                            implicitWidth: 54
+                            implicitHeight: 28
+
+                            x: modeSwitch.leftPadding
+                            y: parent.height / 2 - height / 2
+
+                            radius: height / 2
+
+                            color: modeSwitch.checked ? Theme.slider : Theme.surface1
+                            border.color: modeSwitch.checked ? "#17a81a" : "#d1d1d6"
+
+                            Behavior on color {
+                                ColorAnimation {
+                                    duration: 200
+                                }
+                            }
+
+                            Rectangle {
+                                y: 2
+                                x: modeSwitch.checked ? parent.width - width - 2 : 2
+
+                                width: parent.height - 4
+                                height: parent.height - 4
+                                radius: width / 2
+
+                                color: Theme.switchFg
+
+                                border.color: "#d1d1d6"
+                                border.width: modeSwitch.checked ? 0 : 1
+
+                                Behavior on x {
+                                    NumberAnimation {
+                                        duration: 200
+                                        easing.type: Easing.OutQuad
+                                    }
+                                }
+                            }
+                        }
+
+                        contentItem: StyledText {
+                            text: modeSwitch.text
+                            leftPadding: modeSwitch.indicator.width + 10
+                        }
+                    }
 
                     StyledButton {
                         Layout.fillWidth: true
@@ -193,11 +263,13 @@ Rectangle {
                         text: "Shortest Path"
                         hoverEnabled: false
                         onClicked: {
-                            controller.toast("test", 2)
+                            controller.appMode = Controller.TSP;
                         }
                     }
 
-                    Item { Layout.fillHeight: true }
+                    Item {
+                        Layout.fillHeight: true
+                    }
                 }
 
                 // Spacer
