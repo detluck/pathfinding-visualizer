@@ -234,7 +234,8 @@ void Pathfinding::setSpeed(const int speed) {
     }
     return;
   }
-  int sppedDelay = (100 - speed);
+  int sppedDelay =
+      m_mode == AppMode::Pathfinding ? (100 - speed) : (100 - speed) * 3;
   if (sppedDelay < 1)
     sppedDelay = 1;
 
