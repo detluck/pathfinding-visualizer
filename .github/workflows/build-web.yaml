@@ -44,6 +44,11 @@ jobs:
           echo "=== qmake ===" && find ${{ github.workspace }}/qt-host -name "qmake" 2>/dev/null
           echo "PATH=$PATH"
           echo "QT_ROOT_DIR=$QT_ROOT_DIR"
+      
+      - name: Fix Qt permissions
+        run: |
+          chmod -R +x ${{ github.workspace }}/qt-wasm/Qt/6.6.3/wasm_singlethread/bin/
+          chmod -R +x ${{ github.workspace }}/qt-host/Qt/6.6.3/gcc_64/bin/
 
       - name: Build Project
         env:
