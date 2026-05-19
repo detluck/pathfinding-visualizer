@@ -15,13 +15,13 @@ jobs:
       - name: Setup Emscripten
         uses: mymindstorm/setup-emsdk@v14
         with:
-          version: "3.1.50"
+          version: "3.1.37"
           actions-cache-folder: "emsdk-cache"
 
       - name: Install Qt Desktop (Host Tools)
         uses: jurplel/install-qt-action@v4
         with:
-          version: "6.7.2"
+          version: "6.6.3"
           host: "linux"
           target: "desktop"
           dir: "${{ github.workspace }}/qt-host"
@@ -30,7 +30,7 @@ jobs:
       - name: Install Qt WASM
         uses: jurplel/install-qt-action@v4
         with:
-          version: "6.7.2"
+          version: "6.6.3"
           host: "linux"
           target: "desktop"
           arch: "wasm_singlethread"
