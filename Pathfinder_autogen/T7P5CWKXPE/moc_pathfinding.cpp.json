@@ -1,0 +1,300 @@
+{
+    "classes": [
+        {
+            "className": "Pathfinding",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "ClickType",
+                    "values": [
+                        "Start",
+                        "Pause",
+                        "Resume",
+                        "Stop",
+                        "Clear",
+                        "StartNode",
+                        "TargetNode",
+                        "Deleate",
+                        "Wall",
+                        "WeightNode",
+                        "Count"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "AppMode",
+                    "values": [
+                        "TSP",
+                        "Pathfinding"
+                    ]
+                }
+            ],
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setAlgorithm",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setTspAlgorithm",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "handleClick",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "isCloned": true,
+                    "name": "handleClick",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "weight",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "addWeight",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "runTsp",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "type",
+                    "notify": "clickTypeChanged",
+                    "read": "clickType",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "ClickType",
+                    "user": false,
+                    "write": "setClickType"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "availableWeights",
+                    "notify": "availableWeightsChanged",
+                    "read": "availableWeights",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QVariantList",
+                    "user": false,
+                    "write": "setAvailableWeights"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "currentWeight",
+                    "notify": "currentWeightChanged",
+                    "read": "currentWeight",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setCurrentWeight"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 3,
+                    "name": "appMode",
+                    "notify": "appModeChanged",
+                    "read": "appMode",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "AppMode",
+                    "user": false,
+                    "write": "setAppMode"
+                }
+            ],
+            "qualifiedClassName": "Pathfinding",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "clickTypeChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "appModeChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "availableWeightsChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "currentWeightChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "finished",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "level",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "toast",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "mode",
+                            "type": "Pathfinding::AppMode"
+                        }
+                    ],
+                    "name": "setAppMode",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "type",
+                            "type": "Pathfinding::ClickType"
+                        }
+                    ],
+                    "name": "setClickType",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "startAlgorithm",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "stopAlgorithm",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "resumeAlgorithm",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "speed",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setSpeed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "list",
+                            "type": "QVariantList"
+                        }
+                    ],
+                    "name": "setAvailableWeights",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "weight",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setCurrentWeight",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "name": "onStep",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "name": "buildTsp",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "order",
+                            "type": "QList<int>"
+                        }
+                    ],
+                    "name": "visualizeTsp",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "pathfinding.h",
+    "outputRevision": 68
+}

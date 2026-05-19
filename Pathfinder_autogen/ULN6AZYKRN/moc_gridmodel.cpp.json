@@ -1,0 +1,81 @@
+{
+    "classes": [
+        {
+            "className": "GridModel",
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "width",
+                    "notify": "dimensionsChanged",
+                    "read": "width",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "height",
+                    "notify": "dimensionsChanged",
+                    "read": "height",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false
+                }
+            ],
+            "qualifiedClassName": "GridModel",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "dimensionsChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "width",
+                            "type": "int"
+                        },
+                        {
+                            "name": "height",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "resizeModel",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "width",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "name": "height",
+                    "returnType": "int"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QAbstractListModel"
+                }
+            ]
+        }
+    ],
+    "inputFile": "gridmodel.h",
+    "outputRevision": 68
+}

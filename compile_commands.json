@@ -1,0 +1,170 @@
+[
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/Pathfinder_autogen/mocs_compilation.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/Pathfinder_autogen/mocs_compilation.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/Pathfinder_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/Pathfinder_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/main.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/main.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/main.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/main.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/cpp/core/pathfinding.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/cpp/core/pathfinding.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/cpp/core/pathfinding.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/cpp/core/pathfinding.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/cpp/core/cursorhelper.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/cpp/core/cursorhelper.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/cpp/core/cursorhelper.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/cpp/core/cursorhelper.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/cpp/model/gridmodel.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/cpp/model/gridmodel.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/cpp/model/gridmodel.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/cpp/model/gridmodel.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/cpp/algorithms/astar.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/cpp/algorithms/astar.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/cpp/algorithms/astar.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/cpp/algorithms/astar.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/cpp/algorithms/bfs.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/cpp/algorithms/bfs.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/cpp/algorithms/bfs.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/cpp/algorithms/bfs.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/cpp/algorithms/dijkstra.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/cpp/algorithms/dijkstra.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/cpp/algorithms/dijkstra.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/cpp/algorithms/dijkstra.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/cpp/algorithms/tsp/bruteforce.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/cpp/algorithms/tsp/bruteforce.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/cpp/algorithms/tsp/bruteforce.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/cpp/algorithms/tsp/bruteforce.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/cpp/algorithms/tsp/nearestneighbor.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/cpp/algorithms/tsp/nearestneighbor.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/cpp/algorithms/tsp/nearestneighbor.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/cpp/algorithms/tsp/nearestneighbor.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/pathfinder_qmltyperegistrations.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/pathfinder_qmltyperegistrations.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/pathfinder_qmltyperegistrations.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/pathfinder_qmltyperegistrations.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/build/.rcc/qrc_qmake_Pathfinding.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qrc_qmake_Pathfinding.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qrc_qmake_Pathfinding.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/build/.rcc/qrc_qmake_Pathfinding.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_qmlcache_loader.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_qmlcache_loader.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_qmlcache_loader.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_qmlcache_loader.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_Main_qml.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_Main_qml.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_Main_qml.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_Main_qml.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/ControlPanel_qml.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/ControlPanel_qml.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/ControlPanel_qml.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/ControlPanel_qml.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/PathGrid_qml.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/PathGrid_qml.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/PathGrid_qml.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/PathGrid_qml.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/GridTile_qml.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/GridTile_qml.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/GridTile_qml.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/GridTile_qml.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/StyledButton_qml.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/StyledButton_qml.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/StyledButton_qml.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/StyledButton_qml.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/StyledSlider_qml.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/StyledSlider_qml.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/StyledSlider_qml.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/StyledSlider_qml.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/AlgoSelector_qml.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/AlgoSelector_qml.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/AlgoSelector_qml.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/AlgoSelector_qml.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/StyledText_qml.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/StyledText_qml.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/StyledText_qml.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/StyledText_qml.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/WeightButton_qml.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/WeightButton_qml.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/WeightButton_qml.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/WeightButton_qml.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/Toaster_qml.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/Toaster_qml.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/Toaster_qml.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/Toaster_qml.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/StatusBar_qml.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/StatusBar_qml.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/StatusBar_qml.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/StatusBar_qml.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/SpeedSlider_qml.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/SpeedSlider_qml.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/SpeedSlider_qml.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/SpeedSlider_qml.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/theme/Theme_qml.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/theme/Theme_qml.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/theme/Theme_qml.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/theme/Theme_qml.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/StyledIcon_qml.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/StyledIcon_qml.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmlcache/Pathfinder_ui/components/StyledIcon_qml.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/build/.rcc/qmlcache/Pathfinder_ui/components/StyledIcon_qml.cpp.o"
+},
+{
+  "directory": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build",
+  "command": "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SVG_LIB @CMakeFiles/Pathfinder.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/Pathfinder.dir/build/.rcc/qrc_Pathfinder_raw_qml_0.cpp.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qrc_Pathfinder_raw_qml_0.cpp",
+  "file": "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qrc_Pathfinder_raw_qml_0.cpp",
+  "output": "CMakeFiles/Pathfinder.dir/build/.rcc/qrc_Pathfinder_raw_qml_0.cpp.o"
+}
+]

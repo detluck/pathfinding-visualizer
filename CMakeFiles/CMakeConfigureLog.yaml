@@ -1,0 +1,211 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:200 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The target system is: Emscripten - 1 - x86
+      The host system is: Linux - 6.17.0-1013-azure - x86_64
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/local/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/FindWrapAtomic.cmake:36 (check_cxx_source_compiles)"
+      - "/usr/local/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:30 (_qt_internal_find_third_party_dependencies)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:41 (include)"
+      - "/usr/local/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:111 (find_dependency)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake:40 (include)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/Qt6Config.cmake:164 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Performing Test HAVE_STDATOMIC"
+    directories:
+      source: "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-zSIRHH"
+      binary: "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-zSIRHH"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps-17"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/platforms;/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/platforms;/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/cmake/Modules;/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/cmake/Modules;/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/cmake/Modules;/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/cmake/Modules;/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6;/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin"
+      QT_ADDITIONAL_PACKAGES_PREFIX_PATH: ""
+      QT_CHAINLOAD_TOOLCHAIN_FILE: ""
+      QT_TOOLCHAIN_INCLUDE_FILE: ""
+      QT_TOOLCHAIN_RELOCATABLE_CMAKE_DIR: "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake"
+      QT_TOOLCHAIN_RELOCATABLE_PREFIX: ""
+    buildResult:
+      variable: "HAVE_STDATOMIC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-zSIRHH'
+        
+        Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_81560/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_81560.dir/build.make CMakeFiles/cmTC_81560.dir/build
+        gmake[1]: Entering directory '/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-zSIRHH'
+        Building CXX object CMakeFiles/cmTC_81560.dir/src.cxx.o
+        /home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DHAVE_STDATOMIC  -std=gnu++17 -MD -MT CMakeFiles/cmTC_81560.dir/src.cxx.o -MF CMakeFiles/cmTC_81560.dir/src.cxx.o.d -o CMakeFiles/cmTC_81560.dir/src.cxx.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-zSIRHH/src.cxx
+        shared:INFO: (Emscripten: Running sanity checks)
+        Linking CXX executable cmTC_81560.js
+        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_81560.dir/link.txt --verbose=1
+        cache:INFO: generating system asset: symbol_lists/5080d7f1cb92339cb6082081a23a88daa6ae6ad4.json... (this will be cached in "/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/cache/symbol_lists/5080d7f1cb92339cb6082081a23a88daa6ae6ad4.json" for subsequent builds)
+        cache:INFO:  - ok
+        /home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ @CMakeFiles/cmTC_81560.dir/objects1.rsp -o cmTC_81560.js
+        gmake[1]: Leaving directory '/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-zSIRHH'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/local/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/FindWrapRt.cmake:23 (check_cxx_source_compiles)"
+      - "/usr/local/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:30 (_qt_internal_find_third_party_dependencies)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:41 (include)"
+      - "/usr/local/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:111 (find_dependency)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake:40 (include)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/Qt6Config.cmake:164 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Performing Test HAVE_GETTIME"
+    directories:
+      source: "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-46ZZ5B"
+      binary: "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-46ZZ5B"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps-17"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/platforms;/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/platforms;/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/cmake/Modules;/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/cmake/Modules;/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/cmake/Modules;/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/cmake/Modules;/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6;/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin"
+      QT_ADDITIONAL_PACKAGES_PREFIX_PATH: ""
+      QT_CHAINLOAD_TOOLCHAIN_FILE: ""
+      QT_TOOLCHAIN_INCLUDE_FILE: ""
+      QT_TOOLCHAIN_RELOCATABLE_CMAKE_DIR: "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake"
+      QT_TOOLCHAIN_RELOCATABLE_PREFIX: ""
+    buildResult:
+      variable: "HAVE_GETTIME"
+      cached: true
+      stdout: |
+        Change Dir: '/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-46ZZ5B'
+        
+        Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8c8be/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8c8be.dir/build.make CMakeFiles/cmTC_8c8be.dir/build
+        gmake[1]: Entering directory '/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-46ZZ5B'
+        Building CXX object CMakeFiles/cmTC_8c8be.dir/src.cxx.o
+        /home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DHAVE_GETTIME  -std=gnu++17 -MD -MT CMakeFiles/cmTC_8c8be.dir/src.cxx.o -MF CMakeFiles/cmTC_8c8be.dir/src.cxx.o.d -o CMakeFiles/cmTC_8c8be.dir/src.cxx.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-46ZZ5B/src.cxx
+        Linking CXX executable cmTC_8c8be.js
+        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c8be.dir/link.txt --verbose=1
+        /home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ @CMakeFiles/cmTC_8c8be.dir/objects1.rsp -o cmTC_8c8be.js
+        gmake[1]: Leaving directory '/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-46ZZ5B'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/local/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/FindWrapRt.cmake:34 (check_cxx_source_compiles)"
+      - "/usr/local/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:30 (_qt_internal_find_third_party_dependencies)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:41 (include)"
+      - "/usr/local/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:111 (find_dependency)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake:40 (include)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/Qt6Config.cmake:164 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Performing Test HAVE_SHM_OPEN_SHM_UNLINK"
+    directories:
+      source: "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-KsSBxr"
+      binary: "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-KsSBxr"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps-17"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/platforms;/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/platforms;/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/cmake/Modules;/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/cmake/Modules;/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/cmake/Modules;/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/cmake/Modules;/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6;/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin"
+      QT_ADDITIONAL_PACKAGES_PREFIX_PATH: ""
+      QT_CHAINLOAD_TOOLCHAIN_FILE: ""
+      QT_TOOLCHAIN_INCLUDE_FILE: ""
+      QT_TOOLCHAIN_RELOCATABLE_CMAKE_DIR: "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake"
+      QT_TOOLCHAIN_RELOCATABLE_PREFIX: ""
+    buildResult:
+      variable: "HAVE_SHM_OPEN_SHM_UNLINK"
+      cached: true
+      stdout: |
+        Change Dir: '/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-KsSBxr'
+        
+        Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8bc57/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8bc57.dir/build.make CMakeFiles/cmTC_8bc57.dir/build
+        gmake[1]: Entering directory '/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-KsSBxr'
+        Building CXX object CMakeFiles/cmTC_8bc57.dir/src.cxx.o
+        /home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DHAVE_SHM_OPEN_SHM_UNLINK  -std=gnu++17 -MD -MT CMakeFiles/cmTC_8bc57.dir/src.cxx.o -MF CMakeFiles/cmTC_8bc57.dir/src.cxx.o.d -o CMakeFiles/cmTC_8bc57.dir/src.cxx.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-KsSBxr/src.cxx
+        Linking CXX executable cmTC_8bc57.js
+        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8bc57.dir/link.txt --verbose=1
+        /home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ @CMakeFiles/cmTC_8bc57.dir/objects1.rsp -o cmTC_8bc57.js
+        gmake[1]: Leaving directory '/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-KsSBxr'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/local/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules/FindEGL.cmake:127 (check_cxx_source_compiles)"
+      - "/usr/local/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:30 (_qt_internal_find_third_party_dependencies)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:40 (include)"
+      - "/usr/local/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:111 (find_dependency)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake:40 (include)"
+      - "qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/Qt6Config.cmake:164 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Performing Test HAVE_EGL"
+    directories:
+      source: "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-EaRokv"
+      binary: "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-EaRokv"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps-17"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/platforms;/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/platforms;/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/cmake/Modules;/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/cmake/Modules;/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/cmake/Modules;/home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/cmake/Modules;/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6;/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin"
+      QT_ADDITIONAL_PACKAGES_PREFIX_PATH: ""
+      QT_CHAINLOAD_TOOLCHAIN_FILE: ""
+      QT_TOOLCHAIN_INCLUDE_FILE: ""
+      QT_TOOLCHAIN_RELOCATABLE_CMAKE_DIR: "/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/lib/cmake"
+      QT_TOOLCHAIN_RELOCATABLE_PREFIX: ""
+    buildResult:
+      variable: "HAVE_EGL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-EaRokv'
+        
+        Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b1177/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b1177.dir/build.make CMakeFiles/cmTC_b1177.dir/build
+        gmake[1]: Entering directory '/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-EaRokv'
+        Building CXX object CMakeFiles/cmTC_b1177.dir/src.cxx.o
+        /home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ -DHAVE_EGL  -std=gnu++17 -MD -MT CMakeFiles/cmTC_b1177.dir/src.cxx.o -MF CMakeFiles/cmTC_b1177.dir/src.cxx.o.d -o CMakeFiles/cmTC_b1177.dir/src.cxx.o -c /home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-EaRokv/src.cxx
+        Linking CXX executable cmTC_b1177.js
+        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1177.dir/link.txt --verbose=1
+        /home/runner/work/_temp/4ccfcca2-bf45-477d-a9d0-52160eab6812/emsdk-main/upstream/emscripten/em++ @CMakeFiles/cmTC_b1177.dir/objects1.rsp -o cmTC_b1177.js
+        gmake[1]: Leaving directory '/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/CMakeFiles/CMakeScratch/TryCompile-EaRokv'
+        
+      exitCode: 0
+...

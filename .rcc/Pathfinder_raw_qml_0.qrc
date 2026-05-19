@@ -1,0 +1,36 @@
+<RCC>
+  <qresource prefix="/qt/qml/Pathfinding/">
+    <file alias="Main.qml">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/Main.qml</file>
+    <file alias="ui/components/ControlPanel.qml">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/components/ControlPanel.qml</file>
+    <file alias="ui/components/PathGrid.qml">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/components/PathGrid.qml</file>
+    <file alias="ui/components/GridTile.qml">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/components/GridTile.qml</file>
+    <file alias="ui/components/StyledButton.qml">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/components/StyledButton.qml</file>
+    <file alias="ui/components/StyledSlider.qml">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/components/StyledSlider.qml</file>
+    <file alias="ui/components/AlgoSelector.qml">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/components/AlgoSelector.qml</file>
+    <file alias="ui/components/StyledText.qml">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/components/StyledText.qml</file>
+    <file alias="ui/components/WeightButton.qml">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/components/WeightButton.qml</file>
+    <file alias="ui/components/Toaster.qml">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/components/Toaster.qml</file>
+    <file alias="ui/components/StatusBar.qml">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/components/StatusBar.qml</file>
+    <file alias="ui/components/SpeedSlider.qml">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/components/SpeedSlider.qml</file>
+    <file alias="ui/theme/Theme.qml">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/theme/Theme.qml</file>
+    <file alias="ui/components/StyledIcon.qml">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/components/StyledIcon.qml</file>
+    <file alias="ui/theme/qmldir">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/theme/qmldir</file>
+    <file alias="ui/assets/svgs/startNode.svg">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/assets/svgs/startNode.svg</file>
+    <file alias="ui/assets/svgs/endNode.svg">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/assets/svgs/endNode.svg</file>
+    <file alias="ui/assets/svgs/clean.svg">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/assets/svgs/clean.svg</file>
+    <file alias="ui/assets/svgs/pause.svg">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/assets/svgs/pause.svg</file>
+    <file alias="ui/assets/svgs/start.svg">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/assets/svgs/start.svg</file>
+    <file alias="ui/assets/svgs/terminate.svg">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/assets/svgs/terminate.svg</file>
+    <file alias="ui/assets/svgs/delete.svg">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/assets/svgs/delete.svg</file>
+    <file alias="ui/assets/svgs/wall.svg">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/assets/svgs/wall.svg</file>
+    <file alias="ui/assets/svgs/weight.svg">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/assets/svgs/weight.svg</file>
+    <file alias="ui/assets/svgs/error.svg">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/assets/svgs/error.svg</file>
+    <file alias="ui/assets/svgs/warning.svg">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/assets/svgs/warning.svg</file>
+    <file alias="ui/assets/svgs/status.svg">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/assets/svgs/status.svg</file>
+    <file alias="ui/assets/svgs/light.svg">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/assets/svgs/light.svg</file>
+    <file alias="ui/assets/svgs/dark.svg">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/assets/svgs/dark.svg</file>
+    <file alias="ui/assets/fonts/JetBrainsMono-Bold.ttf">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/assets/fonts/JetBrainsMono-Bold.ttf</file>
+    <file alias="ui/assets/fonts/JetBrainsMono-Regular.ttf">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/ui/assets/fonts/JetBrainsMono-Regular.ttf</file>
+  </qresource>
+</RCC>
+

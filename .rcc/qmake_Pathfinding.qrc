@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/Pathfinding">
+    <file alias="qmldir">/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/Pathfinding/qmldir</file>
+  </qresource>
+</RCC>
+

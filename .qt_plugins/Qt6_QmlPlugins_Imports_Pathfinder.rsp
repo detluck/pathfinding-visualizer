@@ -1,0 +1,14 @@
+-rootPath
+/home/runner/work/pathfinding-visualizer/pathfinding-visualizer
+-cmake-output
+-output-file
+/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.qt_plugins/Qt6_QmlPlugins_Imports_Pathfinder.cmake
+-importPath
+/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/Pathfinding
+-importPath
+/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build
+-importPath
+/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/qt-wasm/Qt/6.6.3/wasm_singlethread/./qml
+-qrcFiles
+/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/qmake_Pathfinding.qrc
+/home/runner/work/pathfinding-visualizer/pathfinding-visualizer/build/.rcc/Pathfinder_raw_qml_0.qrc

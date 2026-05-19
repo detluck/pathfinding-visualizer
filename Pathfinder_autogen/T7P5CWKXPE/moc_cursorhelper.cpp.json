@@ -1,0 +1,59 @@
+{
+    "classes": [
+        {
+            "className": "CursorHelper",
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 0,
+                    "name": "cursor",
+                    "notify": "cursorChanged",
+                    "read": "cursor",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "write": "setCursor"
+                }
+            ],
+            "qualifiedClassName": "CursorHelper",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "cursorChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "path",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "setCursor",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "resetCursor",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "cursorhelper.h",
+    "outputRevision": 68
+}
