@@ -30,7 +30,7 @@ void Pathfinding::setAlgorithm(int index) {
   if (index < 0 || index >= static_cast<int>(AlgorithmType::Count)) {
     return;
   }
-  if (m_mode == AppMode::Pathfinding) {
+  if (m_mode == AppMode::TSP) {
     emit toast("Turn on the Pathfinding mode", 1);
   }
   auto type = static_cast<AlgorithmType>(index);
@@ -410,7 +410,7 @@ void Pathfinding::onStep() {
       timer->stop();
       qDebug() << "finished";
       m_model->markInAktive();
-      fullPath.append(result.bestPathSoFar);
+      fullPath.append(result.currentPath);
       fullPath.append(m_start);
       visualizeTsp(fullPath);
       emit finished();
