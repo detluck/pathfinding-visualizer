@@ -24,10 +24,8 @@ jobs:
           version: "6.7.2"
           host: "linux"
           target: "desktop"
-          arch: "linux_gcc_64"
-          modules: "qtdeclarative qtsvg"
-          set-env: true
           dir: "${{ github.workspace }}/qt-host"
+          set-env: false
 
       - name: Install Qt WASM
         uses: jurplel/install-qt-action@v4
@@ -36,17 +34,20 @@ jobs:
           host: "linux"
           target: "desktop"
           arch: "wasm_singlethread"
-          set-env: true
           dir: "${{ github.workspace }}/qt-wasm"
+          set-env: true
 
       - name: Build Project
+        env:
+          QT_HOST_PATH: ${{ github.workspace }}/qt-host/Qt/6.7.2/gcc_64
+          QT_WASM: ${{ github.workspace }}/qt-wasm/Qt/6.7.2/wasm_singlethread
         run: |
           mkdir build && cd build
-          ${{ github.workspace }}/qt-wasm/Qt/6.7.2/wasm_singlethread/bin/qt-cmake .. \
+          ${QT_WASM}/bin/qt-cmake .. \
             -DCMAKE_BUILD_TYPE=Release \
-            -DQT_HOST_PATH=${{ github.workspace }}/qt-host/Qt/6.7.2/gcc_64
+            -DQT_HOST_PATH=${QT_HOST_PATH}
           cmake --build . --parallel
-          mv Pathfinder.html index.html
+          [ -f Pathfinder.html ] && mv Pathfinder.html index.html
 
       - name: Deploy to Web Branch
         uses: peaceiris/actions-gh-pages@v4
