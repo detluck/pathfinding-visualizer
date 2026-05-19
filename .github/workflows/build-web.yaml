@@ -1,4 +1,5 @@
 name: Qt WebAssembly Build & Deploy
+
 on:
   release:
     types: [published]
@@ -37,13 +38,19 @@ jobs:
           dir: "${{ github.workspace }}/qt-wasm"
           set-env: true
 
+      - name: Find Qt paths (Debug)
+        run: |
+          echo "=== qt-cmake ===" && find ${{ github.workspace }}/qt-wasm -name "qt-cmake" 2>/dev/null
+          echo "=== qmake ===" && find ${{ github.workspace }}/qt-host -name "qmake" 2>/dev/null
+          echo "PATH=$PATH"
+          echo "QT_ROOT_DIR=$QT_ROOT_DIR"
+
       - name: Build Project
         env:
-          QT_HOST_PATH: ${{ github.workspace }}/qt-host/Qt/6.7.2/gcc_64
-          QT_WASM: ${{ github.workspace }}/qt-wasm/Qt/6.7.2/wasm_singlethread
+          QT_HOST_PATH: ${{ github.workspace }}/qt-host/Qt/6.6.3/gcc_64
         run: |
           mkdir build && cd build
-          ${QT_WASM}/bin/qt-cmake .. \
+          qt-cmake .. \
             -DCMAKE_BUILD_TYPE=Release \
             -DQT_HOST_PATH=${QT_HOST_PATH}
           cmake --build . --parallel
